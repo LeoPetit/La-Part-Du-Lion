@@ -20,16 +20,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="googleMap" style="width:100%;height:800px;"></div>
 
-<script>
-    function myMap() {
-        var mapProp= {
-            center:new google.maps.LatLng(47.642,6.838),
-            zoom:14,
-        };
-        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-</script>
-
+<script src="http://localhost/projet_licence/La-Part-Du-Lion/Web/application/JS/Test_Map.js"></script>
+<script src="http://localhost/projet_licence/La-Part-Du-Lion/Web/application/libraries/jquery-3.2.1.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsFGv1OfVECH-3gs5BlGXlESiF3WY5tis&callback=myMap"></script>
 
 </body>
