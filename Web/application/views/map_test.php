@@ -16,6 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>Test de la map</title>
 </head>
 
+
 <body>
 
 <div id="googleMap" style="width:100%;height:800px;"></div>
