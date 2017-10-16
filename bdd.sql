@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS pointEquipe, quartier, competenceEquipe, competence, inventaire, item, utilisateur, equipe;
+DROP TABLE IF EXISTS pointEquipe, quartier, coordonnees,  competenceEquipe, competence, inventaire, item, utilisateur, equipe;
 
 CREATE TABLE equipe(
 	id int NOT NULL AUTO_INCREMENT,
@@ -62,14 +62,24 @@ CREATE TABLE competenceEquipe(
 	CONSTRAINT fk_competence_id_competenceEquipe FOREIGN KEY (competence_id) REFERENCES competence(id)
 );
 
+CREATE TABLE coordonnees(
+  id int NOT NULL AUTO_INCREMENT,
+  longi double(7,6),
+  lat double(8,6),
+
+  PRIMARY KEY (id)
+);
+
 CREATE TABLE quartier(
 	id int NOT NULL AUTO_INCREMENT,
 	nom varchar(25),
 	QG boolean,
 	revenus int,
-	coordonees varchar(25),
+	coordonees_id int,
 
-	PRIMARY KEY(id)
+	PRIMARY KEY(id),
+
+  CONSTRAINT fk_coordonnees_id_quartier FOREIGN KEY (coordonees_id) REFERENCES coordonnees(id)
 );
 
 CREATE TABLE pointEquipe(
