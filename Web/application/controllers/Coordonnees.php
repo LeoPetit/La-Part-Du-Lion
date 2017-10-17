@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Coordonnees extends CI_Controller
 {
+
     public function index()
     {
         $this->load->model("coordonnees", "c");
