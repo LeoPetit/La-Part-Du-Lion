@@ -6,7 +6,7 @@
  * Date: 17/10/17
  * Time: 09:15
  */
-class Coordonnees extends CI_Model
+class Coordonnees_Model extends CI_Model
 {
     public function __construct()
     {

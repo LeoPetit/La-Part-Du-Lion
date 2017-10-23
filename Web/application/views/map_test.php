@@ -6,6 +6,7 @@
  * Time: 10:07
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
+echo BASEPATH;
 ?>
 
 <!DOCTYPE html>

@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Date: 17/10/17
  * Time: 09:14
  */
-class Coordonnees extends CI_Controller
+class Coordonnees_Controller extends CI_Controller
 {
     public function index()
     {
@@ -18,7 +18,8 @@ class Coordonnees extends CI_Controller
 
     public function show()
     {
-        $result = $this->c->show();
+        //$result = $this->c->show();
+        $result = "Allo";
         echo json_encode($result);
     }
 }
