@@ -7,11 +7,10 @@ function myMap() {
 
     $.ajax({
         type : 'POST',
-        url: "http://localhost/projet_licence/La-Part-Du-Lion/Web/application/controllers/Coordonnees_Controller.php/show",
+        url: "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/Coordonnees_Controller/show",
         dataType: 'json',
         success: function(data) {
-            var res = eval(data);
-            console.log(res);
+            console.log(data);
         },
         error : function(e) {
             console.log(e);

@@ -12,14 +12,13 @@ class Coordonnees_Controller extends CI_Controller
 {
     public function index()
     {
-        $this->load->model("coordonnees", "c");
         $this->load->view('map_test');
     }
 
     public function show()
     {
-        //$result = $this->c->show();
-        $result = "Allo";
+        $this->load->model('Coordonnees_Model', 'c');
+        $result = $this->c->show();
         echo json_encode($result);
     }
 }
