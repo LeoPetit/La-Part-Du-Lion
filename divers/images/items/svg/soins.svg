@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="7011 2049 81 73">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        fill: #727272;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="soins" transform="translate(5970 1445)">
+    <rect id="Rectangle_106" data-name="Rectangle 106" class="cls-1" width="81" height="60" rx="8" transform="translate(1041 617)"/>
+    <g id="Rectangle_107" data-name="Rectangle 107" class="cls-2" transform="translate(1067 604)">
+      <rect class="cls-4" width="29" height="23" rx="7"/>
+      <rect class="cls-5" x="2.5" y="2.5" width="24" height="18" rx="4.5"/>
+    </g>
+    <rect id="Rectangle_109" data-name="Rectangle 109" class="cls-3" width="9" height="23" transform="matrix(0.017, 1, -1, 0.017, 1092.92, 641.8)"/>
+    <rect id="Rectangle_110" data-name="Rectangle 110" class="cls-3" width="9" height="23" transform="matrix(-1, 0.017, -0.017, -1, 1086.2, 657.92)"/>
+  </g>
+</svg>

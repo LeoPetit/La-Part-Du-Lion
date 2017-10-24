@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6613 1759 34 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #906912;
+        stroke: #ffe521;
+        stroke-width: 2px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #ffe521;
+      }
+
+      .cls-3 {
+        stroke: #624400;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Symbole_17_1" data-name="Symbole 17 – 1" transform="translate(5970 1445)">
+    <g id="Ellipse_14" data-name="Ellipse 14" class="cls-1" transform="translate(643 314)">
+      <circle class="cls-4" cx="17" cy="17" r="17"/>
+      <circle class="cls-5" cx="17" cy="17" r="16"/>
+    </g>
+    <path id="Tracé_10" data-name="Tracé 10" class="cls-2" d="M6690.373,1775.99l1.433,2.5h17.627l1.453-1.609h-3.242l3.96-.453,1.407-1.392h-23.14Z" transform="translate(-6165.231 1549.711) rotate(-25)"/>
+    <path id="Tracé_11" data-name="Tracé 11" class="cls-2" d="M6690.373,1776.081l1.433,2.735h17.627l1.453-1.762h-3.242l3.96-.5,1.407-1.525h-23.14Z" transform="translate(-6162.231 1557.711) rotate(-25)"/>
+    <path id="Tracé_9" data-name="Tracé 9" class="cls-3" d="M6706.442,1769.426a10.287,10.287,0,0,0-11.118,0v11.7a10.652,10.652,0,0,0,10.852.341,34.544,34.544,0,0,0,.266-4.228c-.264-1.812-4.153-2.3-4.153-2.3v2.873a4.125,4.125,0,0,1,1.326,0,9.569,9.569,0,0,1,0,1.762c-.177.121-.036.009-2.353,0a18.243,18.243,0,0,0-2.326,0v-8.276a21.113,21.113,0,0,1,4.358,0c.743.054-1.178,2.335-.6,2.126.444-.147,3.136-.489,3.748-1.513A13.117,13.117,0,0,0,6706.442,1769.426Z" transform="translate(-6041 -1444)"/>
+  </g>
+</svg>

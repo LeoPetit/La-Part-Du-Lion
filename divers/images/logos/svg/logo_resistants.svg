@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="265.099 3915.127 340.902 395.045">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #02a6b5;
+        stroke: #000;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        filter: url(#Tracé_1);
+      }
+    </style>
+    <filter id="Tracé_1" x="265.099" y="3915.127" width="340.902" height="395.045" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="faux_logo" data-name="faux logo" transform="translate(-242 3649)">
+    <g class="cls-3" transform="matrix(1, 0, 0, 1, 242, -3649)">
+      <path id="Tracé_1-2" data-name="Tracé 1" class="cls-1" d="M6195.6,174.791l-157.492,89.5V454.635L6195.6,540.374l155.41-85.738V264.286Z" transform="translate(-5759.01 3752.1)"/>
+    </g>
+    <path id="Tracé_32" data-name="Tracé 32" class="cls-2" d="M7011.109,2322.612l96.564-31.311,94.956,31.311s3.6,93.911-26.841,137.721-69.853,62.835-69.853,62.835-49.926-33.071-64.975-62.835-29.124-71.458-29.852-101.374S7011.109,2322.612,7011.109,2322.612Z" transform="translate(-6428.957 -1931.604)"/>
+  </g>
+</svg>

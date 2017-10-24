@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="230.137 6403.943 364.855 424.366">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #d07700;
+      }
+
+      .cls-1 {
+        stroke: #000;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        filter: url(#Tracé_1);
+      }
+    </style>
+    <filter id="Tracé_1" x="230.137" y="6403.943" width="364.855" height="424.366" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="faux_logo" data-name="faux logo" transform="translate(-242 6152)">
+    <g class="cls-4" transform="matrix(1, 0, 0, 1, 242, -6152)">
+      <path id="Tracé_1-2" data-name="Tracé 1" class="cls-1" d="M6207.658,174.791l-169.546,96.671V477.073l169.546,92.613,167.309-92.613V271.462Z" transform="translate(-5793.97 6240.92)"/>
+    </g>
+    <g id="Groupe_7" data-name="Groupe 7" transform="translate(552.746 364.039)">
+      <rect id="Rectangle_21" data-name="Rectangle 21" class="cls-2" width="98.352" height="194.355" transform="translate(0 16.293)"/>
+      <rect id="Rectangle_22" data-name="Rectangle 22" class="cls-2" width="83.131" height="194.355" transform="translate(119.428 16.293)"/>
+      <rect id="Rectangle_23" data-name="Rectangle 23" class="cls-2" width="202.559" height="43.061" transform="translate(0 0)"/>
+      <ellipse id="Ellipse_7" data-name="Ellipse 7" class="cls-3" cx="51.24" cy="41.399" rx="51.24" ry="41.399" transform="translate(51.044 38.973)"/>
+      <rect id="Rectangle_24" data-name="Rectangle 24" class="cls-3" width="102.479" height="131.441" transform="translate(51.044 80.371)"/>
+    </g>
+  </g>
+</svg>
