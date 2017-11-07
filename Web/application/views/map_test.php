@@ -20,6 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
+
 <div id="googleMap" style="width:100%;height:800px;"></div>
 
 <script src="http://localhost/projet_licence/La-Part-Du-Lion/Web/application/JS/Test_Map.js"></script>

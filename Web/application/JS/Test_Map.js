@@ -5,28 +5,60 @@
 function myMap() {
     var center = new google.maps.LatLng(47.642,6.838);
 
+    var mapCanvas = document.getElementById("googleMap");
+    var mapOptions = {center: center, zoom: 14};
+    var map = new google.maps.Map(mapCanvas,mapOptions);
+
     $.ajax({
         type : 'POST',
         url: "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/Coordonnees_Controller/show",
         dataType: 'json',
+        async : false,
         success: function(data) {
-            console.log(data);
+            coordonnees = data;
         },
         error : function(e) {
             console.log(e);
         }
     });
 
-    var mapCanvas = document.getElementById("googleMap");
-    var mapOptions = {center: center, zoom: 14, mapTypeId: 'satellite'};
-    var map = new google.maps.Map(mapCanvas,mapOptions);
+    var quartier_id = coordonnees[0].quartier_id;
 
-    /*var flightPath = new google.maps.Polyline({
-        path: [stavanger, amsterdam, london],
-        strokeColor: "#36003A",
-        strokeOpacity: 0.8,
-        strokeWeight: 2
-    });
+    var tabCoord = [];
 
-    flightPath.setMap(map);*/
+    var i = 0;
+
+    while(i < coordonnees.length-1) {
+
+        console.log("Quartier_id " + quartier_id);
+
+        while (coordonnees[i].quartier_id == quartier_id) {
+            //console.log(coordonnees[i].quartier_id + " " + quartier_id);
+            console.log(coordonnees[i].lat + "  " + coordonnees[i].longi + " " + i);
+            tabCoord.push(new google.maps.LatLng(coordonnees[i].lat, coordonnees[i].longi));
+            if(coordonnees[i+1] != null) {
+                i++;
+            } else {
+                quartier_id = 0;
+            }
+        }
+
+        //console.log(tabCoord);
+
+        var flightPath = new google.maps.Polyline({
+            path: tabCoord,
+            strokeColor: "#36003A",
+            strokeOpacity: 0.8,
+            strokeWeight: 2
+        });
+
+        flightPath.setMap(map);
+
+        if(coordonnees[i+1] != null) {
+            quartier_id = coordonnees[i].quartier_id;
+        }
+
+        for(var k=0;k<tabCoord.length;k++)
+            tabCoord.pop();
+    }
 }
