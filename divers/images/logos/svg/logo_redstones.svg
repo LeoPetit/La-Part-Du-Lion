@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1333.484 5782.227 352.489 412.196">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #a20010;
+      }
+
+      .cls-1 {
+        stroke: #000;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        filter: url(#Tracé_1);
+      }
+    </style>
+    <filter id="Tracé_1" x="1333.484" y="5782.227" width="352.489" height="412.196" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="faux_logo" data-name="faux logo" transform="translate(161 5524)">
+    <g class="cls-4" transform="matrix(1, 0, 0, 1, -161, -5524)">
+      <path id="Tracé_1-2" data-name="Tracé 1" class="cls-1" d="M6201.437,174.791l-163.325,93.688V467.744L6201.437,557.5,6362.6,467.744V268.478Z" transform="translate(-4690.63 5619.21)"/>
+    </g>
+    <ellipse id="Ellipse_1" data-name="Ellipse 1" class="cls-2" cx="118.992" cy="120.119" rx="118.992" ry="120.119" transform="translate(1229.218 341.293)"/>
+    <ellipse id="Ellipse_2" data-name="Ellipse 2" class="cls-3" cx="71.057" cy="120.12" rx="71.057" ry="120.12" transform="translate(1296.891 341.293)"/>
+  </g>
+</svg>

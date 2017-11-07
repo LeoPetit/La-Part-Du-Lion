@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6340 2555.263 77.854 79.737">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fffa7b;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #fffa7b;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        opacity: 0.37;
+      }
+    </style>
+  </defs>
+  <g id="Grande_mine" data-name="Grande mine" transform="translate(5970 1445)">
+    <path id="Tracé_28" data-name="Tracé 28" class="cls-1" d="M6368,2067c4.6-35.942,30.485-23.935,31.02-12.878s12.669,15.5,12.669,15.5" transform="matrix(0.899, -0.438, 0.438, 0.899, -6223.278, 2086.359)"/>
+    <rect id="Rectangle_105" data-name="Rectangle 105" class="cls-2" width="16" height="10" transform="translate(395.968 1135.392) rotate(19)"/>
+    <circle id="Ellipse_19" data-name="Ellipse 19" class="cls-2" cx="24" cy="24" r="24" transform="translate(370 1142)"/>
+    <circle id="Ellipse_20" data-name="Ellipse 20" class="cls-3" cx="11" cy="11" r="11" transform="translate(378 1155)"/>
+  </g>
+</svg>
