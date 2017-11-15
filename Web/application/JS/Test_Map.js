@@ -3,7 +3,7 @@
  */
 
 function myMap() {
-    var center = new google.maps.LatLng(47.642,6.838);
+    var center = new google.maps.LatLng(47.640,6.850);
 
     var mapCanvas = document.getElementById("googleMap");
     var mapOptions = {center: center, zoom: 14};
@@ -11,7 +11,7 @@ function myMap() {
 
     $.ajax({
         type : 'POST',
-        url: "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/Coordonnees_Controller/show",
+        url: "http://localhost/projet_licence/Fonctionne/La-Part-Du-Lion/Web/index.php/Coordonnees_Controller/show",
         dataType: 'json',
         async : false,
         success: function(data) {
@@ -22,9 +22,12 @@ function myMap() {
         }
     });
 
+    console.log(coordonnees);
+
     var quartier_id = coordonnees[0].quartier_id;
 
     var tabCoord = [];
+    var test = [];
 
     var i = 0;
 
@@ -35,6 +38,7 @@ function myMap() {
         while (coordonnees[i].quartier_id == quartier_id) {
             //console.log(coordonnees[i].quartier_id + " " + quartier_id);
             console.log(coordonnees[i].lat + "  " + coordonnees[i].longi + " " + i);
+            test.push(coordonnees[i].lat, coordonnees[i].longi);
             tabCoord.push(new google.maps.LatLng(coordonnees[i].lat, coordonnees[i].longi));
             if(coordonnees[i+1] != null) {
                 i++;
@@ -43,22 +47,29 @@ function myMap() {
             }
         }
 
-        //console.log(tabCoord);
+        //console.log(test);
 
-        var flightPath = new google.maps.Polyline({
+        var flightPath = new google.maps.Polygon({
             path: tabCoord,
-            strokeColor: "#36003A",
+            strokeColor: coordonnees[i - 1].couleur,
             strokeOpacity: 0.8,
-            strokeWeight: 2
+            strokeWeight: 5,
+            fillColor: coordonnees[i - 1].couleur,
+            fillOpacity: 0.35
         });
 
         flightPath.setMap(map);
 
+        while(tabCoord.length > 0) {
+            tabCoord.pop();
+        }
+
+        while(test.length > 0) {
+            test.pop();
+        }
+
         if(coordonnees[i+1] != null) {
             quartier_id = coordonnees[i].quartier_id;
         }
-
-        for(var k=0;k<tabCoord.length;k++)
-            tabCoord.pop();
     }
 }
