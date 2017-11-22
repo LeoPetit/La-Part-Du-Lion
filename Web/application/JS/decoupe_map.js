@@ -2,6 +2,8 @@
  * Created by leo on 11/10/17.
  */
 
+var url = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
+
 function myMap() {
     var center = new google.maps.LatLng(47.640,6.850);
 
@@ -11,7 +13,7 @@ function myMap() {
 
     $.ajax({
         type : 'POST',
-        url: "http://localhost/projet_licence/Fonctionne/La-Part-Du-Lion/Web/index.php/Coordonnees_Controller/show",
+        url: url + "Coordonnees_Controller/show",
         dataType: 'json',
         async : false,
         success: function(data) {

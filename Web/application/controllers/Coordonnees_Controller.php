@@ -12,7 +12,7 @@ class Coordonnees_Controller extends CI_Controller
 {
     public function index()
     {
-        $this->load->view('map_test');
+        $this->load->view('index');
     }
 
     public function show()
