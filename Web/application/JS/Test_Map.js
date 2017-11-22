@@ -53,9 +53,9 @@ function myMap() {
             path: tabCoord,
             strokeColor: coordonnees[i - 1].couleur,
             strokeOpacity: 0.8,
-            strokeWeight: 5,
+            strokeWeight: 2,
             fillColor: coordonnees[i - 1].couleur,
-            fillOpacity: 0.35
+            fillOpacity: 0.15
         });
 
         flightPath.setMap(map);
