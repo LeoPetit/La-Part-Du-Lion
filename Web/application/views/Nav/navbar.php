@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-fixed-top">
-    <a class="navbar-brand" href="#">La Part du Lion</a>
+    <a class="navbar-brand col-lg-12" href="#">La Part du Lion</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -8,7 +8,7 @@
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-        <ul class="navbar-nav">
+        <ul class="navbar-nav col-lg-3">
             <li class="nav-item active">
                 <a class="nav-link" href="application/views/Accueil/index.php">Accueil <span class="sr-only">(current)</span></a>
             </li>
@@ -18,16 +18,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Présentation</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link"  href="#"></a>
-            </li>
         </ul>
 
         <a class="brand" href="#"><img class="img-responsive logo" src="../divers/images/logos/png/logo.png" alt=""></a>
 
 
-        <ul class="navbar-nav">
-            <li class="nav-item dropdown " >
+        <ul class="navbar-nav col-lg-3">
+            <li class="nav-item dropdown" >
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Jeu
                 </a>
