@@ -15,6 +15,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <meta charset="utf-8">
     <title>Test de la map</title>
+    <?php include("/Users/schliermelvin/Sites/projet_licence/La-Part-Du-Lion/Web/application/views/Nav/header.php") ?>
+    <?php include("/Users/schliermelvin/Sites/projet_licence/La-Part-Du-Lion/Web/application/views/Nav/navbar.php") ?>
+
+
 </head>
 
 

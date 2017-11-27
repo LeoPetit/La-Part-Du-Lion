@@ -1,3 +1,55 @@
-h1 {
-    color : red;
+nav.navbar.navbar-expand-lg{
+    background-color: #002572;
+    display: inline-block;
+    float: none;
+    width: 100%;
+}
+
+.navbar-expand-lg .navbar-nav{
+    margin: auto;
+}
+.navbar-nav .nav-link{
+    color: #FFFF55;
+    font-size: 18px;
+
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding-left: 2rem;
+
+}
+
+.navbar-nav .active>.nav-link{
+    color: #FFFF55;
+    font-size: 18px;
+
+}
+
+a.dropdown-item{
+    text-align: center;
+    color: #FFFF55;
+}
+
+a.navbar-brand {
+    font-family: "Carolina Mountains";
+    color: #FFFF55;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+
+div.dropdown-menu.show{
+    background-color: #002572;
+}
+
+img.img-responsive.logo{
+    position: absolute;
+    display: block;
+    margin: auto;
+    top: 20%;
+    left: 45%;
+    border:none;
+    z-index: 10;
+    height: 230px;
+    box-shadow: black;
 }
