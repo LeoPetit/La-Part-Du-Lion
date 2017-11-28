@@ -33,4 +33,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </body>
 
+<footer>
+    <?php include("Nav/footer.php") ?>
+</footer>
+
 </html>
