@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-fixed-top">
     <a class="navbar-brand col-lg-12" href="#">La Part du Lion</a>
+    <button class="connexionButtons my-2 my-sm-0" type="submit">Se Connecter</button>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -8,6 +10,7 @@
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+
         <ul class="navbar-nav col-lg-3">
             <li class="nav-item active">
                 <a class="nav-link" href="application/views/Accueil/index.php">Accueil <span class="sr-only">(current)</span></a>
