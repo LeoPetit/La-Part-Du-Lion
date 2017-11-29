@@ -8,6 +8,10 @@ CREATE TABLE equipe (
   PRIMARY KEY (id)
 );
 
+INSERT INTO equipe VALUES(default, 'Technomancien', 'Des trucs');
+INSERT INTO equipe VALUES(default, 'Defenseurs', 'Des machins');
+INSERT INTO equipe VALUES(default, 'RedStone', 'Des bidules');
+
 CREATE TABLE utilisateur (
   id          INT NOT NULL AUTO_INCREMENT,
   pseudo      VARCHAR(25),
@@ -21,6 +25,10 @@ CREATE TABLE utilisateur (
 
   CONSTRAINT fk_equipe_id_utilisateur FOREIGN KEY (equipe_id) REFERENCES equipe (id)
 );
+
+INSERT INTO utilisateur VALUES(default, 'Leo', '0000', 'test@gmail.com', 4, 150, 1);
+INSERT INTO utilisateur VALUES(default, 'Jeremy', '1111', 'test1@gmail.com', 3, 1550, 2);
+INSERT INTO utilisateur VALUES(default, 'Melvin', '2222', 'test2@gmail.com', 2, 180, 3);
 
 CREATE TABLE item (
   id      INT NOT NULL AUTO_INCREMENT,
