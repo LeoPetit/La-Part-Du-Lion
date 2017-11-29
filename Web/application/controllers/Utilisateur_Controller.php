@@ -8,9 +8,9 @@
  */
 class Utilisateur_Controller extends CI_Controller
 {
-    public function index()
+    public function show()
     {
-        $this->load->view('index');
+        $this->load->view('Connection/index.php');
     }
 
     public function connection($userName, $userPass) {
