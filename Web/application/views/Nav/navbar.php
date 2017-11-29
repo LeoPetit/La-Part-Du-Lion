@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-fixed-top">
-    <a class="nav-link connexion" href="#">Se Connecter</a>
+    <?php echo anchor('index.php/Utilisateur_Controller/show/', 'Se connecter', 'class="nav-link connexion"') ?>
     <div class="navbar-brand col-lg-12">La Part du Lion</div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,17 +13,17 @@
 
         <ul class="navbar-nav col-lg-3">
             <li class="nav-item">
-                <a class="nav-link" href="application/views/Accueil/index.php">Accueil </a>
+                <?php echo anchor('Utilisateur_Controller/show/', 'Accueil', 'class="nav-link"') ?>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="application/views/Forum/index.php">Forum</a>
+                <a class="nav-link" href="../Forum/index.php">Forum</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Présentation</a>
             </li>
         </ul>
 
-        <a class="brand" href="#"><img class="img-responsive logo" src="../divers/images/logos/png/logo.png" alt=""></a>
+        <a class="brand"><img class="img-responsive logo" src="../divers/images/logos/png/logo.png" alt=""></a>
 
         <ul class="navbar-nav col-lg-3">
             <li class="nav-item dropdown" >

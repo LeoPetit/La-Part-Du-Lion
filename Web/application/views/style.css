@@ -72,3 +72,7 @@ a.nav-link.connexion{
     color: #FFFF55;
     border: 1px solid darkgray;
 }
+
+button.navbar-toggler{
+    background-color:  #FFFF55;
+}
