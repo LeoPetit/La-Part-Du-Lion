@@ -24,7 +24,7 @@ function myMap() {
         }
     });
 
-    console.log(coordonnees);
+    //console.log(coordonnees);
 
     var quartier_id = coordonnees[0].quartier_id;
 
@@ -35,11 +35,11 @@ function myMap() {
 
     while(i < coordonnees.length-1) {
 
-        console.log("Quartier_id " + quartier_id);
+        //console.log("Quartier_id " + quartier_id);
 
         while (coordonnees[i].quartier_id == quartier_id) {
             //console.log(coordonnees[i].quartier_id + " " + quartier_id);
-            console.log(coordonnees[i].lat + "  " + coordonnees[i].longi + " " + i);
+            //console.log(coordonnees[i].lat + "  " + coordonnees[i].longi + " " + i);
             test.push(coordonnees[i].lat, coordonnees[i].longi);
             tabCoord.push(new google.maps.LatLng(coordonnees[i].lat, coordonnees[i].longi));
             if(coordonnees[i+1] != null) {
