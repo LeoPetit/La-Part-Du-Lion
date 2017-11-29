@@ -6,7 +6,21 @@
  * Date: 28/11/2017
  * Time: 10:51
  */
-class Utilisateur_Model
+class Utilisateur_Model extends CI_Model
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->database();
+    }
 
+    public function connection($userName, $userMDP) {
+        $this->db->select('pseudo, mdp');
+        $this->db->from('utilisateur');
+        $this->db->where('pseudo', $userName);
+        $this->db->where('mdp', $userMDP);
+        $query = $this->db->get();
+
+        return $query->result();
+    }
 }

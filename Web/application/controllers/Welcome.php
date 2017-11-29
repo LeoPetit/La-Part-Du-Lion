@@ -20,6 +20,9 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+        $this->load->helper('form');
+        $this->load->library('session');
+
 		$this->load->view('index.php');
 	}
 }
