@@ -8,5 +8,18 @@
  */
 class Utilisateur_Controller extends CI_Controller
 {
+    public function index()
+    {
+        $this->load->view('index');
+    }
+
+    public function connection($userName, $userPass) {
+
+        $this->load->model('Utilisateur_Model', 'u');
+
+        $isRegistered = $this->u->connection();
+
+        echo $isRegistered;
+    }
 
 }
