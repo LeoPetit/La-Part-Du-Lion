@@ -6,7 +6,7 @@
  * Date: 29/11/17
  * Time: 09:21
  */
-class CompetenceEquipe_Controller
+class CompetenceEquipe_Controller extends CI_Controller
 {
 
 }

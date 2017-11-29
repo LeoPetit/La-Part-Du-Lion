@@ -6,7 +6,7 @@
  * Date: 29/11/17
  * Time: 09:23
  */
-class PointEquipe_Controller
+class PointEquipe_Controller extends CI_Controller
 {
 
 }

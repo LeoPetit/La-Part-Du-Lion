@@ -6,7 +6,7 @@
  * Date: 29/11/17
  * Time: 09:24
  */
-class Utilisateur_Controller
+class Utilisateur_Controller extends CI_Controller
 {
 
 }

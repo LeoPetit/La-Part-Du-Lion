@@ -6,7 +6,7 @@
  * Date: 29/11/17
  * Time: 09:26
  */
-class Item_Model
+class Item_Model extends CI_Model
 {
 
 }
