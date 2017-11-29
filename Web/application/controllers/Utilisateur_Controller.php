@@ -8,5 +8,7 @@
  */
 class Utilisateur_Controller extends CI_Controller
 {
-
+    public function show() {
+        $this->load->view('welcome_message');
+    }
 }
