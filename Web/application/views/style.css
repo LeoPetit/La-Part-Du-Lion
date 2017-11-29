@@ -4,6 +4,7 @@ nav.navbar.navbar-expand-lg{
     float: none;
     width: 100%;
     font-family: "Hind", sans-serif;
+    src: url(../../../divers/fonts/Hind-Medium.ttf);
     font-weight: 600;
     border-bottom: 3px solid #FFFF55;
     text-align: center;
@@ -36,6 +37,7 @@ a.dropdown-item{
 
 .navbar-brand {
     font-family: "Carolina Mountains Personal Use", sans-serif;
+    src: url(../../../divers/fonts/Carolina-Mountains-Personal-Use.ttf);
     font-weight: 200;
     font-size: 36px;
     color: #FFFF55;
