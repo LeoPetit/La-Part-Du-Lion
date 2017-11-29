@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-fixed-top">
-    <?php echo anchor('index.php/Utilisateur_Controller/show/', 'Se connecter', 'class="nav-link connexion"') ?>
+    <?php echo anchor('Utilisateur_Controller/show/', 'Se connecter', 'class="nav-link connexion"') ?>
     <div class="navbar-brand col-lg-12">La Part du Lion</div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,13 +13,13 @@
 
         <ul class="navbar-nav col-lg-3">
             <li class="nav-item">
-                <?php echo anchor('Utilisateur_Controller/show/', 'Accueil', 'class="nav-link"') ?>
+                <?php echo anchor('index.php/Welcome/show/', 'Accueil', 'class="nav-link"') ?>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../Forum/index.php">Forum</a>
+                <?php echo anchor('index.php/Welcome/show/', 'Forum', 'class="nav-link"') ?>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Présentation</a>
+                <?php echo anchor('index.php/Welcome/show/', 'Présentation', 'class="nav-link"') ?>
             </li>
         </ul>
 
@@ -31,14 +31,14 @@
                     Jeu
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Map</a>
+                    <?php echo anchor('index.php/Welcome/show/', 'Map', 'class="dropdown-item"') ?>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Boutique</a>
+                    <?php echo anchor('index.php/Welcome/show/', 'Boutique', 'class="dropdown-item"') ?>
                 </div>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Mon Compte</a>
+                <?php echo anchor('index.php/Welcome/show/', 'Mon compte', 'class="nav-link"') ?>
             </li>
 
             <li class="nav-item dropdown">
@@ -46,9 +46,9 @@
                     Mon Clan
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Progression</a>
+                    <?php echo anchor('index.php/Welcome/show/', 'Progression', 'class="dropdown-item"') ?>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Arbre de compétences</a>
+                    <?php echo anchor('index.php/Welcome/show/', 'Arbre de compétences', 'class="dropdown-item"') ?>
                 </div>
             </li>
         </ul>
