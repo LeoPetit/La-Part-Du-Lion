@@ -23,7 +23,7 @@
             </li>
         </ul>
 
-        <a class="brand"><img class="img-responsive logo" src="../divers/images/logos/png/logo.png" alt=""></a>
+        <a class="brand"><img class="img-responsive logo" src="<?php echo base_url()?>../divers/images/logos/png/logo.png" alt=""></a>
 
         <ul class="navbar-nav col-lg-3">
             <li class="nav-item dropdown" >
