@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-fixed-top">
-    <a class="navbar-brand col-lg-12" href="#">La Part du Lion</a>
-    <button class="connexionButtons my-2 my-sm-0" type="submit">Se Connecter</button>
+    <a class="nav-link connexion" href="#">Se Connecter</a>
+    <div class="navbar-brand col-lg-12">La Part du Lion</div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="icon-bar"></span>
@@ -24,7 +24,6 @@
         </ul>
 
         <a class="brand" href="#"><img class="img-responsive logo" src="../divers/images/logos/png/logo.png" alt=""></a>
-
 
         <ul class="navbar-nav col-lg-3">
             <li class="nav-item dropdown" >

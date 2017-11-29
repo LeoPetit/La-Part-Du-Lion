@@ -34,13 +34,13 @@ a.dropdown-item{
     color: #FFFF55;
 }
 
-a.navbar-brand {
+.navbar-brand {
     font-family: "Carolina Mountains Personal Use", sans-serif;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 36px;
     color: #FFFF55;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 
@@ -51,7 +51,7 @@ div.dropdown-menu.show{
 img.img-responsive.logo{
     position: absolute;
     display: block;
-    top: 50px;
+    top: 60px;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -60,7 +60,7 @@ img.img-responsive.logo{
     height: 230px;
 }
 
-button.connexionButtons.my-2.my-sm-0{
+a.nav-link.connexion{
     position: absolute;
     display: block;
     top: 5%;
