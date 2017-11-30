@@ -17,7 +17,7 @@ class Utilisateur_Controller extends CI_Controller
 
     public function show()
     {
-        $this->load->view('Connection/index.php');
+        //$this->load->view('Connection/index.php');
         $this->connection("Lea", "0000");
     }
 
