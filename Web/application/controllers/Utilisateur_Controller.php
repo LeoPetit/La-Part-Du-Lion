@@ -8,10 +8,17 @@
  */
 class Utilisateur_Controller extends CI_Controller
 {
+
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->library('session');
+    }
+
     public function show()
     {
         $this->load->view('Connection/index.php');
-        $this->connection("Leo", "0000");
+        $this->connection("Lea", "0000");
     }
 
     public function connection($userName, $userPass) {
@@ -21,11 +28,12 @@ class Utilisateur_Controller extends CI_Controller
         $isRegistered = $this->u->connection($userName, $userPass);
 
         if(empty($isRegistered)) {
-            echo 1;
+            $data['error'] = "unregistered";
+            $this->load->view('Connection/index.php', $data);
         } else {
-            $this->load->library('session');
-            var_dump($isRegistered);
-            $this->session->pseudo = $isRegistered[0]->pseudo;
+            $this->session->utilisateur = $isRegistered[0];
+            $data['error'] = "registered";
+            $this->load->view('index.php', $data);
         }
     }
 

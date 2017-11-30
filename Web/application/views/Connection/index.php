@@ -14,14 +14,11 @@
     <meta charset="utf-8">
     <title>Test de la map</title>
     <?php $this->load->view('Nav/header.php') ?>
-<?php $this->load->view('Nav/navbar.php') ?>
-
-
+    <?php $this->load->view('Nav/navbar.php') ?>
 </head>
 
 
 <body>
-
 
 <div id="bloc_Connection" >
 
@@ -51,7 +48,13 @@
 </div>
 
 <div id="bloc_Inscription" >
-
+    <?php
+        if($error == 'unregistered') {
+          echo '<span style="color : red">Vous n\'avez pas de compte</span>';
+        } else {
+            echo '<span style="color : blue">Vous avez un compte</span>';
+        }
+    ?>
     <div id="login">
         <form class ="form_user form-horizontal" method="post" action="">
             <h4>Inscription</h4>
