@@ -24,75 +24,121 @@
 
     <?php echo validation_errors(); ?>
 
-    <div id="login">
-        <?php echo form_open("Utilisateur_Controller/connection", 'class = "form_user form-horizontal"'); ?>
+        <?php echo form_open("Utilisateur_Controller/connection", 'class = "form_user"'); ?>
         <!--<form class ="form_user form-horizontal" method="post" action=""> -->
 
             <h4>Connection</h4>
             <div class="control-group">
-                <label class="control-label" for="pseudo">Pseudo</label>
-                <div class="controls">
-                    <input class="validate[required,custom[email]]" type="text" name="pseudo" placeholder="Email" value="">
+                    <label class="control-label" for="pseudo">Pseudo</label>
+                <div>
+                    <?php
+                    $data = array(
+                        'name'          => 'pseudo',
+                        'id'            => 'pseudo',
+                        'class'         => 'imputPseudo',
+                        'type'          => 'text',
+                        'value'         => '',
+                        'placeholder' => 'pseudo',
+                    );
+
+                    echo form_input($data);
+                    ?>
                 </div>
+
             </div>
 
             <div class="control-group">
-                <label class="control-label" for="mdp">Mot de passe</label>
-                <div class="controls">
-                    <input class="validate[required]" type="password" id="password" placeholder="Password" name="mdp">
+                <label class="control-label" for="Password">Mote de passe</label>
+                <div>
+                    <?php
+                    $data = array(
+                        'name'          => 'Password',
+                        'id'            => 'Password',
+                        'class'         => 'imputPassword',
+                        'type'          => 'password',
+                        'value'         => '',
+                        'placeholder' => 'Mot de passe',
+                    );
+
+                    echo form_input($data);
+
+                    ?>
+                </div>
+                <div>
+                    <?php echo form_button('submit','Valider'); ?>
                 </div>
             </div>
-
-
-            <button class="btn btn-large btn-primary" type="submit">Valider</button>
-
         </form>
     </div>
-</div>
 
 <div id="bloc_Inscription" >
-    <div id="login">
-        <form class ="form_user form-horizontal" method="post" action="">
+    <div id="register">
+        <?php echo form_open("Utilisateur_Controller/enregistrement", 'class = "form_user"'); ?>
             <h4>Inscription</h4>
 
             <?php
             if(isset($error) && $error == 'unregistered') {
                 echo '<span style="color : red">Vous n\'avez pas de compte</span>';
-            }
-            ?>
+            } ?>
 
             <div class="control-group">
-                <label class="control-label" for="Pseudo">Pseudo</label>
-                <div class="controls">
-                    <input class="validate[required]" type="text" name="pseudo" placeholder="Pseudo" value="">
+                <label class="control-label" for="pseudo">Pseudo</label>
+                <div>
+                    <?php
+                    $data = array(
+                        'name'          => 'pseudo',
+                        'id'            => 'pseudo',
+                        'class'         => 'imputPseudo',
+                        'type'          => 'text',
+                        'value'         => '',
+                        'placeholder' => 'pseudo',
+                    );
 
+                    echo form_input($data);
+                    ?>
                 </div>
             </div>
 
             <div class="control-group">
-                <label class="control-label" for="email">Email</label>
-                <div class="controls">
-                    <input class="validate[required,custom[email]]" type="text" name="email" placeholder="Email" value="">
+                <label class="control-label" for="Mail">E-mail</label>
+                <div>
+                    <?php
+                    $data = array(
+                        'name'          => 'Mail',
+                        'id'            => 'Mail',
+                        'class'         => 'imputMail',
+                        'type'          => 'text',
+                        'value'         => '',
+                        'placeholder' => 'Mail',
+                    );
 
+                    echo form_input($data);
+                    ?>
                 </div>
             </div>
+
             <div class="control-group">
-                <label class="control-label" for="ConfirmEmail">ConfirmEmail</label>
-                <div class="controls">
-                    <input class="validate[required,custom[email]]" type="text" name="ConfirmEmail" placeholder="ConfirmEmail" value="">
+                <label class="control-label" for="password">Mot de passe</label>
+                <div>
+                    <?php
+                    $data = array(
+                        'name'          => 'password',
+                        'id'            => 'password',
+                        'class'         => 'imputPassword',
+                        'type'          => 'password',
+                        'value'         => '',
+                        'placeholder' => 'Mot de passe',
+                    );
 
+                    echo form_input($data);
+                    ?>
                 </div>
             </div>
 
-            <div class="control-group">
-                <label class="control-label" for="mdp">Mot de passe</label>
-                <div class="controls">
-                    <input class="validate[required]" type="password" id="password" placeholder="Password" name="mdp">
 
-                </div>
-            </div>
-
-            <button class="btn btn-large btn-primary" type="submit">Valider</button>
+        <div>
+            <?php echo form_button('submit','Valider'); ?>
+        </div>
 
         </form>
     </div>
