@@ -6,6 +6,9 @@
  * Time: 10:07
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
+if(isset($_SESSION["utilisateur"]->pseudo)) {
+    echo "Bienvenue ".$_SESSION["utilisateur"]->pseudo."-kun";
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,13 +20,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>Test de la map</title>
     <?php include("Nav/header.php") ?>
     <?php include("Nav/navbar.php") ?>
-
-
 </head>
 
-
 <body>
-
 
 <div id="googleMap" style="width:100%;height:800px;"></div>
 

@@ -17,24 +17,39 @@ class Utilisateur_Controller extends CI_Controller
 
     public function show()
     {
-        //$this->load->view('Connection/index.php');
-        $this->connection("Lea", "0000");
+        $this->load->helper(array('form', 'url'));
+
+        $this->load->view('Connection/index.php');
     }
 
-    public function connection($userName, $userPass) {
+    public function connection() {
 
-        $this->load->model('Utilisateur_Model', 'u');
+        $this->load->library('form_validation');
 
-        $isRegistered = $this->u->connection($userName, $userPass);
+        $this->form_validation->set_rules('pseudo', 'pseudo', 'required', array('required' => 'Vous devez entrer un %s'));
+        $this->form_validation->set_rules('mdp', 'mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
 
-        if(empty($isRegistered)) {
-            $data['error'] = "unregistered";
-            $this->load->view('Connection/index.php', $data);
-        } else {
-            $this->session->utilisateur = $isRegistered[0];
-            $data['error'] = "registered";
-            $this->load->view('index.php', $data);
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('Connection/index.php');
+        }
+        else
+        {
+            $userName = $this->input->post("pseudo");
+            $mdp = $this->input->post("mdp");
+
+            $this->load->model('Utilisateur_Model', 'u');
+
+            $isRegistered = $this->u->connection($userName, $mdp);
+
+            if(empty($isRegistered)) {
+                $data['error'] = "unregistered";
+                $this->load->view('Connection/index.php', $data);
+            } else {
+                $this->session->utilisateur = $isRegistered[0];
+                $data['error'] = "registered";
+                $this->load->view('index.php', $data);
+            }
         }
     }
-
 }

@@ -22,24 +22,27 @@
 
 <div id="bloc_Connection" >
 
+    <?php echo validation_errors(); ?>
+
     <div id="login">
-        <form class ="form_user form-horizontal" method="post" action="">
+        <?php echo form_open("Utilisateur_Controller/connection", 'class = "form_user form-horizontal"'); ?>
+        <!--<form class ="form_user form-horizontal" method="post" action=""> -->
+
             <h4>Connection</h4>
             <div class="control-group">
-                <label class="control-label" for="email">Email</label>
+                <label class="control-label" for="pseudo">Pseudo</label>
                 <div class="controls">
-                    <input class="validate[required,custom[email]]" type="text" name="id" placeholder="Email" value="">
-
+                    <input class="validate[required,custom[email]]" type="text" name="pseudo" placeholder="Email" value="">
                 </div>
             </div>
 
             <div class="control-group">
                 <label class="control-label" for="mdp">Mot de passe</label>
                 <div class="controls">
-                    <input class="validate[required]" type="password" id="inputPassword" placeholder="Password" name="mdp">
-
+                    <input class="validate[required]" type="password" id="password" placeholder="Password" name="mdp">
                 </div>
             </div>
+
 
             <button class="btn btn-large btn-primary" type="submit">Valider</button>
 
@@ -48,21 +51,20 @@
 </div>
 
 <div id="bloc_Inscription" >
-    <?php
-        if($error == 'unregistered') {
-          echo '<span style="color : red">Vous n\'avez pas de compte</span>';
-        } else {
-            echo '<span style="color : blue">Vous avez un compte</span>';
-        }
-    ?>
     <div id="login">
         <form class ="form_user form-horizontal" method="post" action="">
             <h4>Inscription</h4>
 
+            <?php
+            if(isset($error) && $error == 'unregistered') {
+                echo '<span style="color : red">Vous n\'avez pas de compte</span>';
+            }
+            ?>
+
             <div class="control-group">
                 <label class="control-label" for="Pseudo">Pseudo</label>
                 <div class="controls">
-                    <input class="validate[required]" type="text" name="id" placeholder="Pseudo" value="">
+                    <input class="validate[required]" type="text" name="pseudo" placeholder="Pseudo" value="">
 
                 </div>
             </div>
@@ -70,7 +72,7 @@
             <div class="control-group">
                 <label class="control-label" for="email">Email</label>
                 <div class="controls">
-                    <input class="validate[required,custom[email]]" type="text" name="id" placeholder="Email" value="">
+                    <input class="validate[required,custom[email]]" type="text" name="email" placeholder="Email" value="">
 
                 </div>
             </div>
@@ -85,7 +87,7 @@
             <div class="control-group">
                 <label class="control-label" for="mdp">Mot de passe</label>
                 <div class="controls">
-                    <input class="validate[required]" type="password" id="inputPassword" placeholder="Password" name="mdp">
+                    <input class="validate[required]" type="password" id="password" placeholder="Password" name="mdp">
 
                 </div>
             </div>
