@@ -91,15 +91,59 @@ button.navbar-toggler{
     text-align: center;
     color: white;
 
-    margin: auto;
-    padding:100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 100px 30px 100px;
 }
 
 .row{
     margin: auto;
-    margin-top: 100px;
+    margin-top: 130px;
+    margin-bottom: 100px;
     opacity: 0.8;
     background-color: black;
     border: 3px solid black;
-    border-radius: 3%;
+    border-radius: 2%;
+}
+
+.control-group{
+    padding-top: 30%;
+}
+
+.inputData{
+    background-color: #A0A0A0;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    opacity: 0.8;
+    border: 1px solid white;
+}
+
+.validConnexion{
+    margin-top: 70%;
+    color: #FFFF55;
+    background-color: black;
+    opacity: 0.8;
+    width: 100%;
+}
+
+.validRegister{
+    margin-top: 27%;
+    color: #FFFF55;
+    background-color: black;
+    opacity: 0.8;
+    width: 100%;
+
+}
+
+.backLogo{
+    opacity: 0.3;
+    position: absolute;
+    display: block;
+    top: 60px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
 }
