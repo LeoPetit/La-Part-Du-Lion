@@ -86,3 +86,19 @@ a.nav-link.connexion{
 button.navbar-toggler{
     background-color:  #FFFF55;
 }
+
+.form{
+    text-align: center;
+    color: white;
+
+    margin: auto;
+    padding:100px;
+}
+
+.row{
+    margin: 100px 0 0 0;
+    opacity: 0.8;
+    background-color: black;
+    border: 3px solid black;
+    border-radius: 3%;
+}
