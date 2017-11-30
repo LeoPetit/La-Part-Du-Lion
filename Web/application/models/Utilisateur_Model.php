@@ -23,4 +23,8 @@ class Utilisateur_Model extends CI_Model
 
         return $query->result();
     }
+
+    public function enregistrement($data) {
+        $this->db->insert('utilisateur', $data);
+    }
 }
