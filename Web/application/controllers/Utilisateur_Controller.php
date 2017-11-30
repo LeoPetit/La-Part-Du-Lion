@@ -27,7 +27,7 @@ class Utilisateur_Controller extends CI_Controller
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('pseudo', 'pseudo', 'required', array('required' => 'Vous devez entrer un %s'));
-        $this->form_validation->set_rules('mdp', 'mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
+        $this->form_validation->set_rules('Password', 'mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
 
         if ($this->form_validation->run() == FALSE)
         {
@@ -36,7 +36,7 @@ class Utilisateur_Controller extends CI_Controller
         else
         {
             $userName = $this->input->post("pseudo");
-            $mdp = $this->input->post("mdp");
+            $mdp = $this->input->post("Password");
 
             $this->load->model('Utilisateur_Model', 'u');
 
@@ -53,12 +53,12 @@ class Utilisateur_Controller extends CI_Controller
     }
 
     public function enregistrement() {
+
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('pseudo', 'pseudo', 'required', array('required' => 'Vous devez entrer un %s'));
-        $this->form_validation->set_rules('email', 'email', 'required|valid_email|is_unique[users.email]', array('required' => 'Vous devez entrer un %s'));
-        $this->form_validation->set_rules('ConfirmEmail', '', 'required|valid_email|is_unique[users.email]', array('required' => 'Vous devez confirmer votre email'));
-        $this->form_validation->set_rules('mdp', 'mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
+        $this->form_validation->set_rules('Mail', 'email', 'trim|required|valid_email', array('required' => 'Vous devez entrer un %s', 'is_unique' => '%s existe déjà'));
+        $this->form_validation->set_rules('password', 'mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
 
         if ($this->form_validation->run() == FALSE)
         {
@@ -67,17 +67,20 @@ class Utilisateur_Controller extends CI_Controller
         else
         {
             $data["pseudo"] = $this->input->post("pseudo");
-            $data["mdp"] = $this->input->post("mdp");
-            $data["email"] = $this->input->post("email");
+            $data["mdp"] = $this->input->post("password");
+            $data["email"] = $this->input->post("Mail");
             $data["pointAction"] = 4;
             $data["gold"] = 100;
             $data["equipe_id"] = 1;
 
             $this->load->model('Utilisateur_Model', 'u');
 
-            var_dump($data);
-
             $this->u->enregistrement($data);
+
+            $isRegistered = $this->u->connection($data["pseudo"], $data["mdp"]);
+
+            $this->session->utilisateur = $isRegistered[0];
+            $this->load->view('index.php');
         }
     }
 }
