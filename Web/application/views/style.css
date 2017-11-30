@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Hind";
-    src: url(Hind-Medium.ttf);
+    src: url(../../../divers/fonts/Hind-Medium.ttf);
 }
 
 @font-face {
     font-family: "Carolina Mountains";
-    src: url(Carolina-Mountains-Personal-Use.ttf);
+    src: url(../../../divers/fonts/Carolina-Mountains-Personal-Use.ttf);
 }
 
 nav.navbar.navbar-expand-lg{
