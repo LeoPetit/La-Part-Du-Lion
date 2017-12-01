@@ -93,4 +93,9 @@ class Utilisateur_Controller extends CI_Controller
         $this->session->utilisateur = $isRegistered[0];
         $this->load->view('index.php');
     }
+
+    public function deconnection() {
+        unset($_SESSION["utilisateur"]);
+        $this->load->view("Accueil/index.php");
+    }
 }

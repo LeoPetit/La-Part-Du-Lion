@@ -1,5 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-fixed-top">
-    <?php echo anchor('Utilisateur_Controller/show/', 'Se connecter', 'class="nav-link connexion"') ?>
+    <?php
+        if(!isset($_SESSION["utilisateur"]->pseudo)) {
+            echo anchor('Utilisateur_Controller/show/', 'Se connecter', 'class="nav-link connexion"');
+        } else {
+            echo "<span>Bienvenue, " . $_SESSION["utilisateur"]->pseudo . "</span>";
+            echo anchor('Utilisateur_Controller/deconnection/', 'Se déconnecter', 'class="nav-link connexion"');
+        }
+    ?>
     <div class="navbar-brand col-lg-12">La Part du Lion</div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
