@@ -15,7 +15,7 @@ class Utilisateur_Controller extends CI_Controller
         $this->load->library('session');
     }
 
-    public function show()
+    public function index()
     {
         $this->load->helper(array('form', 'url'));
 

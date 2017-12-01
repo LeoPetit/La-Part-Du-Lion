@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-fixed-top">
     <?php
         if(!isset($_SESSION["utilisateur"]->pseudo)) {
-            echo anchor('Utilisateur_Controller/show/', 'Se connecter', 'class="nav-link connexion"');
+            echo anchor('Utilisateur_Controller', 'Se connecter', 'class="nav-link connexion"');
         } else {
             echo "<span>Bienvenue, " . $_SESSION["utilisateur"]->pseudo . "</span>";
             echo anchor('Utilisateur_Controller/deconnection/', 'Se déconnecter', 'class="nav-link connexion"');
