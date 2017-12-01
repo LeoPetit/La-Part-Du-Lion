@@ -18,8 +18,8 @@ if(isset($_SESSION["utilisateur"]->pseudo)) {
 <head>
     <meta charset="utf-8">
     <title>Test de la map</title>
-    <?php include("Nav/header.php") ?>
-    <?php include("Nav/navbar.php") ?>
+    <?php $this->load->view("Nav/header.php") ?>
+    <?php $this->load->view("Nav/navbar.php") ?>
 </head>
 
 <body>
@@ -33,7 +33,7 @@ if(isset($_SESSION["utilisateur"]->pseudo)) {
 </body>
 
 <footer>
-    <?php include("Nav/footer.php") ?>
+    <?php $this->load->view("Nav/footer.php") ?>
 </footer>
 
 </html>

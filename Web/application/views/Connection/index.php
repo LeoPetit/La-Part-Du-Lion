@@ -21,9 +21,9 @@
 <body>
 
 <div class="container">
-    <div class="row col-lg-10">
+    <div class="row col-sm-10">
         <img class="backLogo" src="<?php echo base_url()?>../divers/images/logos/png/logo.png" />
-        <div class="col-lg-6">
+        <div class="col-sm-6">
             <div id="bloc_Connection" >
                 <?php echo validation_errors(); ?>
 
@@ -78,10 +78,10 @@
                 </form>
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-sm-6">
             <div id="bloc_Inscription" >
                 <div id="register">
-                    <?php echo form_open("Utilisateur_Controller/enregistrement", 'class = "form_user"'); ?>
+                    <?php echo form_open("Utilisateur_Controller/preEnregistrement", 'class = "form_user"'); ?>
                         <h4>S'inscrire</h4>
 
                         <?php
