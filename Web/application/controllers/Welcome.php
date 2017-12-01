@@ -23,6 +23,6 @@ class Welcome extends CI_Controller {
         $this->load->helper('form');
         $this->load->library('session');
 
-		$this->load->view('index.php');
+		$this->load->view('Accueil/index.php');
 	}
 }
