@@ -13,7 +13,7 @@
 
         <ul class="navbar-nav col-lg-3">
             <li class="nav-item">
-                <?php echo anchor('index.php/Welcome/show/', 'Accueil', 'class="nav-link"') ?>
+                <?php echo anchor('Welcome/index/', 'Accueil', 'class="nav-link"') ?>
             </li>
             <li class="nav-item">
                 <?php echo anchor('index.php/Welcome/show/', 'Forum', 'class="nav-link"') ?>
@@ -31,7 +31,7 @@
                     Jeu
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo anchor('index.php/Welcome/show/', 'Map', 'class="dropdown-item"') ?>
+                    <?php echo anchor('Coordonnees_Controller/index/', 'Map', 'class="dropdown-item"') ?>
                     <div class="dropdown-divider"></div>
                     <?php echo anchor('index.php/Welcome/show/', 'Boutique', 'class="dropdown-item"') ?>
                 </div>
