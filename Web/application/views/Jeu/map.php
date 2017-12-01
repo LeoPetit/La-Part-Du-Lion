@@ -25,6 +25,37 @@ if(isset($_SESSION["utilisateur"]->pseudo)) {
 <body>
 
 <div id="googleMap" style="width:100%;height:800px;"></div>
+<div id="legendeMap">
+    <div class="legendeClan">
+        <img src="<?php echo base_url()?>../divers/images/logos/png/logo_exilés.png"/>
+        <h5>Clan des Exilés</h5>
+    </div>
+    <div class="legendeClan">
+        <img src="<?php echo base_url()?>../divers/images/logos/png/logo_forteresse.png"/>
+        <h5>Clan de la Forteresse</h5>
+    </div>
+    <div class="legendeClan">
+        <img src="<?php echo base_url()?>../divers/images/logos/png/logo_negociants.png"/>
+        <h5>Clan des Negociants</h5>
+    </div>
+    <div class="legendeClan">
+        <img src="<?php echo base_url()?>../divers/images/logos/png/logo_redstones.png"/>
+        <h5>Clan des Redstones</h5>
+    </div>
+    <div class="legendeClan">
+        <img src="<?php echo base_url()?>../divers/images/logos/png/logo_resistants.png"/>
+        <h5>Clan des Resistants</h5>
+    </div>
+    <div class="legendeClan">
+        <img src="<?php echo base_url()?>../divers/images/logos/png/logo_technomanciens.png"/>
+        <h5>Clan des Technomanciens</h5>
+    </div>
+    <div class="legendeClan">
+        <img src="<?php echo base_url()?>../divers/images/logos/png/logo_tour.png"/>
+        <h5>Clan de la Tour</h5>
+    </div>
+
+</div>
 
 <script src="<?php echo base_url(); ?>application/JS/decoupe_map.js"></script>
 <script src="<?php echo base_url(); ?>application/libraries/jquery-3.2.1.min.js"></script>
