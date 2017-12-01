@@ -20,6 +20,52 @@
 
 <body>
 
+<div class="menu">
+    <ul>
+        <li class="listItem">
+            <a href="" class="menuItem">Home</a>
+            <div class="animatedItem">
+                <h3>Home</h3>
+                <p>Bienvenue sur le site CSS3Create</p>
+            </div>
+        </li>
+        <li class="listItem">
+            <a href="" class="menuItem">News</a>
+            <div class="animatedItem">
+                <h3>News</h3>
+                <p>Pleins de news sur CSS3 et sur HTML5</p>
+            </div>
+        </li>
+        <li class="listItem">
+            <a href="" class="menuItem">News</a>
+            <div class="animatedItem">
+                <h3>News</h3>
+                <p>Pleins de news sur CSS3 et sur HTML5</p>
+            </div>
+        </li>
+        <li class="listItem">
+            <a href="" class="menuItem">News</a>
+            <div class="animatedItem">
+                <h3>News</h3>
+                <p>Pleins de news sur CSS3 et sur HTML5</p>
+            </div>
+        </li>
+        <li class="listItem">
+            <a href="" class="menuItem">News</a>
+            <div class="animatedItem">
+                <h3>News</h3>
+                <p>Pleins de news sur CSS3 et sur HTML5</p>
+            </div>
+        </li>
+        <li class="listItem">
+            <a href="" class="menuItem">News</a>
+            <div class="animatedItem">
+                <h3>News</h3>
+                <p>Pleins de news sur CSS3 et sur HTML5</p>
+            </div>
+        </li>
+    </ul>
+</div>
     <?php
 
         echo form_open("Utilisateur_Controller/enregistrement"/*, 'class = "form_user"'*/);

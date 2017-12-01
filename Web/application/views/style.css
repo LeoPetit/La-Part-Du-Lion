@@ -148,3 +148,48 @@ button.navbar-toggler{
     margin-right: auto;
     height: 50%;
 }
+
+ul li:hover .animatedItem{
+    left:182px;opacity:1;width:276px;
+    transition:1s left,1s width,1s opacity;
+}
+
+ul li .animatedItem{
+    width: 300px;
+    height: 200px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    color: white;
+    opacity: 0;
+    margin-top: 20px;
+    -webkit-transition: 1s left, 1s width, 1s opacity;
+    -moz-transition: 1s left, 1s width, 1s opacity;
+    -o-transition: 1s left, 1s width, 1s opacity;
+    transition: 1s left, 1s width, 1s opacity;
+}
+
+.menu{
+    border: 3px solid;
+    border-radius: 7%;
+    margin: 10% 60% 10% 30%;
+    background-color: #A0A0A0;
+    color: white;
+    position: relative;
+    z-index: 100;
+}
+
+.menuItem{
+    font-weight: bold;
+    color: white;
+    font-size: 1.8em;
+    padding-left: 22px;
+    display: block;
+    width: 160px;
+    height: 40px;
+}
+
+.listItem{
+    height: 40px;
+}
+
