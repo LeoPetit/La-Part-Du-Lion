@@ -72,22 +72,25 @@ class Utilisateur_Controller extends CI_Controller
 
 
             $this->load->view('Clan/choisirClan.php', $data);
-
-            /*
-            $data["pointAction"] = 4;
-            $data["gold"] = 100;
-            $data["equipe_id"] = 1;$this->load->model('Utilisateur_Model', 'u');
-
-            $this->u->enregistrement($data);
-
-            $isRegistered = $this->u->connection($data["pseudo"], $data["mdp"]);
-
-            $this->session->utilisateur = $isRegistered[0];
-            $this->load->view('index.php');*/
         }
     }
 
     public function enregistrement() {
 
+        $data["pseudo"] = $this->input->post("pseudo");
+        $data["mdp"] = $this->input->post("password");
+        $data["email"] = $this->input->post("Mail");
+        $data["pointAction"] = 4;
+        $data["gold"] = 100;
+        $data["equipe_id"] = $this->input->post("clan");
+
+        $this->load->model('Utilisateur_Model', 'u');
+
+        $this->u->enregistrement($data);
+
+        $isRegistered = $this->u->connection($data["pseudo"], $data["mdp"]);
+
+        $this->session->utilisateur = $isRegistered[0];
+        $this->load->view('index.php');
     }
 }

@@ -5,7 +5,6 @@
  * Date: 01/12/17
  * Time: 10:10
  */
-var_dump($_POST);
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +83,15 @@ var_dump($_POST);
 
         echo form_radio($data);
 
-        echo '<p id="content3">3</p> ';
+        echo '<p id="content3">3</p> <br/>';
+
+        $data = array(
+            'name'          => 'validerEnregistrement',
+            'id'            => 'validationButton',
+            'value'         => 'Valider inscription',
+        );
+
+        echo form_submit($data);
 
         echo "</form>";
     ?>

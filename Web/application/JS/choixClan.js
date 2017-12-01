@@ -3,15 +3,18 @@
  */
 
 
-$("p").each(function(index) {
+$('#validationButton').prop("disabled",true);
+
+$("p").each(function() {
     $(this).hide();
 });
 
 $("input[id*='clan']").click(function() {
-    $("p").each(function(index) {
+    $("p").each(function() {
         $(this).hide();
     });
 
     var id = $(this).attr("id").slice(4);
     $("#content"+id).show();
+    $('#validationButton').prop("disabled",false);
 });
