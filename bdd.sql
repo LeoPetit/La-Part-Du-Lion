@@ -479,7 +479,7 @@ CREATE TABLE pointEquipe (
 );
 
 #Point technomancien
-INSERT into pointEquipe VALUES(default, 1, 1, 10);
+INSERT into pointEquipe VALUES(default, 1, 1, 11);
 INSERT into pointEquipe VALUES(default, 2, 1, 10);
 INSERT into pointEquipe VALUES(default, 3, 1, 10);
 INSERT into pointEquipe VALUES(default, 4, 1, 10);
@@ -487,14 +487,14 @@ INSERT into pointEquipe VALUES(default, 5, 1, 10);
 INSERT into pointEquipe VALUES(default, 6, 1, 10);
 
 #Point Vosge
-INSERT into pointEquipe VALUES(default, 7, 2, 10);
+INSERT into pointEquipe VALUES(default, 7, 2, 12);
 INSERT into pointEquipe VALUES(default, 8, 2, 10);
 INSERT into pointEquipe VALUES(default, 9, 2, 10);
 INSERT into pointEquipe VALUES(default, 10, 2, 10);
 INSERT into pointEquipe VALUES(default, 11, 2, 10);
 
 #Point Jaures
-INSERT into pointEquipe VALUES(default, 12, 3, 10);
+INSERT into pointEquipe VALUES(default, 12, 3, 13);
 INSERT into pointEquipe VALUES(default, 13, 3, 10);
 INSERT into pointEquipe VALUES(default, 14, 3, 10);
 INSERT into pointEquipe VALUES(default, 15, 3, 10);
@@ -502,28 +502,28 @@ INSERT into pointEquipe VALUES(default, 16, 3, 10);
 INSERT into pointEquipe VALUES(default, 17, 3, 10);
 
 #Point Miotte
-INSERT into pointEquipe VALUES(default, 18, 4, 10);
+INSERT into pointEquipe VALUES(default, 18, 4, 14);
 INSERT into pointEquipe VALUES(default, 19, 4, 10);
 INSERT into pointEquipe VALUES(default, 20, 4, 10);
 INSERT into pointEquipe VALUES(default, 21, 4, 10);
 INSERT into pointEquipe VALUES(default, 22, 4, 10);
 
 #Point VieilleVille
-INSERT into pointEquipe VALUES(default, 23, 5, 10);
+INSERT into pointEquipe VALUES(default, 23, 5, 15);
 INSERT into pointEquipe VALUES(default, 24, 5, 10);
 INSERT into pointEquipe VALUES(default, 25, 5, 10);
 INSERT into pointEquipe VALUES(default, 26, 5, 10);
 INSERT into pointEquipe VALUES(default, 27, 5, 10);
 
 #Point CentreVille
-INSERT into pointEquipe VALUES(default, 28, 6, 10);
+INSERT into pointEquipe VALUES(default, 28, 6, 16);
 INSERT into pointEquipe VALUES(default, 29, 6, 10);
 INSERT into pointEquipe VALUES(default, 30, 6, 10);
 INSERT into pointEquipe VALUES(default, 31, 6, 10);
 INSERT into pointEquipe VALUES(default, 32, 6, 10);
 
 #Point RedStone
-INSERT into pointEquipe VALUES(default, 33, 7, 10);
+INSERT into pointEquipe VALUES(default, 33, 7, 17);
 INSERT into pointEquipe VALUES(default, 34, 7, 10);
 INSERT into pointEquipe VALUES(default, 35, 7, 10);
 INSERT into pointEquipe VALUES(default, 36, 7, 10);

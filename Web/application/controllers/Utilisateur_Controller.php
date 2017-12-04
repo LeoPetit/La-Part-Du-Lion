@@ -47,7 +47,7 @@ class Utilisateur_Controller extends CI_Controller
                 $this->load->view('Connection/index.php', $data);
             } else {
                 $this->session->utilisateur = $isRegistered[0];
-                $this->load->view('index.php');
+                $this->load->view('Accueil/index.php');
             }
         }
     }
