@@ -4,13 +4,19 @@ CREATE TABLE equipe (
   id         INT NOT NULL AUTO_INCREMENT,
   nom        VARCHAR(25),
   descriptif TEXT,
+  couleur varchar(25),
+
 
   PRIMARY KEY (id)
 );
 
-INSERT INTO equipe VALUES(default, 'Technomancien', 'Des trucs');
-INSERT INTO equipe VALUES(default, 'Defenseurs', 'Des machins');
-INSERT INTO equipe VALUES(default, 'RedStone', 'Des bidules');
+INSERT INTO equipe VALUES(default, 'Technomancien', 'Des trucs', '#36003A');
+INSERT INTO equipe VALUES(default, 'Vosge', 'Des machins', '#88035C');
+INSERT INTO equipe VALUES(default, 'Jaures', 'Des bidules', '#02A6B5');
+INSERT INTO equipe VALUES(default, 'Miotte', 'Des bidules', '#067E00');
+INSERT INTO equipe VALUES(default, 'VieilleVille', 'Des bidules', '#D07700');
+INSERT INTO equipe VALUES(default, 'CentreVille', 'Des bidules', '#012943');
+INSERT INTO equipe VALUES(default, 'Residence', 'Des bidules', '#A20010');
 
 CREATE TABLE utilisateur (
   id          INT NOT NULL AUTO_INCREMENT,
@@ -75,60 +81,62 @@ CREATE TABLE quartier (
   nom     VARCHAR(25),
   QG      BOOLEAN,
   revenus INT,
-  couleur varchar(25),
+  equipe_id INT,
 
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+
+  CONSTRAINT fk_equipe_id_quartier FOREIGN KEY (equipe_id) REFERENCES equipe (id)
 );
 
 /*Technomancien*/
-INSERT INTO quartier VALUES(default, 'Technomancien1', false, 10, '#36003A');
-INSERT INTO quartier VALUES(default, 'Technomancien2', false, 10, '#36003A');
-INSERT INTO quartier VALUES(default, 'Technomancien3', true, 10, '#36003A');
-INSERT INTO quartier VALUES(default, 'Technomancien4', false, 10, '#36003A');
-INSERT INTO quartier VALUES(default, 'Technomancien5', false, 10, '#36003A');
-INSERT INTO quartier VALUES(default, 'Technomancien6', false, 10, '#36003A');
+INSERT INTO quartier VALUES(default, 'Technomancien1', false, 10, 1);
+INSERT INTO quartier VALUES(default, 'Technomancien2', false, 10, 1);
+INSERT INTO quartier VALUES(default, 'Technomancien3', true, 10, 1);
+INSERT INTO quartier VALUES(default, 'Technomancien4', false, 10, 1);
+INSERT INTO quartier VALUES(default, 'Technomancien5', false, 10, 1);
+INSERT INTO quartier VALUES(default, 'Technomancien6', false, 10, 1);
 
 /*Vosge*/
-INSERT INTO quartier VALUES(default, 'Vosge1', false, 10, '#88035C');
-INSERT INTO quartier VALUES(default, 'Vosge2', false, 10, '#88035C');
-INSERT INTO quartier VALUES(default, 'Vosge3', true, 10, '#88035C');
-INSERT INTO quartier VALUES(default, 'Vosge4', false, 10, '#88035C');
-INSERT INTO quartier VALUES(default, 'Vosge5', false, 10, '#88035C');
+INSERT INTO quartier VALUES(default, 'Vosge1', false, 10, 2);
+INSERT INTO quartier VALUES(default, 'Vosge2', false, 10, 2);
+INSERT INTO quartier VALUES(default, 'Vosge3', true, 10, 2);
+INSERT INTO quartier VALUES(default, 'Vosge4', false, 10, 2);
+INSERT INTO quartier VALUES(default, 'Vosge5', false, 10, 2);
 
 /*Jaures*/
-INSERT INTO quartier VALUES(default, 'Jaures1', false, 10, '#02A6B5');
-INSERT INTO quartier VALUES(default, 'Jaures2', false, 10, '#02A6B5');
-INSERT INTO quartier VALUES(default, 'Jaures3', true, 10, '#02A6B5');
-INSERT INTO quartier VALUES(default, 'Jaures4', false, 10, '#02A6B5');
-INSERT INTO quartier VALUES(default, 'Jaures5', false, 10, '#02A6B5');
-INSERT INTO quartier VALUES(default, 'Jaures6', false, 10, '#012A6B5');
+INSERT INTO quartier VALUES(default, 'Jaures1', false, 10, 3);
+INSERT INTO quartier VALUES(default, 'Jaures2', false, 10, 3);
+INSERT INTO quartier VALUES(default, 'Jaures3', true, 10, 3);
+INSERT INTO quartier VALUES(default, 'Jaures4', false, 10, 3);
+INSERT INTO quartier VALUES(default, 'Jaures5', false, 10, 3);
+INSERT INTO quartier VALUES(default, 'Jaures6', false, 10, 3);
 
 /*Miotte*/
-INSERT INTO quartier VALUES(default, 'Miotte1', false, 10, '#067E00');
-INSERT INTO quartier VALUES(default, 'Miotte2', false, 10, '#067E00');
-INSERT INTO quartier VALUES(default, 'Miotte3', true, 10, '#067E00');
-INSERT INTO quartier VALUES(default, 'Miotte4', false, 10, '#067E00');
-INSERT INTO quartier VALUES(default, 'Miotte5', false, 10, '#067E00');
+INSERT INTO quartier VALUES(default, 'Miotte1', false, 10, 4);
+INSERT INTO quartier VALUES(default, 'Miotte2', false, 10, 4);
+INSERT INTO quartier VALUES(default, 'Miotte3', true, 10, 4);
+INSERT INTO quartier VALUES(default, 'Miotte4', false, 10, 4);
+INSERT INTO quartier VALUES(default, 'Miotte5', false, 10, 4);
 
 /*Vieille ville*/
-INSERT INTO quartier VALUES(default, 'VieilleVille1', false, 10, '#D07700');
-INSERT INTO quartier VALUES(default, 'VieilleVille2', false, 10, '#D07700');
-INSERT INTO quartier VALUES(default, 'VieilleVille3', false, 10, '#D07700');
-INSERT INTO quartier VALUES(default, 'VieilleVille4', false, 10, '#D07700');
-INSERT INTO quartier VALUES(default, 'VieilleVille5', false, 10, '#D07700');
+INSERT INTO quartier VALUES(default, 'VieilleVille1', false, 10, 5);
+INSERT INTO quartier VALUES(default, 'VieilleVille2', false, 10, 5);
+INSERT INTO quartier VALUES(default, 'VieilleVille3', false, 10, 5);
+INSERT INTO quartier VALUES(default, 'VieilleVille4', false, 10, 5);
+INSERT INTO quartier VALUES(default, 'VieilleVille5', false, 10, 5);
 
 /*Centre ville*/
-INSERT INTO quartier VALUES(default, 'CentreVille1', false, 10, '#012943');
-INSERT INTO quartier VALUES(default, 'CentreVille2', false, 10, '#012943');
-INSERT INTO quartier VALUES(default, 'CentreVille3', false, 10, '#012943');
-INSERT INTO quartier VALUES(default, 'CentreVille4', false, 10, '#012943');
-INSERT INTO quartier VALUES(default, 'CentreVille5', false, 10, '#012943');
+INSERT INTO quartier VALUES(default, 'CentreVille1', false, 10, 6);
+INSERT INTO quartier VALUES(default, 'CentreVille2', false, 10, 6);
+INSERT INTO quartier VALUES(default, 'CentreVille3', false, 10, 6);
+INSERT INTO quartier VALUES(default, 'CentreVille4', false, 10, 6);
+INSERT INTO quartier VALUES(default, 'CentreVille5', false, 10, 6);
 
 /*Residence*/
-INSERT INTO quartier VALUES(default, 'Residence1', false, 10, '#A20010');
-INSERT INTO quartier VALUES(default, 'residence2', false, 10, '#A20010');
-INSERT INTO quartier VALUES(default, 'Residence3', false, 10, '#A20010');
-INSERT INTO quartier VALUES(default, 'Residence4', false, 10, '#A20010');
+INSERT INTO quartier VALUES(default, 'Residence1', false, 10, 7);
+INSERT INTO quartier VALUES(default, 'residence2', false, 10, 7);
+INSERT INTO quartier VALUES(default, 'Residence3', false, 10, 7);
+INSERT INTO quartier VALUES(default, 'Residence4', false, 10, 7);
 
 CREATE TABLE coordonnees (
   id    INT NOT NULL AUTO_INCREMENT,
@@ -469,3 +477,54 @@ CREATE TABLE pointEquipe (
   CONSTRAINT fk_quartier_id_pointEquipe FOREIGN KEY (quartier_id) REFERENCES quartier (id),
   CONSTRAINT fk_equipe_id_pointEquipe FOREIGN KEY (equipe_id) REFERENCES equipe (id)
 );
+
+#Point technomancien
+INSERT into pointEquipe VALUES(default, 1, 1, 10);
+INSERT into pointEquipe VALUES(default, 2, 1, 10);
+INSERT into pointEquipe VALUES(default, 3, 1, 10);
+INSERT into pointEquipe VALUES(default, 4, 1, 10);
+INSERT into pointEquipe VALUES(default, 5, 1, 10);
+INSERT into pointEquipe VALUES(default, 6, 1, 10);
+
+#Point Vosge
+INSERT into pointEquipe VALUES(default, 7, 2, 10);
+INSERT into pointEquipe VALUES(default, 8, 2, 10);
+INSERT into pointEquipe VALUES(default, 9, 2, 10);
+INSERT into pointEquipe VALUES(default, 10, 2, 10);
+INSERT into pointEquipe VALUES(default, 11, 2, 10);
+
+#Point Jaures
+INSERT into pointEquipe VALUES(default, 12, 3, 10);
+INSERT into pointEquipe VALUES(default, 13, 3, 10);
+INSERT into pointEquipe VALUES(default, 14, 3, 10);
+INSERT into pointEquipe VALUES(default, 15, 3, 10);
+INSERT into pointEquipe VALUES(default, 16, 3, 10);
+INSERT into pointEquipe VALUES(default, 17, 3, 10);
+
+#Point Miotte
+INSERT into pointEquipe VALUES(default, 18, 4, 10);
+INSERT into pointEquipe VALUES(default, 19, 4, 10);
+INSERT into pointEquipe VALUES(default, 20, 4, 10);
+INSERT into pointEquipe VALUES(default, 21, 4, 10);
+INSERT into pointEquipe VALUES(default, 22, 4, 10);
+
+#Point VieilleVille
+INSERT into pointEquipe VALUES(default, 23, 5, 10);
+INSERT into pointEquipe VALUES(default, 24, 5, 10);
+INSERT into pointEquipe VALUES(default, 25, 5, 10);
+INSERT into pointEquipe VALUES(default, 26, 5, 10);
+INSERT into pointEquipe VALUES(default, 27, 5, 10);
+
+#Point CentreVille
+INSERT into pointEquipe VALUES(default, 28, 6, 10);
+INSERT into pointEquipe VALUES(default, 29, 6, 10);
+INSERT into pointEquipe VALUES(default, 30, 6, 10);
+INSERT into pointEquipe VALUES(default, 31, 6, 10);
+INSERT into pointEquipe VALUES(default, 32, 6, 10);
+
+#Point RedStone
+INSERT into pointEquipe VALUES(default, 33, 7, 10);
+INSERT into pointEquipe VALUES(default, 34, 7, 10);
+INSERT into pointEquipe VALUES(default, 35, 7, 10);
+INSERT into pointEquipe VALUES(default, 36, 7, 10);
+
