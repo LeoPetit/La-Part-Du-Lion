@@ -20,7 +20,7 @@
 
         <ul class="navbar-nav col-lg-3">
             <li class="nav-item">
-                <?php echo anchor('Welcome/index/', 'Accueil', 'class="nav-link"') ?>
+                <?php echo anchor('Welcome', 'Accueil', 'class="nav-link"') ?>
             </li>
             <li class="nav-item">
                 <?php echo anchor('index.php/Welcome/show/', 'Forum', 'class="nav-link"') ?>
@@ -38,7 +38,7 @@
                     Jeu
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo anchor('Coordonnees_Controller/index/', 'Map', 'class="dropdown-item"') ?>
+                    <?php echo anchor('Coordonnees_Controller', 'Map', 'class="dropdown-item"') ?>
                     <div class="dropdown-divider"></div>
                     <?php echo anchor('index.php/Welcome/show/', 'Boutique', 'class="dropdown-item"') ?>
                 </div>
@@ -53,7 +53,12 @@
                     Mon Clan
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo anchor('index.php/Welcome/show/', 'Progression', 'class="dropdown-item"') ?>
+                    <?php
+                        if(isset($_SESSION["utilisateur"]->pseudo))
+                            echo anchor('Equipe_Controller', 'Progression', 'class="dropdown-item"');
+                        else
+                            echo anchor('Utilisateur_Controller', 'Progression', 'class="dropdown-item"');
+                    ?>
                     <div class="dropdown-divider"></div>
                     <?php echo anchor('index.php/Welcome/show/', 'Arbre de compétences', 'class="dropdown-item"') ?>
                 </div>
