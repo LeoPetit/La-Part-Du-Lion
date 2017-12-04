@@ -20,7 +20,7 @@
 
 <body>
 
-<div class="menu">
+<div class="menu row col-md-3">
     <ul>
         <li class="listItem">
             <a href="" class="menuItem">Home</a>

@@ -134,7 +134,6 @@ button.navbar-toggler{
     background-color: black;
     opacity: 0.8;
     width: 100%;
-
 }
 
 .backLogo{
@@ -150,33 +149,30 @@ button.navbar-toggler{
 }
 
 ul li:hover .animatedItem{
-    left:182px;opacity:1;width:276px;
+    opacity:1;
+    width:276px;
     transition:1s left,1s width,1s opacity;
 }
 
 ul li .animatedItem{
-    width: 300px;
+    position: absolute;
+    top: 12%;
+    width:0px;
     height: 200px;
-    padding: 15px;
+    margin-left: 60%;
     background: rgba(0, 0, 0, 0.6);
     overflow: hidden;
     color: white;
-    opacity: 0;
-    margin-top: 20px;
-    -webkit-transition: 1s left, 1s width, 1s opacity;
-    -moz-transition: 1s left, 1s width, 1s opacity;
-    -o-transition: 1s left, 1s width, 1s opacity;
-    transition: 1s left, 1s width, 1s opacity;
+    opacity:0;
+    transition:1s left,1s width,1s opacity;
 }
 
 .menu{
     border: 3px solid;
     border-radius: 7%;
-    margin: 10% 60% 10% 30%;
+    margin: 10% 0% 0% 30%;
     background-color: #A0A0A0;
     color: white;
-    position: relative;
-    z-index: 100;
 }
 
 .menuItem{
@@ -195,26 +191,32 @@ ul li .animatedItem{
 
 #legendeMap
 {
-    background-color: #ffff99;
-    border: solid 5px #CD9E47 ;
+    background-color: #D5D5D5;
+    border: solid 1px #FFFF55;
+    margin: 0 0 0 0
 }
 .legendeClan
 {
     color: black ;
-    width: 500px;
+    width: 30%;
     height: 50px;
     float: left;
 }
-.legendeClan img
+
+.legendPicture
 {
-    width: 50px;
-    height: 50px;
+    height: 60px;
     float:  left;
 }
-.legendeClan h5
+.legendeClan
 {
-    padding-top: 10px;
+    margin: 15px auto 15px auto;
 }
+
+.legend{
+    padding: 15px 0 0 15%;
+}
+
 
 .spanError {
     position : absolute;
