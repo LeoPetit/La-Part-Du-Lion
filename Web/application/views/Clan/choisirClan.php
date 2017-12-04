@@ -21,6 +21,13 @@
 <body>
 
 <h1 style="text-align: center; margin-top:30px;">Choix du clan</h1>
+<?php
+    echo form_open("Utilisateur_Controller/enregistrement"/*, 'class = "form_user"'*/);
+    echo form_hidden('pseudo', $_POST["pseudo"]);
+    echo form_hidden('Mail', $_POST["Mail"]);
+    echo form_hidden('password', $_POST["password"]);
+?>
+
 <div class="menu row">
     <ul>
         <li class="listItem">
@@ -28,7 +35,6 @@
             <div class="animatedItem">
                 <h3>Technomancien</h3>
                 <?php
-
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
                 );
