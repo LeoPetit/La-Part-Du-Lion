@@ -22,10 +22,15 @@
 
 <div class="container">
     <div class="row col-md-10">
+
+        <?php echo '<span class="spanError">'.validation_errors()."</span>"; ?>
+        <?php
+        if(isset($error) && $error == 'unregistered') {
+            echo '<span class="spanError">Vous n\'avez pas de compte</span>';
+        } ?>
         <img class="backLogo" src="<?php echo base_url()?>../divers/images/logos/png/logo.png" />
         <div class="col-md-6">
             <div id="bloc_Connection" >
-                <?php echo validation_errors(); ?>
 
                 <?php echo form_open("Utilisateur_Controller/connection", 'class = "form_user"'); ?>
 
@@ -83,11 +88,6 @@
                 <div id="register">
                     <?php echo form_open("Utilisateur_Controller/preEnregistrement", 'class = "form_user"'); ?>
                         <h4>S'inscrire</h4>
-
-                        <?php
-                        if(isset($error) && $error == 'unregistered') {
-                            echo '<span style="color : red">Vous n\'avez pas de compte</span>';
-                        } ?>
 
                         <div class="control-group">
                             <div>

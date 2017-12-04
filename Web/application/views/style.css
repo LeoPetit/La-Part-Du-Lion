@@ -203,6 +203,7 @@ ul li .animatedItem{
     color: black ;
     width: 500px;
     height: 50px;
+    float: left;
 }
 .legendeClan img
 {
@@ -215,3 +216,8 @@ ul li .animatedItem{
     padding-top: 10px;
 }
 
+.spanError {
+    position : absolute;
+    left : 39%;
+    color : red;
+}

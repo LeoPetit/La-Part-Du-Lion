@@ -57,7 +57,7 @@ class Utilisateur_Controller extends CI_Controller
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('pseudo', 'pseudo', 'required', array('required' => 'Vous devez entrer un %s'));
-        $this->form_validation->set_rules('Mail', 'email', 'trim|required|valid_email', array('required' => 'Vous devez entrer un %s', 'is_unique' => '%s existe déjà'));
+        $this->form_validation->set_rules('Mail', 'email', 'trim|required|valid_email', array('required' => 'Vous devez entrer un %s', 'is_unique' => '%s existe déjà', 'valid_email' => 'Vous devez entrer un %s valide'));
         $this->form_validation->set_rules('password', 'mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
 
         if ($this->form_validation->run() == FALSE)
