@@ -8,6 +8,7 @@
     src: url(../../../divers/fonts/Carolina-Mountains-Personal-Use.ttf);
 }
 
+/*navbar*/
 nav.navbar.navbar-expand-lg{
     background-color: #002572;
     display: inline-block;
@@ -50,7 +51,7 @@ a.dropdown-item{
     font-size: 36px;
     color: #FFFF55;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 
@@ -67,7 +68,7 @@ img.img-responsive.logo{
     margin-left: auto;
     margin-right: auto;
     z-index: 10;
-    height: 230px;
+    height: 130px;
 }
 
 a.nav-link.connexion{
@@ -87,6 +88,7 @@ button.navbar-toggler{
     background-color:  #FFFF55;
 }
 
+/*connexion*/
 .form_user{
     text-align: center;
     color: white;
@@ -148,18 +150,20 @@ button.navbar-toggler{
     height: 50%;
 }
 
+/*choose clan*/
 ul li:hover .animatedItem{
     opacity:1;
-    width:276px;
+    width:400px;
+    padding: 10px;
     transition:1s left,1s width,1s opacity;
 }
 
 ul li .animatedItem{
     position: absolute;
     top: 12%;
-    width:0px;
-    height: 200px;
-    margin-left: 60%;
+    left: 100%;
+    width:0;
+    height: 240px;
     background: rgba(0, 0, 0, 0.6);
     overflow: hidden;
     color: white;
@@ -168,27 +172,29 @@ ul li .animatedItem{
 }
 
 .menu{
-    border: 3px solid;
     border-radius: 7%;
-    margin: 10% 0% 0% 30%;
     background-color: #A0A0A0;
     color: white;
+    position: absolute;
+    left: 30%;
+
 }
 
 .menuItem{
     font-weight: bold;
     color: white;
     font-size: 1.8em;
-    padding-left: 22px;
-    display: block;
-    width: 160px;
-    height: 40px;
 }
 
 .listItem{
     height: 40px;
+    list-style-type: none;
+    padding-right: 20px;
+
 }
 
+
+/*Map*/
 #legendeMap
 {
     background-color: #D5D5D5;
@@ -198,19 +204,15 @@ ul li .animatedItem{
 .legendeClan
 {
     color: black ;
-    width: 30%;
     height: 50px;
     float: left;
+    margin: 15px 0 15px 0;
 }
 
 .legendPicture
 {
     height: 60px;
     float:  left;
-}
-.legendeClan
-{
-    margin: 15px auto 15px auto;
 }
 
 .legend{
