@@ -20,7 +20,7 @@
 
 <body>
 
-<h1>Choix du clan</h1>
+<h1 style="text-align: center; margin-top:30px;">Choix du clan</h1>
 <div class="menu row">
     <ul>
         <li class="listItem">
@@ -30,7 +30,7 @@
                 <?php
 
                 $attributes = array(
-                    'class' => 'control-label',
+                    'class' => 'control-labelCheckBox',
                 );
 
                 echo '<span id="content1">Ces savants fous sont des exclus de la société, leurs experiences dont souvent peur aux enfants ainsi qu aux quinquagénaires.</span> ';
@@ -60,7 +60,7 @@
                 <h3>Les résistants</h3>
                 <?php
                     $attributes = array(
-                    'class' => 'control-label',
+                    'class' => 'control-labelCheckBox',
                     );
 
                     echo '<span id="content2">Depuis l aube des temps, les resistants se dressent contre les lois afin d établir les leurs, qu ils trouvent moins débiles.</span> ';
@@ -94,7 +94,7 @@
                 <h3>RedStone</h3>
                 <?php
                     $attributes = array(
-                        'class' => 'control-label',
+                        'class' => 'control-labelCheckBox',
                     );
 
                     echo '<span id="content3">C est dans les Redstones que les plus grands bandits et délinquants de notre époque s évicent. C est un endroit dangereux et occupé par les pires malendrins connus. </span> <br/>';
@@ -127,7 +127,7 @@
                 <h3>La Tour</h3>
                 <?php
                 $attributes = array(
-                    'class' => 'control-label',
+                    'class' => 'control-labelCheckBox',
                 );
 
                 echo '<span id="content4">Une bien belle batisse fut conçu, d après la légende, par le dieu lion. Ses adèptes la protègent toujours au peril de leur vie.</span> <br/>';
@@ -161,7 +161,7 @@
                 <h3>Les Négociants</h3>
                 <?php
                 $attributes = array(
-                    'class' => 'control-label',
+                    'class' => 'control-labelCheckBox',
                 );
 
                 echo '<span id="content5">Les plus fourbes de cette contrée arpentent les rues belfortaines afin de vendre leurs produits les plus rares au plus offrant.</span> <br/>';
@@ -195,7 +195,7 @@
                 <h3>Les Exilés</h3>
                 <?php
                 $attributes = array(
-                    'class' => 'control-label',
+                    'class' => 'control-labelCheckBox',
                 );
 
                 echo '<span id="content6">Les derniers membres de l ancien clan –Ø]‰‰@Ûå– se sont écilés dans la partie plus retranchée de Belfort avant de se venger des clans de la tour et de la fortesresse.</span> <br/>';
@@ -229,7 +229,7 @@
                 <h3>La Forteresse</h3>
                 <?php
                 $attributes = array(
-                    'class' => 'control-label',
+                    'class' => 'control-labelCheckBox',
                 );
 
                 echo '<span id="content7">Les défenseurs de cette forteresse gardent un précieux trésor en son sein. Cependant, personne ne sait ce sue c est...</span> <br/>';
@@ -258,76 +258,6 @@
     </ul>
 </div>
     <?php
-
-        echo form_open("Utilisateur_Controller/enregistrement"/*, 'class = "form_user"'*/);
-
-        echo form_hidden('pseudo', $_POST["pseudo"]);
-        echo form_hidden('Mail', $_POST["Mail"]);
-        echo form_hidden('password', $_POST["password"]);
-
-
-        $attributes = array(
-            'class' => 'control-label',
-        );
-
-        echo form_label('Technomancien', 'clan1', $attributes);
-
-        $data = array(
-            'name'          => 'clan',
-            'id'            => 'clan1',
-            'value'         => '1',
-            'class'         => 'bouton',
-        );
-
-        echo form_radio($data);
-
-        echo '<p id="content1">1</p> ';
-
-        echo "</br>";
-
-        $attributes = array(
-            'class' => 'control-label',
-        );
-
-        echo form_label('Defenseur', 'clan2', $attributes);
-
-        $data = array(
-            'name'          => 'clan',
-            'id'            => 'clan2',
-            'value'         => '2',
-            'class'         => 'bouton',
-        );
-
-        echo form_radio($data);
-
-        echo '<p id="content2">2</p> ';
-
-
-        echo "</br>";
-
-        $attributes = array(
-            'class' => 'control-label',
-        );
-
-        echo form_label('RedStone', 'clan3', $attributes);
-
-        $data = array(
-            'name'          => 'clan',
-            'id'            => 'clan3',
-            'value'         => '3',
-            'class'         => 'bouton',
-        );
-
-        echo form_radio($data);
-
-        echo '<p id="content3">3</p> <br/>';
-
-        $data = array(
-            'name'          => 'validerEnregistrement',
-            'id'            => 'validationButton',
-            'value'         => 'Valider inscription',
-        );
-
         echo form_submit($data);
 
         echo "</form>";
