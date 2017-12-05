@@ -6,9 +6,6 @@
  * Time: 10:07
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-if(isset($_SESSION["utilisateur"]->pseudo)) {
-    echo "Bienvenue ".$_SESSION["utilisateur"]->pseudo."-kun";
-}
 ?>
 
 <!DOCTYPE html>
