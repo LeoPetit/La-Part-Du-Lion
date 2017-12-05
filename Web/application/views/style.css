@@ -161,7 +161,7 @@ ul li:hover .animatedItem{
     opacity:1;
     width:400px;
     padding: 10px;
-    transition:1s left,1s width,1s opacity;
+    transition:0.5s left,0.5s width,0.5s opacity;
 }
 
 ul li .animatedItem{
@@ -174,7 +174,7 @@ ul li .animatedItem{
     overflow: hidden;
     color: white;
     opacity:0;
-    transition:1s left,1s width,1s opacity;
+    transition:0.5s left,0.5s width,0.5s opacity;
 }
 
 
@@ -188,11 +188,12 @@ ul li .animatedItem{
         opacity:1;
         height:240px;
         width: 280px;
-        transition:1s left,1s height,1s opacity;
+        transition:0.5s left,0.5s height,0.5s opacity;
     }
 
     ul li .animatedItem{
         position: absolute;
+        z-index: 100;
         top: 98%;
         left: 0;
         width:280px;
@@ -201,7 +202,7 @@ ul li .animatedItem{
         overflow: hidden;
         color: white;
         opacity:0;
-        transition:1s left,1s height,1s opacity;
+        transition:0.5s left,0.5s height,0.5s opacity;
     }
 }
 
@@ -240,6 +241,7 @@ ul li .animatedItem{
 
 #validationButton{
     position: absolute;
+    z-index: 0;
     top: 80%;
     left: 0;
     right: 0;
@@ -252,10 +254,15 @@ ul li .animatedItem{
 /*Map*/
 #legendeMap
 {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
     background-color: #D5D5D5;
+    opacity: 1;
     border: solid 1px #FFFF55;
-    margin: 0 0 0 0
+    margin: 0 0 0 0;
 }
+
 .legendeClan
 {
     color: black ;
