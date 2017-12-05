@@ -54,6 +54,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </div>
 
+<div id="infoQuartier" style="hidden=hidden">
+    coucou je suis une div hidden
+</div>
+
 <script src="<?php echo base_url(); ?>application/JS/decoupe_map.js"></script>
 <script src="<?php echo base_url(); ?>application/libraries/jquery-3.2.1.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsFGv1OfVECH-3gs5BlGXlESiF3WY5tis&callback=myMap"></script>

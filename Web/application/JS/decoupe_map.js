@@ -49,7 +49,13 @@ function myMap() {
             }
         }
 
-        //console.log(test);
+
+        var addListenersOnPolygon = function(polygon) {
+
+            google.maps.event.addListener(polygon, 'click', function (event) {
+                $.blockUI({message: $("#infoQuartier")});
+            });
+        }
 
         var flightPath = new google.maps.Polygon({
             path: tabCoord,
@@ -57,10 +63,13 @@ function myMap() {
             strokeOpacity: 0.8,
             strokeWeight: 2,
             fillColor: coordonnees[i - 1].couleur,
-            fillOpacity: 0.15
+            fillOpacity: 0.15,
+            indexID:i
         });
 
         flightPath.setMap(map);
+        addListenersOnPolygon(flightPath);
+
 
         while(tabCoord.length > 0) {
             tabCoord.pop();
