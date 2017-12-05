@@ -53,9 +53,8 @@ function myMap() {
         var addListenersOnPolygon = function(polygon) {
 
             google.maps.event.addListener(polygon, 'click', function (event) {
-                $.blockUI({message: $("#infoQuartier")});
             });
-        }
+        };
 
         var flightPath = new google.maps.Polygon({
             path: tabCoord,
