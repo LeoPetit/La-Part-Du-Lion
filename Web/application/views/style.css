@@ -258,7 +258,7 @@ ul li .animatedItem{
     z-index: 10;
     bottom: 0;
     background-color: #D5D5D5;
-    opacity: 1;
+    opacity: 0.9;
     border: solid 1px #FFFF55;
     margin: 0 0 0 0;
 }
@@ -268,7 +268,7 @@ ul li .animatedItem{
     color: black ;
     height: 50px;
     float: left;
-    margin: 15px 0 15px 0;
+    margin: 10px 0 10px 0;
 }
 
 .legendPicture
