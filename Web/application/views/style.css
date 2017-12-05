@@ -9,6 +9,12 @@
 }
 
 /*navbar*/
+
+.welcome{
+    position: absolute;
+    left: 2%;
+    color: white;
+}
 nav.navbar.navbar-expand-lg{
     background-color: #002572;
     display: inline-block;
@@ -173,6 +179,10 @@ ul li .animatedItem{
 
 
 @media only screen and (max-width: 1000px) {
+
+    img.img-responsive.logo{
+        display:none;
+    }
 
     ul li:hover .animatedItem{
         opacity:1;

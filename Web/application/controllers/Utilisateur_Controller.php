@@ -91,7 +91,7 @@ class Utilisateur_Controller extends CI_Controller
         $isRegistered = $this->u->connection($data["pseudo"], $data["mdp"]);
 
         $this->session->utilisateur = $isRegistered[0];
-        $this->load->view('index.php');
+        $this->load->view('Accueil/index.php');
     }
 
     public function deconnection() {

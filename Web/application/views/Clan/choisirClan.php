@@ -85,12 +85,6 @@
                     );
 
                     echo form_radio($data);
-
-                    $attributes = array(
-                    'class' => 'control-label',
-                    );
-
-                    echo "</form>";
                 ?>
             </div>
         </li>
@@ -122,8 +116,6 @@
                         'id'            => 'validationButton',
                         'value'         => 'Valider inscription',
                     );
-
-                    echo "</form>";
                 ?>
             </div>
         </li>
@@ -156,8 +148,6 @@
                     'value'         => 'Valider inscription',
                 );
 
-
-                echo "</form>";
                 ?>
             </div>
         </li>
@@ -190,8 +180,6 @@
                     'value'         => 'Valider inscription',
                 );
 
-
-                echo "</form>";
                 ?>
             </div>
         </li>
@@ -224,8 +212,6 @@
                     'value'         => 'Valider inscription',
                 );
 
-
-                echo "</form>";
                 ?>
             </div>
         </li>
@@ -256,8 +242,6 @@
                     'id'            => 'validationButton',
                     'value'         => 'Valider inscription',
                 );
-
-                echo "</form>";
                 ?>
             </div>
         </li>
