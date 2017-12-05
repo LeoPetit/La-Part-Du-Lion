@@ -20,20 +20,24 @@
 
 <body>
 
-    <img id="imageClan" src="<?php echo base_url()?>../divers/images/logos/png/logo_technomanciens.png"/>
+    <div class="clanStats row col-lg-8">
+        <img id="imageClan" class="pictureClan" src="<?php echo base_url()?>../divers/images/logos/png/logo_technomanciens.png"/>
 
-    <div>
-        <h5>Control de la carte :</h5>
-        <?php echo round($controlled,2)."%"; ?>
-    </div>
+        <div class="controlMap col-lg-4">
+            <h5>Controle de la carte</h5>
+            <div class="mapControl">
+                <?php echo round($controlled,2)."%"; ?>
+            </div>
+        </div>
 
-    <div>
-        <label>Classement :</label>
-        <?php echo '<span>'.$classement.'</span>';?>
-        <br/>
-        <label>Ressource/Jour :</label>
-        <?php echo '<span>'.$revenusEquipe.'</span>';?>
+        <div class="elemClan col-lg-10">
+            <label>Classement :</label>
+            <?php echo '<span>'.$classement.'</span>';?>
+            <br/>
+            <label>Ressource/Jour :</label>
+            <?php echo '<span>'.$revenusEquipe.'</span>';?>
 
+        </div>
     </div>
 
 </body>

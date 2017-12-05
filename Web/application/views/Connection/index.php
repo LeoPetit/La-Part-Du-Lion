@@ -21,7 +21,7 @@
 <body>
 
 <div class="container">
-    <div class="row col-md-10">
+    <div class="form row col-md-10">
 
         <?php echo '<span class="spanError">'.validation_errors()."</span>"; ?>
         <?php

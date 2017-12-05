@@ -104,7 +104,7 @@ button.navbar-toggler{
     padding: 10% 20% 10% 20%;
 }
 
-.row{
+.form.row{
     margin: auto;
     margin-top: 80px;
     margin-bottom: 100px;
@@ -178,7 +178,7 @@ ul li .animatedItem{
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 990px) {
 
     img.img-responsive.logo{
         display:none;
@@ -287,3 +287,38 @@ ul li .animatedItem{
     left : 39%;
     color : red;
 }
+
+/*Clan*/
+.controlMap{
+    margin: 110px auto 20px auto;
+    padding: 5% 0 5% 0;
+    opacity: 0.8;
+    background-color: #36003A;
+    border-radius: 20px;
+    height: 50%;
+}
+
+.clanStats{
+    text-align: center;
+    color: white;
+    margin: auto;
+
+
+}
+
+.elemClan{
+    margin: 100px auto 20px auto;
+    opacity: 0.8;
+    background-color: #36003A;
+    border-radius: 20px;
+}
+
+.pictureClan {
+    margin: 100px auto auto auto;
+    height: 250px;
+}
+
+.mapControl{
+    font-size: 400%;
+}
+
