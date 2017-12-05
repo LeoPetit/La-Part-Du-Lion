@@ -53,6 +53,9 @@ function myMap() {
         var addListenersOnPolygon = function(polygon) {
 
             google.maps.event.addListener(polygon, 'click', function (event) {
+                $('#infoQuartierHead').html("Info Quartier");
+                $('#infoQuartierBody').html("<p>coucou voici le quartier</p>");
+                $('#infoQuartier').modal('show');
             });
         };
 

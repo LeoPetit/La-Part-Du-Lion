@@ -54,8 +54,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </div>
 
-<div id="infoQuartier" style="hidden=hidden">
-    coucou je suis une div hidden
+
+</div>
+
+<div class="modal fade" id="infoQuartier" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="infoQuartierHead"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body" id="infoQuartierBody">
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+
+    </div>
 </div>
 
 <script src="<?php echo base_url(); ?>application/JS/decoupe_map.js"></script>
