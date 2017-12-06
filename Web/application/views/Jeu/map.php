@@ -69,6 +69,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="modal-body" id="infoQuartierBody">
                 <p>Some text in the modal.</p>
             </div>
+
+            <button  id="plusInfo" type="button" class="btn btn-info btn-lg">
+                Plus d'infos
+            </button>
             <div class="modal-footer">
             </div>
         </div>
