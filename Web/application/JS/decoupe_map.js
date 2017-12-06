@@ -3,6 +3,23 @@
  */
 
 var url = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
+var polygonId;
+
+$("#plusInfo").click(function(){
+
+    $.ajax({
+        type : 'POST',
+        url: url + "Quartier_Controller/info/"+ $polygonId,
+        dataType: 'json',
+        success: function(data) {
+            quartier = data;
+        },
+        error : function(e) {
+            console.log(e);
+        }
+    });
+
+});
 
 function myMap() {
     var center = new google.maps.LatLng(47.640,6.850);
@@ -49,12 +66,11 @@ function myMap() {
             }
         }
 
-
         var addListenersOnPolygon = function(polygon) {
-
             google.maps.event.addListener(polygon, 'click', function (event) {
-                $('#infoQuartierHead').html("Info Quartier");
-                $('#infoQuartierBody').html("<p>coucou voici le quartier</p>");
+                polygonId = polygon.indexID;
+                $('#infoQuartierHead').html("Info Quartier " + polygon.nom );
+                $('#infoQuartierBody').html("<h5>Controlé par : " +polygon.possesseur+"</h5>");
                 $('#infoQuartier').modal('show');
             });
         };
@@ -66,7 +82,9 @@ function myMap() {
             strokeWeight: 2,
             fillColor: coordonnees[i - 1].couleur,
             fillOpacity: 0.15,
-            indexID:i
+            indexID:coordonnees[i-1].quartier_id,
+            possesseur:coordonnees[i-1].possesseur,
+            nom:coordonnees[i-1].quartier_nom
         });
 
         flightPath.setMap(map);

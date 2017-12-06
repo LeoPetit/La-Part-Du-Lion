@@ -16,7 +16,7 @@ class Coordonnees_Model extends CI_Model
 
     public function show() {
 
-        $this->db->select('coordonnees.lat as lat, coordonnees.longi as longi, coordonnees.quartier_id as quartier_id, equipe.couleur as couleur');
+        $this->db->select('coordonnees.lat as lat, coordonnees.longi as longi, coordonnees.quartier_id as quartier_id, quartier.nom as quartier_nom, equipe.nom as possesseur, equipe.couleur as couleur');
         $this->db->from('coordonnees');
         $this->db->join('quartier', 'quartier.id = coordonnees.quartier_id');
         $this->db->join('equipe', 'quartier.equipe_id = equipe.id');
@@ -24,4 +24,6 @@ class Coordonnees_Model extends CI_Model
 
         return $query->result();
     }
+
+
 }
