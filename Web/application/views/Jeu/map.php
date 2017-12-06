@@ -21,41 +21,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
-<div id="googleMap" style="width:100%;min-height: 85vh;;"></div>
-<div id="legendeMap" class="row col-md-12">
-    <div class="legendeClan col-sm-3">
-        <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_exilés.png"/>
-        <p class="legend">Clan des Exilés</p>
-    </div>
-    <div class="legendeClan col-sm-3">
-        <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_forteresse.png"/>
-        <p class="legend">Clan de la Forteresse</p>
-    </div>
-    <div class="legendeClan col-sm-3">
-        <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_negociants.png"/>
-        <p class="legend">Clan des Negociants</p>
-    </div>
-    <div class="legendeClan col-sm-3">
-        <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_redstones.png"/>
-        <p class="legend">Clan des Redstones</p>
-    </div>
-    <div class="legendeClan col-sm-3">
-        <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_resistants.png"/>
-        <p class="legend">Clan des Resistants</p>
-    </div>
-    <div class="legendeClan col-sm-3">
-        <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_technomanciens.png"/>
-        <p class="legend">Clan des Technomanciens</p>
-    </div>
-    <div class="legendeClan col-sm-3">
-        <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_tour.png"/>
-        <p class="legend">Clan de la Tour</p>
-    </div>
+<div id="googleMap" style="width:100%;max-height: 100vh;"></div>
+    <div id="legendeMap" class="row col-md-12">
+        <div class="legendeClan col-sm-3">
+            <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_exilés.png"/>
+            <p class="legend">Clan des Exilés</p>
+        </div>
+        <div class="legendeClan col-sm-3">
+            <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_forteresse.png"/>
+            <p class="legend">Clan de la Forteresse</p>
+        </div>
+        <div class="legendeClan col-sm-3">
+            <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_negociants.png"/>
+            <p class="legend">Clan des Negociants</p>
+        </div>
+        <div class="legendeClan col-sm-3">
+            <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_redstones.png"/>
+            <p class="legend">Clan des Redstones</p>
+        </div>
+        <div class="legendeClan col-sm-3">
+            <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_resistants.png"/>
+            <p class="legend">Clan des Resistants</p>
+        </div>
+        <div class="legendeClan col-sm-3">
+            <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_technomanciens.png"/>
+            <p class="legend">Clan des Technomanciens</p>
+        </div>
+        <div class="legendeClan col-sm-3">
+            <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_tour.png"/>
+            <p class="legend">Clan de la Tour</p>
+        </div>
 
-</div>
-
-
-</div>
+    </div>
 
 <div class="modal fade" id="infoQuartier" role="dialog">
     <div class="modal-dialog">

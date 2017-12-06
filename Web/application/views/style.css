@@ -8,6 +8,11 @@
     src: url(../../../divers/fonts/Carolina-Mountains-Personal-Use.ttf);
 }
 
+.lead{
+    font-family: "Hind", sans-serif;
+    font-size: 16px;
+}
+
 /*navbar*/
 
 .welcome{
@@ -40,24 +45,17 @@ nav.navbar.navbar-expand-lg{
 
 }
 
-.navbar-nav .active>.nav-link{
-    color: #FFFF55;
-    font-size: 18px;
-
-}
-
 a.dropdown-item{
     text-align: center;
     color: #FFFF55;
 }
 
-.navbar-brand {
+.navbar-fixed-top {
     font-family: "Carolina Mountains", sans-serif;
     font-weight: 200;
     font-size: 36px;
     color: #FFFF55;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 
@@ -68,7 +66,7 @@ div.dropdown-menu.show{
 img.img-responsive.logo{
     position: absolute;
     display: block;
-    top: 60px;
+    top: 45px;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -88,6 +86,7 @@ a.nav-link.connexion{
     background-color: #001050;
     color: #FFFF55;
     border: 1px solid darkgray;
+    font-size: 18px;
 }
 
 button.navbar-toggler{
@@ -302,8 +301,6 @@ ul li .animatedItem{
     text-align: center;
     color: white;
     margin: auto;
-
-
 }
 
 .elemClan{
@@ -320,5 +317,133 @@ ul li .animatedItem{
 
 .mapControl{
     font-size: 400%;
+}
+
+/*Home*/
+
+.home{
+    background-image: url("../../../divers/images/city.jpg");
+    background-clip: padding-box;
+    background-position: 20%;
+    background-size: 120vw;
+    width: 100%;
+    height: 800px;
+    filter: blur(5px);
+
+
+}
+
+@media only screen and (max-width: 990px) {
+    .home{
+        background-position: 20%;
+        background-size: 250vw;
+    }
+}
+
+.home_text{
+    position: absolute;
+    top: 700px;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Carolina Mountains", sans-serif;
+    font-weight: 200;
+    font-size: 48px;
+    color: #FFFF55;
+    text-align: center;
+}
+
+.home_logo{
+    position: absolute;
+    z-index: 0;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.clans{
+    width: 100%;
+    height: 900px;
+}
+
+.moreInfos{
+     margin: auto;
+     width: 100%;
+     height: 1100px;
+     padding:15%;
+     background-color: #002572;
+}
+
+.infos{
+    margin: auto;
+    width: 100%;
+    height: 1000px;
+    padding: 8%;
+}
+
+img.home_logo_details{
+    margin:auto;
+    min-width: 250px;
+    max-width: 300px;
+    padding-bottom: 20px;
+}
+
+img.phone{
+    max-width: 400px;
+    margin:auto;
+}
+
+.details{
+    color: black;
+    margin: auto;
+    text-align: justify;
+    padding-bottom: 30px;
+}
+
+.moreDetails{
+    color: white;
+    margin: auto;
+    text-align: justify;
+}
+
+.test{
+    width: 100%;
+    height: 800px;
+}
+
+.leftClan{
+    margin-top: 30px;
+    max-width: 70%;
+    height: 200px;
+    background-color: #A0A0A0;
+    float: left;
+}
+
+.rightClan{
+    margin-top: 30px;
+    max-width: 70%;
+    height: 200px;
+    background-color: #A0A0A0;
+    float: right;
+}
+
+@media only screen and (max-width: 990px) {
+    .leftClan{
+        float: none;
+        margin: 20px auto 0 auto;
+        height: 140px;
+
+    }
+
+    .rightClan{
+
+        height: 140px;
+        float: none;
+        margin: 20px auto 0 auto;
+    }
 }
 

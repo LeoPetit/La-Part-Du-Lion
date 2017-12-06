@@ -7,7 +7,7 @@
             echo anchor('Utilisateur_Controller/deconnection/', 'Se déconnecter', 'class="nav-link connexion"');
         }
     ?>
-    <div class="navbar-brand col-lg-12">La Part du Lion</div>
+    <div class="navbar-fixed-top col-lg-12">La Part du Lion</div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="icon-bar"></span>
