@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
-<div id="googleMap" style="width:100%;max-height: 100vh;"></div>
+<div id="googleMap" style="width:100%;min-height: 82vh;"></div>
     <div id="legendeMap" class="row col-md-12">
         <div class="legendeClan col-sm-3">
             <img class="legendPicture" src="<?php echo base_url()?>../divers/images/logos/png/logo_exilés.png"/>

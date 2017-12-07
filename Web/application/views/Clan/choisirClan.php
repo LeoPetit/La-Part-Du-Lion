@@ -20,7 +20,7 @@
 
 <body>
 
-<h1 style="text-align: center; margin-top:30px;">Choix du clan</h1>
+<h1 style="text-align: center; margin:60px;">Choix du clan</h1>
 <?php
     echo form_open("Utilisateur_Controller/enregistrement"/*, 'class = "form_user"'*/);
     echo form_hidden('pseudo', $_POST["pseudo"]);
@@ -39,7 +39,7 @@
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<p class="lead" id="content1">Ces savants fous sont des exclus de la société, leurs experiences dont souvent peur aux enfants ainsi qu aux quinquagénaires.</p> ';
+                echo '<span class="lead" id="content1">Ces savants fous sont des exclus de la société, leurs experiences dont souvent peur aux enfants ainsi qu aux quinquagénaires.</span> ';
 
                 echo form_label('Choisir ce clan', 'clan1', $attributes);
 
@@ -69,7 +69,7 @@
                     'class' => 'control-labelCheckBox',
                     );
 
-                    echo '<p class="lead" id="content2">Depuis l aube des temps, les resistants se dressent contre les lois afin d établir les leurs, qu ils trouvent moins débiles.</span> ';
+                    echo '<span class="lead" id="content2">Depuis l aube des temps, les resistants se dressent contre les lois afin d établir les leurs, qu ils trouvent moins débiles.</span> ';
 
 
                     echo "</br>";
@@ -97,7 +97,7 @@
                         'class' => 'control-labelCheckBox',
                     );
 
-                    echo '<p class="lead" id="content3">C est dans les Redstones que les plus grands bandits et délinquants de notre époque s évicent. C est un endroit dangereux et occupé par les pires malendrins connus. </span> <br/>';
+                    echo '<span class="lead" id="content3">C est dans les Redstones que les plus grands bandits et délinquants de notre époque s évicent. C est un endroit dangereux et occupé par les pires malendrins connus. </span> <br/>';
 
                     echo form_label('Choisir ce clan', 'clan3', $attributes);
 
@@ -128,7 +128,7 @@
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<p class="lead" id="content4">Une bien belle batisse fut conçu, d après la légende, par le dieu lion. Ses adèptes la protègent toujours au peril de leur vie.</span> <br/>';
+                echo '<span class="lead" id="content4">Une bien belle batisse fut conçu, d après la légende, par le dieu lion. Ses adèptes la protègent toujours au peril de leur vie.</span> <br/>';
 
 
                 echo form_label('Choisir ce clan', 'clan4', $attributes);
@@ -160,7 +160,7 @@
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<p class="lead" id="content5">Les plus fourbes de cette contrée arpentent les rues belfortaines afin de vendre leurs produits les plus rares au plus offrant.</span> <br/>';
+                echo '<span class="lead" id="content5">Les plus fourbes de cette contrée arpentent les rues belfortaines afin de vendre leurs produits les plus rares au plus offrant.</span> <br/>';
 
                 echo form_label('Choisir ce clan', 'clan5', $attributes);
 
@@ -192,7 +192,7 @@
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<p class="lead" id="content6">Les derniers membres de l ancien clan –Ø]‰‰@Ûå– se sont écilés dans la partie plus retranchée de Belfort avant de se venger des clans de la tour et de la fortesresse.</span> <br/>';
+                echo '<span class="lead" id="content6">Les derniers membres de l ancien clan –Ø]‰‰@Ûå– se sont écilés dans la partie plus retranchée de Belfort avant de se venger des clans de la tour et de la fortesresse.</span> <br/>';
 
                 echo form_label('Choisir ce clan', 'clan6', $attributes);
 
@@ -224,7 +224,7 @@
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<p class="lead" id="content7">Les défenseurs de cette forteresse gardent un précieux trésor en son sein. Cependant, personne ne sait ce sue c est...</span> <br/>';
+                echo '<span class="lead" id="content7">Les défenseurs de cette forteresse gardent un précieux trésor en son sein. Cependant, personne ne sait ce sue c est...</span> <br/>';
 
                 echo form_label('Choisir ce clan', 'clan7', $attributes);
 

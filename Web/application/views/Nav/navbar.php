@@ -3,7 +3,7 @@
         if(!isset($_SESSION["utilisateur"]->pseudo)) {
             echo anchor('Utilisateur_Controller', 'Se connecter', 'class="nav-link connexion"');
         } else {
-            echo "<span class='welcome'>Bienvenue, " . $_SESSION["utilisateur"]->pseudo . "</span>";
+            echo "<p class='welcome'>Bienvenue, " . $_SESSION["utilisateur"]->pseudo . "</p>";
             echo anchor('Utilisateur_Controller/deconnection/', 'Se déconnecter', 'class="nav-link connexion"');
         }
     ?>
