@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-fixed-top">
+<nav class="navbar navbar-expand-lg">
     <?php
         if(!isset($_SESSION["utilisateur"]->pseudo)) {
             echo anchor('Utilisateur_Controller', 'Se connecter', 'class="nav-link connexion"');
