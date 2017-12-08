@@ -3,8 +3,6 @@
  */
 
 
-
-
 $(function(){
     var position_top_raccourci = $(".navbar.navbar-expand-lg").offset().top;
 

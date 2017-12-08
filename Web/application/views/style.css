@@ -66,7 +66,7 @@ a.dropdown-item{
     font-size: 36px;
     color: #FFFF55;
     text-align: center;
-    display: none;
+    display:none;
 }
 
 div.dropdown-menu.show{
@@ -82,11 +82,17 @@ div.dropdown-menu.show{
     margin-right: auto;
     z-index: 10;
     height: 130px;
-    display: none;
+    display:none;
 }
 
 .onDisplay{
     display: block;
+}
+
+@media only screen and (max-width: 990px) {
+    .logo{
+        display: none;
+    }
 }
 
 a.nav-link.connexion{

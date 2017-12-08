@@ -16,19 +16,16 @@ $(function(){
 //on ajoute la classe "fixNavigation" a <div id="navigation">
             $('.navbar.navbar-expand-lg').addClass("fixNavigation");
             $('.nav-item').removeClass("btn-group dropup");
-            if (window.matchMedia('(min-width: 1000px)').matches) {
-                $('.navtitle').addClass("onDisplay");
-                $('.logo').addClass("onDisplay");
-            }
+            $('.logo').addClass("onDisplay");
+            $('.navtitle').addClass("onDisplay");
+
         } else {
 
 //sinon on retire la classe "fixNavigation" a <div id="navigation">
             $('.navbar.navbar-expand-lg').removeClass("fixNavigation");
             $('.nav-item').addClass("btn-group dropup");
-            if (window.matchMedia('(min-width: 1000px)').matches) {
-                $('.navtitle').removeClass("onDisplay");
-                $('.logo').removeClass("onDisplay");
-            }
+            $('.logo').removeClass("onDisplay");
+            $('.navtitle').removeClass("onDisplay");
         }
     });
 });
