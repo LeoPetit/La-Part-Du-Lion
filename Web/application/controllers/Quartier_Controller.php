@@ -8,11 +8,26 @@
  */
 class Quartier_Controller extends CI_Controller
 {
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->library('session');
+    }
     public function info()
     {
-        $id = $this->input->post("polygon.indexID");
-        $this->load->model('Quartier_Model', 'c');
-        $result = $this->c->infoQuartier($id);
+        $id = $this->input->post("polygonId");
+        $this->load->model('Quartier_Model', 'q');
+        $result = $this->q->infoQuartier($id);
+
+        echo json_encode($result);
+    }
+
+    public function classement()
+    {
+        $id = $this->input->post("polygonId");
+        $this->load->model('Quartier_Model', 'q');
+        $result = $this->q->classementQuartier($id);
+
         echo json_encode($result);
     }
 }

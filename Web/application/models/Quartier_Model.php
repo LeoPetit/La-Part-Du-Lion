@@ -45,12 +45,13 @@ class Quartier_Model extends CI_Model
 
     public function infoQuartier($id) {
 
-        $this->db->select('quartier.nom as QuartierNom,quartier.revenu as revenu, equipe.nom as possesseur');
+        $this->db->select('revenus');
         $this->db->from('quartier');
-        $this->db->join('equipe', 'quartier.equipe_id = equipe.id');
-        $this->db->where('quartier.id',$id);
+        $this->db->where('id',$id);
         $query = $this->db->get();
 
         return $query->result();
     }
+
+
 }
