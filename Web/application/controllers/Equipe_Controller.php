@@ -16,6 +16,8 @@ class Equipe_Controller extends CI_Controller
 
     public function index() {
 
+        $this->load->helper(array('form', 'url'));
+
         $equipe_user = $this->session->utilisateur->equipe_id;
         $i = 1;
         $this->load->model('Quartier_Model', 'q');

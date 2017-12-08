@@ -20,6 +20,16 @@
 
 <body>
 
+    <?php
+        $data = array(
+            'type'  => 'hidden',
+            'name'  => 'couleur',
+            'id'    => 'couleurUtilisateur',
+            'value' => $_SESSION["utilisateur"]->couleur,
+        );
+        echo form_input($data);
+    ?>
+
     <div class="clanStats row col-lg-8">
         <img id="imageClan" class="pictureClan" src="<?php echo base_url()?>../divers/images/logos/png/logo_technomanciens.png"/>
 
@@ -45,5 +55,7 @@
 <footer>
     <?php $this->load->view('Nav/footer.php') ?>
 </footer>
+
+<script type="text/javascript" src="<?php echo base_url();?>application/JS/colorChanges.js"></script>
 
 </html>

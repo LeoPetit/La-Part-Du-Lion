@@ -15,8 +15,9 @@ class Utilisateur_Model extends CI_Model
     }
 
     public function connection($userName, $userMDP) {
-        $this->db->select('pseudo, mdp, id, gold, equipe_id, email');
+        $this->db->select('pseudo, mdp, utilisateur.id, gold, equipe_id, email, equipe.couleur');
         $this->db->from('utilisateur');
+        $this->db->join('equipe', 'equipe.id=utilisateur.equipe_id');
         $this->db->where('pseudo', $userName);
         $this->db->where('mdp', $userMDP);
         $query = $this->db->get();
