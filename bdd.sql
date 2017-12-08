@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS pointEquipe, coordonnees, quartier, competenceEquipe, competence, inventaire, item, utilisateur, equipe;
+DROP TABLE IF EXISTS pointEquipe, coordonnees, quartier, competenceEquipe, competence, inventaire, mapItem, item, utilisateur, equipe;
 
 CREATE TABLE equipe (
   id         INT NOT NULL AUTO_INCREMENT,
@@ -43,6 +43,18 @@ CREATE TABLE item (
   effet   VARCHAR(25),
 
   PRIMARY KEY (id)
+);
+
+CREATE TABLE mapItem (
+  id INT NOT NULL AUTO_INCREMENT,
+  item_id INT,
+  lat   DOUBLE(8, 6),
+  longi DOUBLE(7, 6),
+  duree INT,
+
+  PRIMARY KEY (id),
+
+  CONSTRAINT fk_map_id_item FOREIGN KEY (item_id) REFERENCES item (id)
 );
 
 CREATE TABLE inventaire (
