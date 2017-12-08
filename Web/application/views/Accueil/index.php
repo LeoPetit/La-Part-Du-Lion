@@ -94,6 +94,7 @@
 </body>
 <footer>
     <?php $this->load->view('Nav/footer.php') ?>
+    <script>$('.nav-item').addClass("btn-group dropup");</script>
 </footer>
 
 </html>

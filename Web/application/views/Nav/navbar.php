@@ -16,7 +16,7 @@
     </button>
 
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <ul class="navbar-nav col-lg-3">
             <li class="nav-item">
