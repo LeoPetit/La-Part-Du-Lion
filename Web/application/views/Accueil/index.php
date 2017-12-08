@@ -13,13 +13,13 @@
     <meta charset="utf-8">
     <title>La Part du Lion</title>
     <?php $this->load->view('Nav/header.php') ?>
-    <?php $this->load->view('Nav/navbar.php') ?>
 </head>
 <body>
     <div class="home"></div>
     <div class="content">
         <img class="home_logo" src="<?php echo base_url()?>../divers/images/logos/png/logo.png" alt="">
         <div class="home_text">La Part du Lion</div>
+        <?php $this->load->view('Nav/navbar.php') ?>
         <div class="infos">
             <div class="details row col-lg-10">
                 <div class="details col-lg-6">
@@ -94,7 +94,6 @@
 </body>
 <footer>
     <?php $this->load->view('Nav/footer.php') ?>
-
 </footer>
 
 </html>
