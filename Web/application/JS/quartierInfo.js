@@ -8,10 +8,9 @@ $(document).ready(function() {
 
     $("#infoQuartier").on("hidden.bs.modal", function () {
         $('#plusInfo').show();
-        $('#plusInfoDiv').html("");
-        $('#plusInfoDivClassement').html("");
-
+        $("#chartContainerInfo").html("");
     });
+
     $("#plusInfo").on("click", function(e){
         $.ajax({
             type : 'POST',
@@ -40,14 +39,21 @@ $(document).ready(function() {
             },
             success: function(data) {
                 classement = data;
-                var affichage ="";
-                for( var i =0; i<classement.length; i++)
-                {
-                    affichage += classement[i].nomClan +" : "+classement[i].nbpoints+" points <br>"
+
+                var chartInfo = new CanvasJS.Chart("chartContainerInfo");
+
+
+                chartInfo.options.title = { text: "Classement" };
+
+                chartInfo.options.data = [];
+                chartInfo.options.data.push({dataPoints: []});
+
+
+                for(var i=0;i<classement.length;i++) {
+                    chartInfo.options.data[0].dataPoints.push({label: classement[i].nomClan, y: parseInt(classement[i].nbpoints)});
                 }
-                $('#plusInfoDivClassement').html(
-                    affichage
-                );
+
+                chartInfo.render();
             },
             error : function(e) {
                 console.log(e);
