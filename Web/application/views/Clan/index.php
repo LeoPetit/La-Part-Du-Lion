@@ -31,7 +31,7 @@
     ?>
 
     <div class="clanStats row col-lg-8">
-        <img id="imageClan" class="pictureClan" src="<?php echo base_url()?>../divers/images/logos/png/logo_technomanciens.png"/>
+        <img id="imageClan" class="pictureClan" src="<?php echo base_url()?>application/assets/images/logos/png/logo_technomanciens.png"/>
 
         <div class="controlMap col-lg-4">
             <h5>Controle de la carte</h5>

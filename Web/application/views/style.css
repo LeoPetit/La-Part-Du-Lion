@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Hind";
-    src: url(../../../divers/fonts/Hind-Medium.ttf);
+    src: url(../assets/fonts/Hind-Medium.ttf);
 }
 
 @font-face {
     font-family: "Carolina Mountains";
-    src: url(../../../divers/fonts/Carolina-Mountains-Personal-Use.ttf);
+    src: url(../assets/fonts/Carolina-Mountains-Personal-Use.ttf);
 }
 
 .lead{
@@ -344,7 +344,7 @@ ul li .animatedItem{
 /*Home*/
 
 .home{
-    background-image: url("../../../divers/images/city.jpg");
+    background-image: url("../assets/images/city.jpg");
     background-clip: padding-box;
     background-position: 20%;
     background-size: 120vw;

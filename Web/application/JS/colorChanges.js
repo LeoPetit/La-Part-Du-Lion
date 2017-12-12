@@ -3,7 +3,7 @@
  */
 
 var urlAjax = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
-var imageUrl = "http://localhost/projet_licence/La-Part-Du-Lion/divers/images/logos/png/" ;
+var imageUrl = "http://localhost/projet_licence/La-Part-Du-Lion/Web/application/assets/images/logos/png/" ;
 
 $(document).ready(function () {
     var couleur = $("#couleurUtilisateur").val();

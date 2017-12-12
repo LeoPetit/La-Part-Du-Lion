@@ -5,12 +5,12 @@
 
 $(function(){
 // On recupere la position du bloc par rapport au haut du site
-    var position_top_raccourci = $(".navbar.navbar-expand-lg").offset().top;
+    var position_top_raccourci = $(".navbar").offset().top;
 
 
 
 
-    if (window.matchMedia('(min-width: 1000px)').matches) {
+    if (window.matchMedia('(min-width: 990px)').matches) {
 
         $('.nav-item').addClass("btn-group dropup");
         $('.logo').removeClass("onDisplay");

@@ -26,11 +26,11 @@
                 <?php echo anchor('index.php/Welcome/show/', 'Forum', 'class="nav-link"') ?>
             </li>
             <li class="nav-item">
-                <?php echo anchor('index.php/Welcome/show/', 'Présentation', 'class="nav-link"') ?>
+                <?php echo anchor('#presentation', 'Présentation', 'class="nav-link" id="presentationButton"') ?>
             </li>
         </ul>
 
-        <a class="brand"><img class="logo" src="<?php echo base_url()?>../divers/images/logos/png/logo.png" alt=""></a>
+        <a class="brand"><img class="logo" src="<?php echo base_url()?>application/assets/images/logos/png/logo.png" alt=""></a>
 
         <ul class="navbar-nav col-lg-3">
             <li class="nav-item dropdown" >

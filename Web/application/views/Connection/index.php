@@ -28,7 +28,7 @@
         if(isset($error) && $error == 'unregistered') {
             echo '<span class="spanError">Vous n\'avez pas de compte</span>';
         } ?>
-        <img class="backLogo" src="<?php echo base_url()?>../divers/images/logos/png/logo.png" />
+        <img class="backLogo" src="<?php echo base_url()?>application/assets/images/logos/png/logo.png" />
         <div class="col-md-6">
             <div id="bloc_Connection" >
 
