@@ -20,7 +20,7 @@
 
 <body>
 
-<h1 style="text-align: center; margin:60px;">Choix du clan</h1>
+<h1 style="text-align: center; margin:100px auto 50px auto;">Choix du clan</h1>
 <?php
     echo form_open("Utilisateur_Controller/enregistrement"/*, 'class = "form_user"'*/);
     echo form_hidden('pseudo', $_POST["pseudo"]);
@@ -257,6 +257,7 @@
 
 <footer>
     <?php $this->load->view('Nav/footer.php') ?>
+
 </footer>
 
 <script type="text/javascript" src="<?php echo base_url();?>application/JS/choixClan.js"></script>

@@ -3,29 +3,15 @@
  */
 
 $(function(){
-// On recupere la position du bloc par rapport au haut du site
     var position_top_raccourci = $(".navbar.navbar-expand-lg").offset().top;
 
-//Au scroll dans la fenetre on déclenche la fonction
-    $(window).scroll(function () {
+    $('.logo').addClass("onDisplay");
+    $('.navtitle').addClass("onDisplay");
 
+    if (window.matchMedia('(max-width: 1000px)').matches) {
 
-//si on a defile de plus de 150px du haut vers le bas
-        if ($(this).scrollTop() > position_top_raccourci) {
+        $('.navbar').addClass("fixed-top");
+    }
 
-//on ajoute la classe "fixNavigation" a <div id="navigation">
-            $('.navbar.navbar-expand-lg').addClass("fixNavigation");
-            $('.nav-item').removeClass("btn-group dropup");
-            $('.logo').addClass("onDisplay");
-            $('.navtitle').addClass("onDisplay");
-
-        } else {
-
-//sinon on retire la classe "fixNavigation" a <div id="navigation">
-            $('.navbar.navbar-expand-lg').removeClass("fixNavigation");
-            $('.nav-item').addClass("btn-group dropup");
-            $('.logo').removeClass("onDisplay");
-            $('.navtitle').removeClass("onDisplay");
-        }
-    });
 });
+

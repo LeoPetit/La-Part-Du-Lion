@@ -95,7 +95,7 @@
 <footer>
     <?php $this->load->view('Nav/footer.php') ?>
     <script src="<?php echo base_url();?>application/JS/home.js"></script>
-    <script src="<?php echo base_url();?>application/JS/navbar.js"></script>
+
 </footer>
 
 </html>
