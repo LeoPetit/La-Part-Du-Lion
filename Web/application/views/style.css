@@ -109,6 +109,8 @@ a.nav-link.connexion{
     font-size: 18px;
 }
 
+
+
 button.navbar-toggler{
     background-color:  #FFFF55;
 }
@@ -347,14 +349,14 @@ ul li .animatedItem{
     background-position: 20%;
     background-size: 120vw;
     width: 100%;
-    height: 830px;
+    min-height: 94vh;
     filter: blur(5px);
 }
 
 @media only screen and (max-width: 990px) {
     .home{
         background-position: 20%;
-        background-size: 250vw;
+        background-size: 280vw;
     }
 }
 
