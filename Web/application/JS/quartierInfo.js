@@ -40,14 +40,19 @@ $(document).ready(function() {
             success: function(data) {
                 classement = data;
 
-                var chartInfo = new CanvasJS.Chart("chartContainerInfo");
+                var colors = [];
+                for(var k=0;k<classement.length;k++) {
+                    colors.push(classement[k].couleur);
+                }
 
+                CanvasJS.addColorSet("customColors", colors);
+
+                var chartInfo = new CanvasJS.Chart("chartContainerInfo", {colorSet: "customColors"});
 
                 chartInfo.options.title = { text: "Classement" };
 
                 chartInfo.options.data = [];
                 chartInfo.options.data.push({dataPoints: []});
-
 
                 for(var i=0;i<classement.length;i++) {
                     chartInfo.options.data[0].dataPoints.push({label: classement[i].nomClan, y: parseInt(classement[i].nbpoints)});
