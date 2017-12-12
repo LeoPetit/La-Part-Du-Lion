@@ -70,7 +70,9 @@ class Utilisateur_Controller extends CI_Controller
             $data["mdp"] = $this->input->post("password");
             $data["email"] = $this->input->post("Mail");
 
-
+            $this->load->model('Equipe_Model', 'e');
+            $result = $this->e->getDescriptionClan();
+            $data["descriptif"] = $result;
             $this->load->view('Clan/choisirClan.php', $data);
         }
     }

@@ -33,13 +33,13 @@
         <li class="listItem">
             <a href="" class="menuItem">Technomancien</a>
             <div class="animatedItem">
-                <h3>Technomancien</h3>
+                <h3><?php echo($descriptif[0]->nom);?></h3>
                 <?php
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<span class="lead" id="content1">Ces savants fous sont des exclus de la société, leurs experiences dont souvent peur aux enfants ainsi qu aux quinquagénaires.</span> ';
+                echo '<span class="lead" id="content1">'.$descriptif[0]->descriptif.'</span> ';
 
                 echo form_label('Choisir ce clan', 'clan1', $attributes);
 
@@ -63,13 +63,13 @@
         <li class="listItem">
             <a href="" class="menuItem">Les résistants</a>
             <div class="animatedItem">
-                <h3>Les résistants</h3>
+                <h3><?php ($descriptif[2]->nom)?></h3>
                 <?php
                     $attributes = array(
                     'class' => 'control-labelCheckBox',
                     );
 
-                    echo '<span class="lead" id="content2">Depuis l aube des temps, les resistants se dressent contre les lois afin d établir les leurs, qu ils trouvent moins débiles.</span> ';
+                    echo '<span class="lead" id="content2">'.$descriptif[2]->descriptif.'</span> ';
 
 
                     echo "</br>";
@@ -91,13 +91,13 @@
         <li class="listItem">
             <a href="" class="menuItem">RedStone</a>
             <div class="animatedItem">
-                <h3>RedStone</h3>
+                <h3><?php ($descriptif[6]->nom)?></h3>
                 <?php
                     $attributes = array(
                         'class' => 'control-labelCheckBox',
                     );
 
-                    echo '<span class="lead" id="content3">C est dans les Redstones que les plus grands bandits et délinquants de notre époque s évicent. C est un endroit dangereux et occupé par les pires malendrins connus. </span> <br/>';
+                    echo '<span class="lead" id="content3">'.$descriptif[6]->descriptif.'</span> <br/>';
 
                     echo form_label('Choisir ce clan', 'clan3', $attributes);
 
@@ -122,13 +122,13 @@
         <li class="listItem">
             <a href="" class="menuItem">La tour</a>
             <div class="animatedItem">
-                <h3>La Tour</h3>
+                <h3><?php ($descriptif[3]->nom)?></h3>
                 <?php
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<span class="lead" id="content4">Une bien belle batisse fut conçu, d après la légende, par le dieu lion. Ses adèptes la protègent toujours au peril de leur vie.</span> <br/>';
+                echo '<span class="lead" id="content4">'.$descriptif[3]->descriptif.'</span> <br/>';
 
 
                 echo form_label('Choisir ce clan', 'clan4', $attributes);
@@ -154,13 +154,13 @@
         <li class="listItem">
             <a href="" class="menuItem">Les Négociants</a>
             <div class="animatedItem">
-                <h3>Les Négociants</h3>
+                <h3><?php ($descriptif[5]->nom)?></h3>
                 <?php
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<span class="lead" id="content5">Les plus fourbes de cette contrée arpentent les rues belfortaines afin de vendre leurs produits les plus rares au plus offrant.</span> <br/>';
+                echo '<span class="lead" id="content5">'.$descriptif[5]->descriptif.'</span> <br/>';
 
                 echo form_label('Choisir ce clan', 'clan5', $attributes);
 
@@ -186,13 +186,13 @@
         <li class="listItem">
             <a href="" class="menuItem">Les Exilés</a>
             <div class="animatedItem">
-                <h3>Les Exilés</h3>
+                <h3><?php ($descriptif[1]->nom)?></h3>
                 <?php
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<span class="lead" id="content6">Les derniers membres de l ancien clan –Ø]‰‰@Ûå– se sont écilés dans la partie plus retranchée de Belfort avant de se venger des clans de la tour et de la fortesresse.</span> <br/>';
+                echo '<span class="lead" id="content6">'.$descriptif[1]->descriptif.'</span> <br/>';
 
                 echo form_label('Choisir ce clan', 'clan6', $attributes);
 
@@ -218,13 +218,13 @@
         <li class="listItem">
             <a href="" class="menuItem">La forteresse</a>
             <div class="animatedItem">
-                <h3>La Forteresse</h3>
+                <h3><?php ($descriptif[4]->nom)?></h3>
                 <?php
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<span class="lead" id="content7">Les défenseurs de cette forteresse gardent un précieux trésor en son sein. Cependant, personne ne sait ce sue c est...</span> <br/>';
+                echo '<span class="lead" id="content7">'.$descriptif[4]->descriptif.'</span> <br/>';
 
                 echo form_label('Choisir ce clan', 'clan7', $attributes);
 
