@@ -40,7 +40,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php echo anchor('Coordonnees_Controller', 'Map', 'class="dropdown-item"') ?>
                     <div class="dropdown-divider"></div>
-                    <?php echo anchor('index.php/Welcome/show/', 'Boutique', 'class="dropdown-item"') ?>
+                    <?php echo anchor('Item_Controller', 'Boutique', 'class="dropdown-item"') ?>
                 </div>
             </li>
 
