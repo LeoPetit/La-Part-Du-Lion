@@ -7,7 +7,7 @@
             echo anchor('Utilisateur_Controller/deconnection/', 'Se déconnecter', 'class="nav-link connexion"');
         }
     ?>
-    <div class="navtitle col-lg-12">La Part du Lion</div>
+    <div  id="test"  class="navtitle col-lg-12">La Part du Lion</div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="icon-bar"></span>
@@ -30,7 +30,7 @@
             </li>
         </ul>
 
-        <a class="brand"><img class="logo" src="<?php echo base_url()?>application/assets/images/logos/png/logo.png" alt=""></a>
+        <a class="brand"><img id="test" class="logo" src="<?php echo base_url()?>application/assets/images/logos/png/logo.png" alt=""></a>
 
         <ul class="navbar-nav col-lg-3">
             <li class="nav-item dropdown" >

@@ -19,8 +19,7 @@
     z-index: 9999;
     position: fixed;
     top: 0;
-    /* Mise en forme */
-    width: 100%; /* <-- Largeur de votre site */
+    width: 100%;
 }
 
 .welcome{
@@ -488,4 +487,57 @@ img.home_logoClan_details{
         margin: 20px auto 0 auto;
     }
 }
+
+/*shop*/
+
+.budgetItem{
+    background-color:black;
+    border-radius: 30px;
+    opacity: 0.8;
+    width: 150px;
+    margin: 70px auto 50px auto;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.budgetItem :nth-child(1){
+    width: 25px;
+}
+
+.articleItem{
+    background-color: #D5D5D5;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin: auto;
+    padding: 10px;
+}
+
+.imgItem{
+    background-color: #A0A0A0;
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 8px;
+}
+
+.prixItem{
+    color: black;
+    font-size: 12px;
+}
+
+.prixItem :nth-child(1){
+    width: 25px;
+    padding-left: 5px;
+}
+
+.moreDetails :nth-child(1){
+    margin-bottom: 5%;
+}
+
+.moreDetails :nth-child(2){
+    font-size: 12px;
+}
+
 
