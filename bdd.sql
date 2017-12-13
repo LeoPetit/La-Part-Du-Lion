@@ -23,9 +23,8 @@ CREATE TABLE utilisateur (
   pseudo      VARCHAR(25),
   mdp         VARCHAR(25),
   email       VARCHAR(25),
-  pointAction INT,
   gold        INT,
-  ressource   INT,
+  pointAction   INT,
   equipe_id   INT,
 
   PRIMARY KEY (id),
@@ -33,9 +32,9 @@ CREATE TABLE utilisateur (
   CONSTRAINT fk_equipe_id_utilisateur FOREIGN KEY (equipe_id) REFERENCES equipe (id)
 );
 
-INSERT INTO utilisateur VALUES (default, 'Leo', '0000', 'test@gmail.com', 4, 150, 10, 1);
-INSERT INTO utilisateur VALUES (default, 'Jeremy', '1111', 'test1@gmail.com', 3, 1550, 10, 2);
-INSERT INTO utilisateur VALUES (default, 'Melvin', '2222', 'test2@gmail.com', 2, 180, 10, 3);
+INSERT INTO utilisateur VALUES (default, 'Leo', '0000', 'test@gmail.com',  150, 10, 1);
+INSERT INTO utilisateur VALUES (default, 'Jeremy', '1111', 'test1@gmail.com', 1550, 10, 2);
+INSERT INTO utilisateur VALUES (default, 'Melvin', '2222', 'test2@gmail.com',  180, 10, 3);
 
 CREATE TABLE item (
   id            INT NOT NULL AUTO_INCREMENT,
