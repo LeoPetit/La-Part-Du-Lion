@@ -7,9 +7,6 @@ $(function(){
 // On recupere la position du bloc par rapport au haut du site
     var position_top_raccourci = $(".navbar").offset().top;
 
-
-
-
     if (window.matchMedia('(min-width: 990px)').matches) {
 
         $('.nav-item').addClass("btn-group dropup");
@@ -17,13 +14,11 @@ $(function(){
         $('.navtitle').removeClass("onDisplay");
     }
 
-
 //Au scroll dans la fenetre on déclenche la fonction
     $(window).scroll(function () {
 
-
 //si on a defile de plus de 150px du haut vers le bas
-        if ($(this).scrollTop() > position_top_raccourci) {
+        if ($(this).scrollTop() > position_top_raccourci-10) {
 
 //on ajoute la classe "fixNavigation" a <div id="navigation">
             $('.navbar.navbar-expand-lg').addClass("fixNavigation");
