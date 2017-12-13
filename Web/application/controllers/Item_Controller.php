@@ -9,6 +9,14 @@
 class Item_Controller extends CI_Controller
 {
     public function index() {
-        $this->load->view("Jeu/boutique.php");
+
+        parent::__construct();
+
+        $this->load->model('Item_Model', 'i');
+        $result = $this->i->getItemInDataBase();
+        $return["items"] = $result;
+        $this->load->view("Jeu/boutique.php",$return);
     }
+
+
 }

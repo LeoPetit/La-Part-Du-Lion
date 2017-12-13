@@ -22,6 +22,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
+<?php
+foreach ($item as $items)
+{
+    // créer une div et affiche l'items
+    echo '<div></div>';
+}
+?>
+
 </body>
 
 <footer>
