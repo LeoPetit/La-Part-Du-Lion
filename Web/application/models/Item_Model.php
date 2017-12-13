@@ -17,12 +17,12 @@ class Item_Model extends CI_Model
     function getItemInDataBase()
     {
         // récupère les items en BDD
-        /*
-        $this->db->select('');
-        $this->db->from('');
+
+        $this->db->select('nom,coutAchat,coutRessource');
+        $this->db->from('item');
         $query = $this->db->get();
 
-        return $query->result();*/
+        return $query->result();
     }
 
     function getItemInInventaire($idJoueur)

@@ -23,13 +23,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <?php
-foreach ($item as $items)
+foreach ($items as $item)
 {
     // créer une div et affiche l'items
     echo '<div class="articleItem">';
-    echo '<div class="imgItem"><img src="application/assets/images/items/'.$item->nom.'.png"> </div>';
+    echo '<div class="imgItem"><img src="'.base_url().'application/assets/images/items/png/'.$item->nom.'.png"> </div>';
     echo '<div class="titreItem">'.$item->nom.'</div>';
-    echo '<div class="prixItem"><img src="application/assets/images/items/monnaie.png">'.$item->coutAchat.'</div>';
+    echo '<div class="prixItem"><img src="'.base_url().'application/assets/images/items/png/monnaie.png">'.$item->coutAchat.'</div>';
+    echo '<div class="titreItem"><p>Utilisation : </p>'.$item->coutRessource.'</div>';
     echo form_radio();
     echo '</div>';
 }
