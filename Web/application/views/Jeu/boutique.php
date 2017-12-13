@@ -26,7 +26,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 foreach ($item as $items)
 {
     // créer une div et affiche l'items
-    echo '<div></div>';
+    echo '<div class="articleItem">';
+    echo '<div class="imgItem"><img src="application/assets/images/items/'.$item->nom.'.png"> </div>';
+    echo '<div class="titreItem">'.$item->nom.'</div>';
+    echo '<div class="prixItem"><img src="application/assets/images/items/monnaie.png">'.$item->coutAchat.'</div>';
+    echo form_radio();
+    echo '</div>';
 }
 ?>
 
