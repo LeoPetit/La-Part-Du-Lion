@@ -41,11 +41,13 @@ CREATE TABLE item (
   nom           VARCHAR(25),
   coutAchat     INT,
   coutRessource INT,
+  libelle VARCHAR(50),
 
   PRIMARY KEY (id)
 );
 
-INSERT INTO item VALUES(default, 'Piege classique', 60, 1);
+INSERT INTO item VALUES(default, 'Piege classique', 60, 1, '+2PC, +60G / -1 PA');
+INSERT INTO item VALUES(default, 'Piege etrange', 20, 2, '+20 G');
 
 CREATE TABLE effet (
   id      INT NOT NULL AUTO_INCREMENT,
@@ -61,6 +63,7 @@ CREATE TABLE effet (
 INSERT INTO effet VALUE (default, '-1 PA', -1, 'Ressource', 'cible');
 INSERT INTO effet VALUE (default, '+2 PC', 2, 'Classement', 'joueur');
 INSERT INTO effet VALUE (default, '+60 G', 60, 'Gold', 'joueur');
+INSERT INTO effet VALUE (default, '+20 G', 20, 'Gold', 'joueur');
 
 CREATE TABLE effetItem (
   id       INT NOT NULL AUTO_INCREMENT,
@@ -76,6 +79,7 @@ CREATE TABLE effetItem (
 INSERT INTO effetItem VALUES (default, 1,1);
 INSERT INTO effetItem VALUES (default, 1,2);
 INSERT INTO effetItem VALUES (default, 1,3);
+INSERT INTO effetItem VALUES (default, 2,4);
 
 CREATE TABLE mapItem (
   id      INT NOT NULL AUTO_INCREMENT,
@@ -99,6 +103,12 @@ CREATE TABLE inventaire (
   CONSTRAINT fk_user_id_inventaire FOREIGN KEY (user_id) REFERENCES utilisateur (id),
   CONSTRAINT fk_item_id_inventaire FOREIGN KEY (item_id) REFERENCES item (id)
 );
+
+INSERT INTO inventaire VALUES(default, 1, 1);
+INSERT INTO inventaire VALUES(default, 1, 1);
+INSERT INTO inventaire VALUES(default, 1, 1);
+INSERT INTO inventaire VALUES(default, 1, 2);
+INSERT INTO inventaire VALUES(default, 2, 1);
 
 CREATE TABLE competence (
   id        INT AUTO_INCREMENT NOT NULL,
@@ -571,4 +581,3 @@ INSERT INTO pointEquipe VALUES (default, 33, 7, 17);
 INSERT INTO pointEquipe VALUES (default, 34, 7, 10);
 INSERT INTO pointEquipe VALUES (default, 35, 7, 10);
 INSERT INTO pointEquipe VALUES (default, 36, 7, 10);
-
