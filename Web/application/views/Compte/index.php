@@ -15,8 +15,6 @@
     <title>Test de la map</title>
     <?php $this->load->view('Nav/header.php') ?>
     <?php $this->load->view('Nav/navbar.php') ?>
-
-
 </head>
 
 

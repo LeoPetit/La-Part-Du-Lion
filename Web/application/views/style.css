@@ -428,11 +428,6 @@ img.phone{
     text-align: justify;
 }
 
-.test{
-    width: 100%;
-    height: 800px;
-}
-
 .leftClan{
     color: white;
     text-align: justify;
@@ -506,16 +501,18 @@ img.home_logoClan_details{
 }
 
 .articleItem{
-    background-color: #D5D5D5;
+    background-color: #A0A0A0;
     border-radius: 10px;
     border: 3px solid black;
     margin: auto;
+    margin-top: 20px;
     padding: 10px;
+    display: inline-flex;
 }
 
 .imgItem{
-    background-color: #A0A0A0;
-    border: 3px solid black;
+    background-color: #505050;
+    border: 3px solid grey;
     width: 100px;
     height: 100px;
     margin: auto;
@@ -525,12 +522,15 @@ img.home_logoClan_details{
 .prixItem{
     color: black;
     font-size: 12px;
+    padding-left: 10%;
+    padding-right: 0;
 }
 
 .prixItem :nth-child(1){
-    width: 25px;
+    width: 20px;
     padding-left: 5px;
 }
+
 
 .moreDetails :nth-child(1){
     margin-bottom: 5%;
@@ -539,5 +539,25 @@ img.home_logoClan_details{
 .moreDetails :nth-child(2){
     font-size: 12px;
 }
+
+.test{
+    margin:auto;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+@media only screen and (max-width: 1400px) {
+
+    .test{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .prixItem{
+        padding-left: 5%;
+        margin-top: 10px;
+    }
+}
+
 
 

@@ -23,26 +23,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div class="budgetItem"> <img src="<?php echo base_url()?>application/assets/images/items/png/monnaie.png"></div>
-<div class="container">
-    <div class="row">
-
+    <div class="test col-lg-10">
         <?php
         foreach ($items as $item)
         {
             // créer une div et affiche l'items
             echo '<div class="articleItem row col-lg-6">';
             echo '<img class="imgItem" src="'.base_url().'application/assets/images/items/png/'.$item->nom.'.png">';
-            echo '<div class="moreDetails col-lg-6">';
+            echo '<div class="moreDetails col-sm-6">';
             echo '<div class="titreItem">'.$item->nom.'</div>';
             echo '<div class="titreItem">fhuezif huzfizhfu izfhu zifh uzihf uizfhuz fhuiz hfui zhfuize </div>';
             echo '</div>';
-            echo '<div class="prixItem">Prix: '.$item->coutAchat.' PA : '.$item->coutRessource.'<img src="'.base_url().'application/assets/images/items/png/monnaie.png"></div>';
+            echo '<div class="prixItem col-md-3">Prix: '.$item->coutAchat.'<img src="'.base_url().'application/assets/images/items/png/monnaie.png"> PA : '.$item->coutRessource.'</div>';
+
             echo '</div>';
 
         }
         ?>
-
-    </div>
 </div>
 
 
