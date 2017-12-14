@@ -18,7 +18,7 @@ $(function(){
     $(window).scroll(function () {
 
 //si on a defile de plus de 150px du haut vers le bas
-        if ($(this).scrollTop() > position_top_raccourci-10) {
+        if ($(this).scrollTop() > position_top_raccourci-20) {
 
 //on ajoute la classe "fixNavigation" a <div id="navigation">
             $('.navbar.navbar-expand-lg').addClass("fixNavigation");
