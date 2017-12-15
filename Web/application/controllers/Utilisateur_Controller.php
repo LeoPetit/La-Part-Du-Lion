@@ -108,4 +108,10 @@ class Utilisateur_Controller extends CI_Controller
         $this->u->UpdateBudget($_SESSION["utilisateur"]->id,$this->input->post("prix"),"diminuer");
         $this->load->view("Jeu/boutique.php");
     }
+
+    public function modification()
+    {
+        $this->load->helper(array('form', 'url'));
+        $this->load->view('Compte/index.php');
+    }
 }

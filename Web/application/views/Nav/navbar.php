@@ -53,7 +53,7 @@
             <li class="nav-item">
                 <?php
                 if(isset($_SESSION["utilisateur"]->pseudo))
-                 echo anchor('index.php/Welcome/show/', 'Mon compte', 'class="nav-link"');
+                 echo anchor('Utilisateur_Controller/modification/', 'Mon compte', 'class="nav-link"');
                 else
                 echo anchor('Utilisateur_Controller', 'Mon compte', 'class="nav-link"');
                 ?>

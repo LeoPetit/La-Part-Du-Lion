@@ -23,7 +23,30 @@
 
 
 <div id="bloc_Compte" >
+    <div class="titre">
+        <?php
+            echo "<h3>Infos compte de ".$_SESSION["utilisateur"]->pseudo."</h3>";
+        ?>
+    </div>
+    <div class="champInfo">
+        <?php
+        echo "<h6>Pseudo ".$_SESSION["utilisateur"]->pseudo."</h6>";
+        ?>
+    </div>
 
+    <div class="champInfo">
+        <?php
+        echo "<h6>mot de passe : </h6><p> ".$_SESSION["utilisateur"]->mdp."</p>";
+        echo anchor('Utilisateur_Controller/modifierInfo/champ/mdp', 'Modifier', 'class="boutonModifiction"');
+        ?>
+    </div>
+    <div class="champInfo">
+        <?php
+        echo "<h6>email : </h6><p>".$_SESSION["utilisateur"]->email."</p>";
+        echo anchor('Utilisateur_Controller/modifierInfo/champ/email', 'Modifier', 'class="boutonModifiction"');
+        ?>
+    </div>
+    </div>
 </div>
 
 
