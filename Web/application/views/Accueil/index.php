@@ -13,6 +13,7 @@
 <head>
     <meta charset="utf-8">
     <title>La Part du Lion</title>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>application/CSS/home.css">
     <?php $this->load->view('Nav/header.php') ?>
 </head>
 <body>
@@ -89,7 +90,8 @@
                     <div class="moreDetails col-lg-6">
                         <h4><?php echo($descriptif[4]->nom);?></h4>
                         <p class="lead"><?php echo( $descriptif[4]->descriptif);?></p>
-                    </div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

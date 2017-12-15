@@ -17,13 +17,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta charset="utf-8">
     <title>Test de la map</title>
     <?php $this->load->view("Nav/header.php") ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>application/CSS/boutique.css">
     <?php $this->load->view("Nav/navbar.php") ?>
 </head>
 
 <body>
 
 <div class="budgetItem"><?php echo $_SESSION["utilisateur"]->gold?> <img src="<?php echo base_url()?>application/assets/images/items/png/monnaie.png"></div>
-    <div class="test col-lg-10">
+    <div class="shopContent col-lg-10">
         <?php
         foreach ($items as $item)
         {
@@ -40,6 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         }
         ?>
+    </div>
 </div>
 
 

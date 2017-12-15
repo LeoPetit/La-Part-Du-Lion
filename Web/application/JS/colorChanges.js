@@ -36,4 +36,5 @@ $(document).ready(function () {
     $(".navbar").css("background-color", couleur);
     $(".controlMap").css("background-color", couleur);
     $(".elemClan").css("background-color", couleur);
+    $(".dropdown-menu").css("background-color", couleur);
 });
