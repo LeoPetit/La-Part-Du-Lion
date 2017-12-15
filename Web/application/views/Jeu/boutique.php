@@ -24,14 +24,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div class="budgetItem"><?php echo $_SESSION["utilisateur"]->gold?> <img src="<?php echo base_url()?>application/assets/images/items/png/monnaie.png"></div>
-    <div class="shopContent col-lg-10">
+    <div class="shopContent col-lg-12">
         <?php
         foreach ($items as $item)
         {
             // créer une div et affiche l'items
-            echo '<div class="articleItem row col-lg-6">';
+            echo '<div class="articleItem col-lg-5">';
             echo '<img class="imgItem" src="'.base_url().'application/assets/images/items/png/'.$item->nom.'.png">';
-            echo '<div class="moreDetails col-sm-6">';
+            echo '<div class="moreDetails col-sm-5">';
             echo '<div class="titreItem">'.$item->nom.'</div>';
             echo '<div class="titreItem">fhuezif huzfizhfu izfhu zifh uzihf uizfhuz fhuiz hfui zhfuize </div>';
             echo '</div>';

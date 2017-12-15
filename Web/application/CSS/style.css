@@ -88,12 +88,6 @@ div.dropdown-menu.show{
     display: block;
 }
 
-@media only screen and (max-width: 990px) {
-    .logo{
-        display: none;
-    }
-}
-
 a.nav-link.connexion{
     position: absolute;
     display: block;
@@ -108,8 +102,36 @@ a.nav-link.connexion{
     font-size: 18px;
 }
 
+a.nav-link.phoneConnexion{
+    display: none;
+    color: white;
+}
+
+a.nav-link.phoneDeconnexion{
+    display: none;
+    color: red;
+}
+
 button.navbar-toggler{
     background-color:  #FFFF55;
+}
+
+@media only screen and (max-width: 990px) {
+    .logo{
+        display: none;
+    }
+
+    a.nav-link.phoneConnexion{
+        display: block
+    }
+
+    a.nav-link.phoneDeconnexion{
+        display: block
+    }
+
+    a.nav-link.connexion{
+        display: none;
+    }
 }
 
 

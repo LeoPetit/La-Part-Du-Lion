@@ -74,6 +74,15 @@
                     <?php echo anchor('index.php/Welcome/show/', 'Arbre de compétences', 'class="dropdown-item"') ?>
                 </div>
             </li>
+            <li class="nav-item">
+                <?php
+                if(!isset($_SESSION["utilisateur"]->pseudo)) {
+                    echo anchor('Utilisateur_Controller', 'Se connecter', 'class="nav-link phoneConnexion"');
+                } else {
+                    echo anchor('Utilisateur_Controller/deconnection/', 'Se déconnecter', 'class="nav-link phoneDeconnexion"');
+                }
+                ?>
+            </li>
         </ul>
 
 <!--        <form class="form-inline ">-->
