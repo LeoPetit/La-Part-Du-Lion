@@ -1,0 +1,31 @@
+/*Clan*/
+.controlMap{
+    margin: 110px auto 20px auto;
+    padding: 5% 0 5% 0;
+    opacity: 0.8;
+    background-color: #36003A;
+    border-radius: 20px;
+    height: 50%;
+}
+
+.clanStats{
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+
+.elemClan{
+    margin: 100px auto 20px auto;
+    opacity: 0.8;
+    background-color: #36003A;
+    border-radius: 20px;
+}
+
+.pictureClan {
+    margin: 100px auto auto auto;
+    height: 250px;
+}
+
+.mapControl{
+    font-size: 400%;
+}
