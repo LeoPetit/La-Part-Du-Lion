@@ -118,7 +118,6 @@ button.navbar-toggler{
 .form_user{
     text-align: center;
     color: white;
-
     margin-left: auto;
     margin-right: auto;
     padding: 10% 20% 10% 20%;
@@ -174,6 +173,24 @@ button.navbar-toggler{
     margin-left: auto;
     margin-right: auto;
     height: 50%;
+}
+
+@media only screen and (max-width: 990px) {
+    .form.row{
+        margin-top: 40%;
+    }
+
+    .validConnexion{
+        margin-top: 0;
+    }
+
+    .validRegister{
+        margin-top: 0;
+    }
+
+    .backLogo{
+        opacity: 0;
+    }
 }
 
 /*choose clan*/
@@ -490,7 +507,7 @@ img.home_logoClan_details{
     border-radius: 30px;
     opacity: 0.8;
     width: 150px;
-    margin: 70px auto 50px auto;
+    margin: 130px auto 50px auto;
     color: white;
     text-align: center;
     padding: 5px;
@@ -540,7 +557,7 @@ img.home_logoClan_details{
     font-size: 12px;
 }
 
-.test{
+.shopContent{
     margin:auto;
     padding-left: 150px;
     padding-right: 150px;
@@ -548,7 +565,7 @@ img.home_logoClan_details{
 
 @media only screen and (max-width: 1400px) {
 
-    .test{
+    .shopContent{
         padding-left: 50px;
         padding-right: 50px;
     }
