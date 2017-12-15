@@ -40,12 +40,23 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php echo anchor('Coordonnees_Controller', 'Map', 'class="dropdown-item"') ?>
                     <div class="dropdown-divider"></div>
-                    <?php echo anchor('Item_Controller', 'Boutique', 'class="dropdown-item"') ?>
+
+                    <?php
+                    if(isset($_SESSION["utilisateur"]->pseudo))
+                        echo anchor('Item_Controller', 'Boutique', 'class="dropdown-item"');
+                    else
+                        echo anchor('Utilisateur_Controller', 'Boutique', 'class="dropdown-item"');
+                    ?>
                 </div>
             </li>
 
             <li class="nav-item">
-                <?php echo anchor('index.php/Welcome/show/', 'Mon compte', 'class="nav-link"') ?>
+                <?php
+                if(isset($_SESSION["utilisateur"]->pseudo))
+                 echo anchor('index.php/Welcome/show/', 'Mon compte', 'class="nav-link"');
+                else
+                echo anchor('Utilisateur_Controller', 'Mon compte', 'class="nav-link"');
+                ?>
             </li>
 
             <li class="nav-item dropdown">
