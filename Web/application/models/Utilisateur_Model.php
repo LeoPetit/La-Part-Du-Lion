@@ -28,4 +28,24 @@ class Utilisateur_Model extends CI_Model
     public function enregistrement($data) {
         $this->db->insert('utilisateur', $data);
     }
+    public function addItemInInventaire($idJoueur)
+    {
+
+    }
+    public function updateBudget($idJoueur,$prix,$transaction)
+    {
+        if ($transaction =="diminuer")
+        {
+            // problème avec $prix
+            $this->db->set('gold', 'gold-'.$prix, FALSE);
+            $this->db->where('id', $idJoueur);
+            $this->db->update('Utilisateur');
+        }
+        else
+        {
+            $this->db->set('gold', 'gold+'.$prix, FALSE);
+            $this->db->where('id', $idJoueur);
+            $this->db->update('Utilisateur');
+        }
+    }
 }

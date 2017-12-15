@@ -100,4 +100,12 @@ class Utilisateur_Controller extends CI_Controller
         unset($_SESSION["utilisateur"]);
         $this->load->view("Accueil/index.php");
     }
+
+    public function achat()
+    {
+        $this->load->model('Utilisateur_Model', 'u');
+        $this->u->addItemInInventaire($_SESSION["utilisateur"]->id,$this->input->post("item_id"));
+        $this->u->UpdateBudget($_SESSION["utilisateur"]->id,$this->input->post("prix"),"diminuer");
+        $this->load->view("Jeu/boutique.php");
+    }
 }

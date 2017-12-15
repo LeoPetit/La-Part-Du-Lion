@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
-<div class="budgetItem"> <img src="<?php echo base_url()?>application/assets/images/items/png/monnaie.png"></div>
+<div class="budgetItem"><?php echo $_SESSION["utilisateur"]->gold?> <img src="<?php echo base_url()?>application/assets/images/items/png/monnaie.png"></div>
     <div class="test col-lg-10">
         <?php
         foreach ($items as $item)
@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             echo '<div class="titreItem">fhuezif huzfizhfu izfhu zifh uzihf uizfhuz fhuiz hfui zhfuize </div>';
             echo '</div>';
             echo '<div class="prixItem col-md-3">Prix: '.$item->coutAchat.'<img src="'.base_url().'application/assets/images/items/png/monnaie.png"> PA : '.$item->coutRessource.'</div>';
-
+            //echo anchor('Utilisateur_Controller/achat/item_id/'.$item->id."/prix/".$item->coutAchat, 'Acheter', 'class="boutonAchat"');
             echo '</div>';
 
         }

@@ -8,10 +8,15 @@
  */
 class Item_Controller extends CI_Controller
 {
-    public function index() {
 
+    function __construct()
+    {
         parent::__construct();
+        $this->load->library('session');
 
+    }
+
+    public function index() {
         $this->load->model('Item_Model', 'i');
         $result = $this->i->getItemInDataBase();
         $return["items"] = $result;

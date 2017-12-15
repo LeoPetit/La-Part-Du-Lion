@@ -18,7 +18,7 @@ class Item_Model extends CI_Model
     {
         // récupère les items en BDD
 
-        $this->db->select('nom,coutAchat,coutRessource');
+        $this->db->select('id,nom,coutAchat,coutRessource');
         $this->db->from('item');
         $query = $this->db->get();
 
