@@ -104,7 +104,7 @@ class Utilisateur_Controller extends CI_Controller
     public function achat()
     {
         $this->load->model('Utilisateur_Model', 'u');
-        $this->u->addItemInInventaire($_SESSION["utilisateur"]->id,$this->input->post("item_id"));
+        //$this->u->addItemInInventaire($_SESSION["utilisateur"]->id,$this->input->post("item_id"));
         $this->u->UpdateBudget($_SESSION["utilisateur"]->id,$this->input->post("prix"),"diminuer");
         $this->load->view("Jeu/boutique.php");
     }
@@ -113,5 +113,39 @@ class Utilisateur_Controller extends CI_Controller
     {
         $this->load->helper(array('form', 'url'));
         $this->load->view('Compte/index.php');
+    }
+    public function updateMdp($idJoueur)
+    {
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('password', 'mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('Compte/index.php');
+        }
+        else
+        {
+            $data["mdp"] = $this->input->post("password");
+            $this->load->model('Utilisateur_Model', 'u');
+            $this->u->UpdateUser($data,$idJoueur);
+            $this->load->view('Compte/index.php');
+        }
+
+    }
+    public function updateEmail($idJoueur)
+    {
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('Mail', 'email', 'trim|required|valid_email', array('required' => 'Vous devez entrer un %s', 'is_unique' => '%s existe déjà', 'valid_email' => 'Vous devez entrer un %s valide'));
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('Compte/index.php');
+        }
+        else
+        {
+            $data["email"] = $this->input->post("Mail");
+            $this->load->model('Utilisateur_Model', 'u');
+            $this->u->UpdateUser($data,$idJoueur);
+            $this->load->view('Compte/index.php');
+        }
+
     }
 }
