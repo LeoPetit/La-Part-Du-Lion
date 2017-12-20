@@ -14,6 +14,13 @@ $(function(){
         $('.navtitle').removeClass("onDisplay");
     }
 
+    if ($(this).scrollTop() > position_top_raccourci-20) {
+        $('.welcome').removeClass("center");
+    }
+    else{
+        $('.welcome').addClass("center");
+    }
+
 //Au scroll dans la fenetre on déclenche la fonction
     $(window).scroll(function () {
 
@@ -25,12 +32,15 @@ $(function(){
             $('.nav-item').removeClass("btn-group dropup");
             $('.logo').addClass("onDisplay");
             $('.navtitle').addClass("onDisplay");
+            $('.welcome').removeClass("center");
 
         } else {
 
 //sinon on retire la classe "fixNavigation" a <div id="navigation">
             $('.navbar.navbar-expand-lg').removeClass("fixNavigation");
             $('.logo').removeClass("onDisplay");
+            $('.welcome').addClass("center");
+
             if (window.matchMedia('(min-width: 1000px)').matches) {
                 $('.navtitle').removeClass("onDisplay");
                 $('.nav-item').addClass("btn-group dropup");

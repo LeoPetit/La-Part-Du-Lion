@@ -24,9 +24,16 @@
 
 .welcome{
     position: absolute;
-    left: 2%;
+    right: 200px;
+    top: 18px;
     color: white;
     font-size: 16px;
+}
+
+.center{
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 
 nav.navbar.navbar-expand-lg{
@@ -94,11 +101,19 @@ a.nav-link.connexion{
     top: 5%;
     right: 1%;
     z-index: 11;
-    opacity: 0.70;
-    padding: 0 20px 0 20px;
-    background-color: #001050;
-    color: #FFFF55;
-    border: 1px solid darkgray;
+    padding: 10px 20px 0 20px;
+    color: white;
+    font-size: 18px;
+}
+
+a.nav-link.deconnexion{
+    position: absolute;
+    display: block;
+    top: 5%;
+    right: 1%;
+    z-index: 11;
+    padding: 10px 20px 0 20px;
+    color: red;
     font-size: 18px;
 }
 
@@ -112,8 +127,13 @@ a.nav-link.phoneDeconnexion{
     color: red;
 }
 
-button.navbar-toggler{
-    background-color:  #FFFF55;
+.icon-bar{
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-top: 5px;
+    background-color: #FFFF55;
+    border-radius: 1px;
 }
 
 @media only screen and (max-width: 990px) {
@@ -130,7 +150,20 @@ button.navbar-toggler{
     }
 
     a.nav-link.connexion{
+         display: none;
+    }
+
+    a.nav-link.deconnexion{
         display: none;
+    }
+
+    .welcome{
+        display: none;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding-left: 1rem;
+
     }
 }
 
