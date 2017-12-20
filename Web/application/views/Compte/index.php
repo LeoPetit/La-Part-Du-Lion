@@ -37,6 +37,7 @@
 
         <div class="champInfo">
             <?php
+            echo form_open("Utilisateur_Controller/updateMdp", 'class = "form_user"');
             echo "<h6>mot de passe : ".$_SESSION["utilisateur"]->mdp."</h6>";
             $attributes = array(
                 'class' => 'control-label',
@@ -51,8 +52,8 @@
                 'placeholder' => 'Mot de passe',
             );
 
-            echo form_input($data);
-            echo anchor('Utilisateur_Controller/modifierInfo/champ/mdp', 'Modifier', 'class="boutonModification"');
+            echo form_input('Mot de passe', 'password',$data);
+            echo anchor('Utilisateur_Controller/updateMdp/', 'Modifier', 'class="boutonModification"');
             ?>
         </div>
         <div class="champInfo">
@@ -71,9 +72,16 @@
                 'placeholder' => 'mail',
             );
 
-            echo form_input($data);
-            echo anchor('Utilisateur_Controller/modifierInfo/champ/email', 'Modifier', 'class="boutonModification"');
+            echo form_input('Mail', 'mail',$data);
+            $data = array(
+                'name'          => 'Modifier',
+                'class'         => 'boutonModification',
+                'value'         => 'Modifier',
+            );
+
+            echo form_submit($data);
             ?>
+            </form>
         </div>
 
     </div>
