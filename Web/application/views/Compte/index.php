@@ -22,30 +22,60 @@
 <body>
 
 
-<div id="bloc_Compte" >
+<div class="bloc_compte col-lg-6" >
     <div class="titre">
         <?php
-            echo "<h3>Infos compte de ".$_SESSION["utilisateur"]->pseudo."</h3>";
+        echo "<h3>Infos compte de ".$_SESSION["utilisateur"]->pseudo."</h3>";
         ?>
     </div>
-    <div class="champInfo">
-        <?php
-        echo "<h6>Pseudo ".$_SESSION["utilisateur"]->pseudo."</h6>";
-        ?>
-    </div>
+    <div class="info_compte">
+        <div class="champInfo">
+            <?php
+            echo "<h6>Pseudo : ".$_SESSION["utilisateur"]->pseudo."</h6>";
+            ?>
+        </div>
 
-    <div class="champInfo">
-        <?php
-        echo "<h6>mot de passe : </h6><p> ".$_SESSION["utilisateur"]->mdp."</p>";
-        echo anchor('Utilisateur_Controller/modifierInfo/champ/mdp', 'Modifier', 'class="boutonModifiction"');
-        ?>
-    </div>
-    <div class="champInfo">
-        <?php
-        echo "<h6>email : </h6><p>".$_SESSION["utilisateur"]->email."</p>";
-        echo anchor('Utilisateur_Controller/modifierInfo/champ/email', 'Modifier', 'class="boutonModifiction"');
-        ?>
-    </div>
+        <div class="champInfo">
+            <?php
+            echo "<h6>mot de passe : ".$_SESSION["utilisateur"]->mdp."</h6>";
+            $attributes = array(
+                'class' => 'control-label',
+            );
+
+            $data = array(
+                'name'          => 'Password',
+                'id'            => 'Password',
+                'class'         => 'inputData',
+                'type'          => 'password',
+                'value'         => '',
+                'placeholder' => 'Mot de passe',
+            );
+
+            echo form_input($data);
+            echo anchor('Utilisateur_Controller/modifierInfo/champ/mdp', 'Modifier', 'class="boutonModification"');
+            ?>
+        </div>
+        <div class="champInfo">
+            <?php
+            echo "<h6>email :".$_SESSION["utilisateur"]->email."</h6>";
+            $attributes = array(
+                'class' => 'control-label',
+            );
+
+            $data = array(
+                'name'          => 'mail',
+                'id'            => 'mail',
+                'class'         => 'inputData',
+                'type'          => 'text',
+                'value'         => '',
+                'placeholder' => 'mail',
+            );
+
+            echo form_input($data);
+            echo anchor('Utilisateur_Controller/modifierInfo/champ/email', 'Modifier', 'class="boutonModification"');
+            ?>
+        </div>
+
     </div>
 </div>
 

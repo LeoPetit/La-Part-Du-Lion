@@ -1,0 +1,54 @@
+.info_compte{
+    margin:30px;
+
+}
+
+.bloc_compte{
+    margin:auto;
+    margin-top: 100px;
+    width: 30%;
+    border-radius: 20px;
+    background-color: #A0A0A0;
+    color: white;
+    padding: 20px;
+}
+.titre{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.champInfo{
+    margin: auto;
+    margin-top: 15px;
+    display: inline-flex;
+}
+
+.boutonModification{
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px 30px 5px 30px;
+    font-size: 12px;
+}
+
+.boutonModification:hover{
+    background-color: #FFFF55;
+    text-decoration: none;
+}
+
+.inputData{
+    background-color: #505050;
+    margin: auto;
+    opacity: 0.8;
+    border: 1px solid white;
+    width: 300px;
+    color: white;
+    margin-right: 80px;
+    margin-left: 50px;
+}
+
+input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
