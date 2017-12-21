@@ -22,19 +22,17 @@ class Utilisateur_Controller extends CI_Controller
         $this->load->view('Connection/index.php');
     }
 
-    public function connection() {
+    public function connection()
+    {
 
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('pseudo', 'pseudo', 'required', array('required' => 'Vous devez entrer un %s'));
         $this->form_validation->set_rules('Password', 'mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
 
-        if ($this->form_validation->run() == FALSE)
-        {
+        if ($this->form_validation->run() == FALSE) {
             $this->load->view('Connection/index.php');
-        }
-        else
-        {
+        } else {
             $userName = $this->input->post("pseudo");
             $mdp = $this->input->post("Password");
 
@@ -42,7 +40,7 @@ class Utilisateur_Controller extends CI_Controller
 
             $isRegistered = $this->u->connection($userName, $mdp);
 
-            if(empty($isRegistered)) {
+            if (empty($isRegistered)) {
                 $data["error"] = "unregistered";
                 $this->load->view('Connection/index.php', $data);
             } else {
@@ -52,7 +50,8 @@ class Utilisateur_Controller extends CI_Controller
         }
     }
 
-    public function preEnregistrement() {
+    public function preEnregistrement()
+    {
 
         $this->load->library('form_validation');
 
@@ -60,12 +59,9 @@ class Utilisateur_Controller extends CI_Controller
         $this->form_validation->set_rules('Mail', 'email', 'trim|required|valid_email', array('required' => 'Vous devez entrer un %s', 'is_unique' => '%s existe déjà', 'valid_email' => 'Vous devez entrer un %s valide'));
         $this->form_validation->set_rules('password', 'mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
 
-        if ($this->form_validation->run() == FALSE)
-        {
+        if ($this->form_validation->run() == FALSE) {
             $this->load->view('Connection/index.php');
-        }
-        else
-        {
+        } else {
             $data["pseudo"] = $this->input->post("pseudo");
             $data["mdp"] = $this->input->post("password");
             $data["email"] = $this->input->post("Mail");
@@ -77,7 +73,8 @@ class Utilisateur_Controller extends CI_Controller
         }
     }
 
-    public function enregistrement() {
+    public function enregistrement()
+    {
 
         $data["pseudo"] = $this->input->post("pseudo");
         $data["mdp"] = $this->input->post("password");
@@ -96,7 +93,8 @@ class Utilisateur_Controller extends CI_Controller
         $this->load->view('Accueil/index.php');
     }
 
-    public function deconnection() {
+    public function deconnection()
+    {
         unset($_SESSION["utilisateur"]);
         $this->load->view("Accueil/index.php");
     }
@@ -105,7 +103,7 @@ class Utilisateur_Controller extends CI_Controller
     {
         $this->load->model('Utilisateur_Model', 'u');
         //$this->u->addItemInInventaire($_SESSION["utilisateur"]->id,$this->input->post("item_id"));
-        $this->u->UpdateBudget($_SESSION["utilisateur"]->id,$this->input->post("prix"),"diminuer");
+        $this->u->UpdateBudget($_SESSION["utilisateur"]->id, $this->input->post("prix"), "diminuer");
         $this->load->view("Jeu/boutique.php");
     }
 
@@ -114,41 +112,38 @@ class Utilisateur_Controller extends CI_Controller
         $this->load->helper(array('form', 'url'));
         $this->load->view('Compte/index.php');
     }
+
     public function updateMdp()
     {
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('password', 'Mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
-        if ($this->form_validation->run() == FALSE)
-        {
-            echo 'error';
 
-           // $this->load->view('Compte/index.php');
+        $this->form_validation->set_rules('password', 'mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
 
-        }
-        else
-        {
+        if ($this->form_validation->run() == FALSE) {
+
+            $this->load->view('Compte/index.php');
+
+        } else {
             $idJoueur = $this->session->utilisateur->id;
             $data["mdp"] = $this->input->post("password");
             $this->load->model('Utilisateur_Model', 'u');
-            $this->u->UpdateUser($data,$idJoueur);
+            $this->u->UpdateUser($data, $idJoueur);
             $this->load->view('Compte/index.php');
         }
 
     }
+
     public function updateEmail()
     {
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('Mail', 'email', 'trim|required|valid_email', array('required' => 'Vous devez entrer un %s', 'is_unique' => '%s existe déjà', 'valid_email' => 'Vous devez entrer un %s valide'));
-        if ($this->form_validation->run() == FALSE)
-        {
+        $this->form_validation->set_rules('mail', 'email', 'trim|required|valid_email', array('required' => 'Vous devez entrer un %s', 'is_unique' => '%s existe déjà', 'valid_email' => 'Vous devez entrer un %s valide'));
+        if ($this->form_validation->run() == FALSE) {
             $this->load->view('Compte/index.php');
-        }
-        else
-        {
+        } else {
             $idJoueur = $this->session->utilisateur->id;
-            $data["email"] = $this->input->post("Mail");
+            $data["email"] = $this->input->post("mail");
             $this->load->model('Utilisateur_Model', 'u');
-            $this->u->UpdateUser($data,$idJoueur);
+            $this->u->UpdateUser($data, $idJoueur);
             $this->load->view('Compte/index.php');
         }
 
