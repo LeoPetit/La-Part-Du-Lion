@@ -128,6 +128,7 @@ class Utilisateur_Controller extends CI_Controller
             $data["mdp"] = $this->input->post("password");
             $this->load->model('Utilisateur_Model', 'u');
             $this->u->UpdateUser($data, $idJoueur);
+            $_SESSION["utilisateur"]->mdp =  $data["mdp"];
             $this->load->view('Compte/index.php');
         }
 
@@ -144,6 +145,7 @@ class Utilisateur_Controller extends CI_Controller
             $data["email"] = $this->input->post("mail");
             $this->load->model('Utilisateur_Model', 'u');
             $this->u->UpdateUser($data, $idJoueur);
+            $_SESSION["utilisateur"]->email =  $data["email"];
             $this->load->view('Compte/index.php');
         }
 
