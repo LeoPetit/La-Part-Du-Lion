@@ -26,7 +26,7 @@
                 <?php echo anchor('index.php/Welcome/show/', 'Forum', 'class="nav-link"') ?>
             </li>
             <li class="nav-item">
-                <?php echo anchor('#presentation', 'Présentation', 'class="nav-link" id="presentationButton"') ?>
+                <?php echo anchor('Utilisateur_Controller', 'télécharger', 'class="nav-link" id="presentationButton"') ?>
             </li>
         </ul>
 

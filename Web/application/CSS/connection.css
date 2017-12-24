@@ -59,25 +59,6 @@
     height: 50%;
 }
 
-@media only screen and (max-width: 990px) {
-    .form.row{
-        margin-top: 40%;
-    }
-
-    .validConnexion{
-        margin-top: 0;
-    }
-
-    .validRegister{
-        margin-top: 0;
-    }
-
-    .backLogo{
-        opacity: 0;
-    }
-}
-
-
 /*choose clan*/
 ul li:hover .animatedItem{
     opacity:1;
@@ -99,8 +80,73 @@ ul li .animatedItem{
     transition:0.5s left,0.5s width,0.5s opacity;
 }
 
+.menu{
+    border-radius: 7%;
+    background-color: #A0A0A0;
+    color: white;
+    position: absolute;
+    left: 30%;
+}
+
+.menuItem{
+    font-weight: bold;
+    color: white;
+    font-size: 1.8em;
+}
+
+.listItem{
+    height: 40px;
+    list-style-type: none;
+    padding-right: 20px;
+}
+
+.control-labelCheckBox{
+    border: 4px solid white;
+    border-radius: 20px;
+    padding: 5px 30px;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    margin: 35px;
+}
+
+#validationButton{
+    position: absolute;
+    z-index: 0;
+    top: 80%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+.spanError{
+    position: absolute;
+    left:0;
+    right:0;
+    margin: auto;
+    text-align: center;
+    color: red
+}
 
 @media only screen and (max-width: 990px) {
+
+    .form.row{
+        margin-top: 40%;
+    }
+
+    .validConnexion{
+        margin-top: 0;
+    }
+
+    .validRegister{
+        margin-top: 0;
+    }
+
+    .backLogo{
+        opacity: 0;
+    }
 
     img.img-responsive.logo{
         display:none;
@@ -126,50 +172,10 @@ ul li .animatedItem{
         opacity:0;
         transition:0.5s left,0.5s height,0.5s opacity;
     }
-}
 
-
-.menu{
-    border-radius: 7%;
-    background-color: #A0A0A0;
-    color: white;
-    position: absolute;
-    left: 30%;
-
-}
-
-.menuItem{
-    font-weight: bold;
-    color: white;
-    font-size: 1.8em;
-}
-
-.listItem{
-    height: 40px;
-    list-style-type: none;
-    padding-right: 20px;
-
-}
-
-.control-labelCheckBox{
-    border: 4px solid white;
-    border-radius: 20px;
-    padding: 5px 30px;
-    background-color: black;
-    font-weight: bold;
-    color: white;
-    margin: 35px;
-}
-
-#validationButton{
-    position: absolute;
-    z-index: 0;
-    top: 80%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 250px;
+    .menu{
+        left: 26%;
+    }
 }
 
 

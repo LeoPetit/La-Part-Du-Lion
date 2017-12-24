@@ -58,7 +58,6 @@ nav.navbar.navbar-expand-lg{
 
 .navbar-expand-lg .navbar-nav .nav-link{
     padding-left: 2rem;
-
 }
 
 a.dropdown-item{
@@ -135,6 +134,59 @@ a.nav-link.phoneDeconnexion{
     background-color: #FFFF55;
     border-radius: 1px;
 }
+/*footer*/
+.footerContent{
+    height: 38vh;
+    background-color: black;
+    color: white;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.linksContent{
+    border-right: 1px solid white;
+}
+
+.footerContent p{
+    margin: 15%;
+    text-align: center;
+}
+
+.networks p{
+    margin: auto;
+    margin-top: 70px;
+}
+
+.androidButtonFooter{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 250px;
+}
+
+.networks{
+    text-align: center;
+}
+
+.networksButton{
+}
+
+.facebook{
+    width: 50px;
+    height: 50px;
+}
+
+.twitter{
+    width: 50px;
+    height: 50px;
+    padding:5px;
+}
+
+.youtube{
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+}
 
 @media only screen and (max-width: 990px) {
     .logo{
@@ -163,7 +215,35 @@ a.nav-link.phoneDeconnexion{
 
     .navbar-expand-lg .navbar-nav .nav-link{
         padding-left: 1rem;
+    }
 
+    .footerContent{
+        margin-top: 100px;
+        height: 500px;
+    }
+
+    .linksContent{
+        border-right: 0;
+        border-bottom: 1px solid white;
+    }
+
+    .networks p{
+        margin-top: 20px;
+    }
+
+    .androidButtonFooter{
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .networks{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footerContent p{
+        margin: 7%;
+        text-align: center;
     }
 }
 

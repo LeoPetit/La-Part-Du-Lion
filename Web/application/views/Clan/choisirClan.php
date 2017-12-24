@@ -64,7 +64,7 @@
         <li class="listItem">
             <a href="" class="menuItem">Les résistants</a>
             <div class="animatedItem">
-                <h3><?php ($descriptif[2]->nom)?></h3>
+                <h3><?php echo($descriptif[2]->nom)?></h3>
                 <?php
                     $attributes = array(
                     'class' => 'control-labelCheckBox',
@@ -92,7 +92,7 @@
         <li class="listItem">
             <a href="" class="menuItem">RedStone</a>
             <div class="animatedItem">
-                <h3><?php ($descriptif[6]->nom)?></h3>
+                <h3><?php echo($descriptif[6]->nom)?></h3>
                 <?php
                     $attributes = array(
                         'class' => 'control-labelCheckBox',
@@ -123,7 +123,7 @@
         <li class="listItem">
             <a href="" class="menuItem">La tour</a>
             <div class="animatedItem">
-                <h3><?php ($descriptif[3]->nom)?></h3>
+                <h3><?php echo($descriptif[3]->nom)?></h3>
                 <?php
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
@@ -155,7 +155,7 @@
         <li class="listItem">
             <a href="" class="menuItem">Les Négociants</a>
             <div class="animatedItem">
-                <h3><?php ($descriptif[5]->nom)?></h3>
+                <h3><?php echo($descriptif[5]->nom)?></h3>
                 <?php
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
@@ -187,7 +187,7 @@
         <li class="listItem">
             <a href="" class="menuItem">Les Exilés</a>
             <div class="animatedItem">
-                <h3><?php ($descriptif[1]->nom)?></h3>
+                <h3><?php echo($descriptif[1]->nom)?></h3>
                 <?php
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
@@ -219,7 +219,7 @@
         <li class="listItem">
             <a href="" class="menuItem">La forteresse</a>
             <div class="animatedItem">
-                <h3><?php ($descriptif[4]->nom)?></h3>
+                <h3><?php echo($descriptif[4]->nom)?></h3>
                 <?php
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
@@ -258,7 +258,6 @@
 
 <footer>
     <?php $this->load->view('Nav/footer.php') ?>
-
 </footer>
 
 <script type="text/javascript" src="<?php echo base_url();?>application/JS/choixClan.js"></script>

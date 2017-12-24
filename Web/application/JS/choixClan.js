@@ -18,3 +18,7 @@ $("input[id*='clan']").click(function() {
     $("#content"+id).show();
     $('#validationButton').prop("disabled",false);
 });
+
+$("footer").each(function() {
+    $(this).hide();
+});

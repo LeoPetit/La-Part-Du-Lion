@@ -7,6 +7,23 @@
  */
 ?>
 
+<div class="footerContent row col-lg-12">
+    <div class="linksContent col-lg-8">
+        <p>©2017 ZBEUBOUILLE ENTERTAINMENT, INC. TOUS DROITS RÉSERVÉS(bientot).
+            Toutes les marques citées appartiennent à leur propriétaire (bientot aussi).</p>
+    </div>
+    <div class="networks col-md-4">
+        <p>Téléchargez La Part du Lion !</p>
+        <img class="androidButtonFooter" src="<?php echo base_url()?>application/assets/images/androidButton.png" alt="">
+        <div class="networksButton">
+            <img class="facebook" src="<?php echo base_url()?>application/assets/images/facebook_logo.png" alt="">
+            <img class="twitter" src="<?php echo base_url()?>application/assets/images/twitter_logo.png" alt="">
+            <img class="youtube" src="<?php echo base_url()?>application/assets/images/youtube_logo.png" alt="">
+        </div>
+
+    </div>
+</div>
+
 <script type="text/javascript" src="<?php echo base_url();?>application/libraries/jquery-3.2.1.min.js"></script>
 <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

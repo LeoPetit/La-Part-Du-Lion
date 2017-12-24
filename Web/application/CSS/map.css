@@ -1,9 +1,6 @@
 /*Map*/
 #legendeMap
 {
-    position: absolute;
-    z-index: 10;
-    bottom: 0;
     background-color: #D5D5D5;
     opacity: 0.9;
     border: solid 1px #FFFF55;
@@ -26,11 +23,4 @@
 
 .legend{
     padding: 5px 0 0 15%;
-}
-
-
-.spanError {
-    position : absolute;
-    left : 39%;
-    color : red;
 }

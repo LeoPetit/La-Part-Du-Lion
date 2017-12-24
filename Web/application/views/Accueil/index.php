@@ -29,6 +29,7 @@
                 <div class="details col-lg-6">
                     <H3>Qu'est-ce que "La part du lion" ?</H3>
                     <p class="lead">La part du Lion est un jeu mobile de conquète en équipe à travers la ville de Belfort. Rejoignez l'un des sept clans dans cette guerres est faites le grandirafin de devenirle plus puissant de la ville.</p>
+                    <img class="androidButton" src="<?php echo base_url()?>application/assets/images/androidButton.png" alt="">
                 </div>
                 <img class="phone col-lg-6" src="<?php echo base_url()?>application/assets/images/phone.png" alt="">
             </div>

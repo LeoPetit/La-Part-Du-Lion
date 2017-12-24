@@ -4,7 +4,25 @@
 
 var url = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
 
+window.onresize = function(event) {
+    if (window.matchMedia('(min-width: 990px)').matches) {
+        var height = window.innerHeight - $(".navbar").outerHeight(true) - $("#legendeMap").outerHeight(true);
+        $("#googleMap").css("height", height + 'px');
+    }
+};
+
+
 function myMap() {
+
+    if (window.matchMedia('(min-width: 990px)').matches) {
+        var height = window.innerHeight - $(".navbar").outerHeight(true) - $("#legendeMap").outerHeight(true) * 1.5;
+        $("#googleMap").css("height", height + 'px');
+    }
+    else{
+        $("#googleMap").css("height", 60 + 'vh');
+
+    }
+
     var center = new google.maps.LatLng(47.640, 6.850);
 
     var mapCanvas = document.getElementById("googleMap");

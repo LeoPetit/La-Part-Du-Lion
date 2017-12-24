@@ -44,6 +44,7 @@
 
 .clans{
     margin:auto;
+    height: 200vh;
 }
 
 .moreInfos{
@@ -118,6 +119,11 @@ img.home_logoClan_details{
     padding-bottom: 20px;
 }
 
+.androidButton{
+    width: 200px;
+    margin: 160px
+}
+
 @media only screen and (max-width: 990px) {
 
     img.home_logoClan_details{
@@ -138,5 +144,14 @@ img.home_logoClan_details{
     .rightClan{
         float: none;
         margin: 20px auto 0 auto;
+    }
+
+    .androidButton{
+        margin: 0;
+        margin-left: 70px;
+    }
+
+    img.phone{
+        max-width: 300px;
     }
 }

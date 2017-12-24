@@ -155,6 +155,7 @@
 
                                     echo form_submit($data);
                                 ?>
+                            </div>
                         </div>
                     </form>
                 </div>
