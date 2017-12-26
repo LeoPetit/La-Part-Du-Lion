@@ -1,0 +1,78 @@
+.infosTelecharger{
+    margin: 150px auto 150px auto;
+    height: 500px;
+    max-width: 100%;
+    background-color: #001036;
+}
+
+.backLogo{
+    text-align: center;
+    height: 200px;
+}
+
+.title{
+    text-align: center;
+    background-color: #002572;
+    color: #FFFF55;
+    padding: 2%;
+    font-size: 18px;
+}
+
+.main{
+    background-image: url("../assets/images/city.jpg");
+    background-clip: padding-box;
+    background-position: 20%;
+    background-size: 120vw;
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    text-align: center;
+    padding: 20px;
+}
+
+.main p{
+    color: white;
+    font-size: 26px;
+}
+
+.androidButton{
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.links{
+    background-color: black;
+    opacity: 0.8;
+    padding: 20px;
+}
+
+.links a{
+    color: white;
+}
+
+.links a:hover{
+    color: white;
+}
+
+.more{
+    text-align: center;
+    padding: 60px;
+}
+.more a{
+    margin: auto;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    border: 2px solid #FFFF55;
+    width: 20%;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.more a:hover{
+    opacity:1;
+}
+

@@ -28,4 +28,8 @@ class Welcome extends CI_Controller {
         $return["descriptif"] = $result;
 		$this->load->view('Accueil/index.php', $return);
 	}
+
+	public function telecharger(){
+        $this->load->view('Accueil/telecharger.php');
+    }
 }

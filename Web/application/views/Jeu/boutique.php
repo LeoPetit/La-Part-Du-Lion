@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <head>
     <meta charset="utf-8">
-    <title>Test de la map</title>
+    <title>Part du Lion</title>
     <?php $this->load->view("Nav/header.php") ?>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>application/CSS/boutique.css">
     <?php $this->load->view("Nav/navbar.php") ?>
