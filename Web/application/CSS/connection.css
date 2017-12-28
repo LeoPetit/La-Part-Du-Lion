@@ -60,19 +60,20 @@
 }
 
 /*choose clan*/
-ul li:hover .animatedItem{
+ul li:hover .animatedItem {
     opacity:1;
-    width:400px;
+    width:500px;
     padding: 10px;
+    text-align: justify;
     transition:0.5s left,0.5s width,0.5s opacity;
 }
 
 ul li .animatedItem{
     position: absolute;
-    top: 12%;
+    top: 5%;
     left: 100%;
     width:0;
-    height: 240px;
+    height: 260px;
     background: rgba(0, 0, 0, 0.6);
     overflow: hidden;
     color: white;
@@ -154,7 +155,7 @@ ul li .animatedItem{
 
     ul li:hover .animatedItem{
         opacity:1;
-        height:240px;
+        height:440px;
         width: 280px;
         transition:0.5s left,0.5s height,0.5s opacity;
     }

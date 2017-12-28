@@ -39,8 +39,9 @@
                 <img class="home_logo_details col-lg-6" src="<?php echo base_url()?>application/assets/images/logos/png/logo.png" alt="">
                 <div class="moreDetails col-lg-6">
                     <H3>En vrai c'est quoi LOL ? ?</H3>
-                    <p class="lead">La part du Lion est un jeu mobile de conquète en équipe à travers la ville de Belfort. Rejoignez l'un des sept clans dans cette guerres est faites le grandirafin de devenirle plus puissant de la ville.</br></p>
-                    <p class="lead">La part du Lion est un jeu mobile de conquète en équipe à travers la ville de Belfort. Rejoignez l'un des sept clans dans cette guerres est faites le grandirafin de devenirle plus puissant de la ville.</br></p>
+                    <p>La part du Lion est un jeu mobile de conquète en équipe à travers la ville de Belfort. Rejoignez l'un des sept clans dans cette guerres est faites le grandirafin de devenirle plus puissant de la ville.</br></p>
+                    <p>La part du Lion est un jeu mobile de conquète en équipe à travers la ville de Belfort. Rejoignez l'un des sept clans dans cette guerres est faites le grandirafin de devenirle plus puissant de la ville.</br></p>
+                    <p>La part du Lion est un jeu mobile de conquète en équipe à travers la ville de Belfort. Rejoignez l'un des sept clans dans cette guerres est faites le grandirafin de devenirle plus puissant de la ville.</br></p>
                 </div>
             </div>
         </div>
@@ -50,13 +51,13 @@
                     <img class="home_logoClan_details col-lg-4" src="<?php echo base_url()?>application/assets/images/logos/png/logo_technomanciens.png" alt="">
                     <div class="moreDetails col-lg-6">
                         <h4><?php echo($descriptif[0]->nom);?></h4>
-                        <p class="lead"><?php echo( $descriptif[0]->descriptif);?></p>
+                        <p><?php echo( $descriptif[0]->descriptif);?></p>
                     </div>
                 </div>
                 <div class="rightClan row col-lg-8">
                     <div class="moreDetails col-lg-6">
                         <h4><?php echo($descriptif[2]->nom);?></h4>
-                        <p class="lead"><?php echo( $descriptif[2]->descriptif);?></p>
+                        <p><?php echo( $descriptif[2]->descriptif);?></p>
                     </div>
                     <img class="home_logoClan_details col-lg-4" src="<?php echo base_url()?>application/assets/images/logos/png/logo_resistants.png" alt="">
                 </div>
@@ -64,12 +65,13 @@
                     <img class="home_logoClan_details col-lg-4" src="<?php echo base_url()?>application/assets/images/logos/png/logo_redstones.png" alt="">
                     <div class="moreDetails col-lg-6">
                         <h4><?php echo($descriptif[6]->nom);?></h4>
-                        <p class="lead"><?php echo( $descriptif[6]->descriptif);?></p>
-                    </div></div>
+                        <p><?php echo( $descriptif[6]->descriptif);?></p>
+                    </div>
+                </div>
                 <div class="rightClan row col-lg-8">
                     <div class="moreDetails col-lg-6">
                         <h4><?php echo($descriptif[3]->nom);?></h4>
-                        <p class="lead"><?php echo( $descriptif[3]->descriptif);?></p>
+                        <p><?php echo( $descriptif[3]->descriptif);?></p>
                     </div>
                     <img class="home_logoClan_details col-lg-4" src="<?php echo base_url()?>application/assets/images/logos/png/logo_tour.png" alt="">
                 </div>
@@ -77,12 +79,13 @@
                     <img class="home_logoClan_details col-lg-4" src="<?php echo base_url()?>application/assets/images/logos/png/logo_negociants.png" alt="">
                     <div class="moreDetails col-lg-6">
                         <h4><?php echo($descriptif[5]->nom);?></h4>
-                        <p class="lead"><?php echo( $descriptif[5]->descriptif);?></p>
-                    </div></div>
+                        <p><?php echo( $descriptif[5]->descriptif);?></p>
+                    </div>
+                </div>
                 <div class="rightClan row col-lg-8">
                     <div class="moreDetails col-lg-6">
                         <h4><?php echo($descriptif[1]->nom);?></h4>
-                        <p class="lead"><?php echo( $descriptif[1]->descriptif);?></p>
+                        <p><?php echo( $descriptif[1]->descriptif);?></p>
                     </div>
                     <img class="home_logoClan_details col-lg-4" src="<?php echo base_url()?>application/assets/images/logos/png/logo_exilés.png" alt="">
                 </div>
@@ -90,7 +93,7 @@
                     <img class="home_logoClan_details col-lg-4" src="<?php echo base_url()?>application/assets/images/logos/png/logo_forteresse.png" alt="">
                     <div class="moreDetails col-lg-6">
                         <h4><?php echo($descriptif[4]->nom);?></h4>
-                        <p class="lead"><?php echo( $descriptif[4]->descriptif);?></p>
+                        <p><?php echo( $descriptif[4]->descriptif);?></p>
                     </div>
                 </div>
             </div>

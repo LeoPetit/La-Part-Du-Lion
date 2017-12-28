@@ -40,7 +40,7 @@
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<span class="lead" id="content1">'.$descriptif[0]->descriptif.'</span> ';
+                echo '<span id="content1">'.$descriptif[0]->descriptif.'</span> ';
 
                 echo form_label('Choisir ce clan', 'clan1', $attributes);
 
@@ -70,7 +70,7 @@
                     'class' => 'control-labelCheckBox',
                     );
 
-                    echo '<span class="lead" id="content2">'.$descriptif[2]->descriptif.'</span> ';
+                    echo '<span id="content2">'.$descriptif[2]->descriptif.'</span> ';
 
 
                     echo "</br>";
@@ -98,7 +98,7 @@
                         'class' => 'control-labelCheckBox',
                     );
 
-                    echo '<span class="lead" id="content3">'.$descriptif[6]->descriptif.'</span> <br/>';
+                    echo '<span id="content3">'.$descriptif[6]->descriptif.'</span> <br/>';
 
                     echo form_label('Choisir ce clan', 'clan3', $attributes);
 
@@ -110,13 +110,6 @@
                     );
 
                     echo form_radio($data);
-
-
-                    $data = array(
-                        'name'          => 'validerEnregistrement',
-                        'id'            => 'validationButton',
-                        'value'         => 'Valider inscription',
-                    );
                 ?>
             </div>
         </li>
@@ -129,7 +122,7 @@
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<span class="lead" id="content4">'.$descriptif[3]->descriptif.'</span> <br/>';
+                echo '<span id="content4">'.$descriptif[3]->descriptif.'</span> <br/>';
 
 
                 echo form_label('Choisir ce clan', 'clan4', $attributes);
@@ -142,13 +135,6 @@
                 );
 
                 echo form_radio($data);
-
-                $data = array(
-                    'name'          => 'validerEnregistrement',
-                    'id'            => 'validationButton',
-                    'value'         => 'Valider inscription',
-                );
-
                 ?>
             </div>
         </li>
@@ -161,7 +147,7 @@
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<span class="lead" id="content5">'.$descriptif[5]->descriptif.'</span> <br/>';
+                echo '<span id="content5">'.$descriptif[5]->descriptif.'</span> <br/>';
 
                 echo form_label('Choisir ce clan', 'clan5', $attributes);
 
@@ -173,13 +159,6 @@
                 );
 
                 echo form_radio($data);
-
-
-                $data = array(
-                    'name'          => 'validerEnregistrement',
-                    'id'            => 'validationButton',
-                    'value'         => 'Valider inscription',
-                );
 
                 ?>
             </div>
@@ -193,7 +172,7 @@
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<span class="lead" id="content6">'.$descriptif[1]->descriptif.'</span> <br/>';
+                echo '<span id="content6">'.$descriptif[1]->descriptif.'</span> <br/>';
 
                 echo form_label('Choisir ce clan', 'clan6', $attributes);
 
@@ -205,13 +184,6 @@
                 );
 
                 echo form_radio($data);
-
-
-                $data = array(
-                    'name'          => 'validerEnregistrement',
-                    'id'            => 'validationButton',
-                    'value'         => 'Valider inscription',
-                );
 
                 ?>
             </div>
@@ -225,7 +197,7 @@
                     'class' => 'control-labelCheckBox',
                 );
 
-                echo '<span class="lead" id="content7">'.$descriptif[4]->descriptif.'</span> <br/>';
+                echo '<span id="content7">'.$descriptif[4]->descriptif.'</span> <br/>';
 
                 echo form_label('Choisir ce clan', 'clan7', $attributes);
 
@@ -237,18 +209,18 @@
                 );
 
                 echo form_radio($data);
-
-                $data = array(
-                    'name'          => 'validerEnregistrement',
-                    'id'            => 'validationButton',
-                    'value'         => 'Valider inscription',
-                );
                 ?>
             </div>
         </li>
     </ul>
 </div>
     <?php
+
+        $data = array(
+            'name'          => 'validerEnregistrement',
+            'id'            => 'validationButton',
+            'value'         => 'Valider inscription',
+        );
         echo form_submit($data);
 
         echo "</form>";
