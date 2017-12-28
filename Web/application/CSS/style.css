@@ -29,8 +29,8 @@ span{
 
 .welcome{
     position: absolute;
-    right: 200px;
-    top: 18px;
+    right: 100px;
+    top: 22px;
     color: white;
     font-size: 16px;
 }
@@ -117,7 +117,7 @@ a.nav-link.deconnexion{
     right: 1%;
     z-index: 11;
     padding: 10px 20px 0 20px;
-    color: red;
+    color: white;
     font-size: 18px;
 }
 
@@ -128,7 +128,7 @@ a.nav-link.phoneConnexion{
 
 a.nav-link.phoneDeconnexion{
     display: none;
-    color: red;
+    color: white;
 }
 
 .icon-bar{
@@ -141,9 +141,9 @@ a.nav-link.phoneDeconnexion{
 }
 /*footer*/
 .footerContent{
-    height: 38vh;
-    background-color: black;
-    color: white;
+    height: 25vh;
+    background-color: #D2D2D2;
+    color: black;
     margin: auto;
     width: 100%;
     overflow: hidden;
@@ -154,40 +154,46 @@ a.nav-link.phoneDeconnexion{
 }
 
 .footerContent p{
-    margin: 15%;
+    margin: 8%;
     text-align: center;
 }
 
-.networks p{
-    margin: auto;
-    margin-top: 70px;
+.networks #dlGame{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    color: black;
+    width: 200px;
+    margin-bottom: 80px;
 }
 
-.androidButtonFooter{
-    margin-top: 20px;
-    margin-bottom: 50px;
-    width: 250px;
+.networks #dlGame:hover{
+    background-color: #F2F2F2;
+    text-decoration: none;
 }
 
 .networks{
     text-align: center;
+    padding: 80px;
 }
 
-.facebook{
-    width: 50px;
-    height: 50px;
+.networksButton{
+    margin-top: 20px;
 }
 
-.twitter{
-    width: 50px;
-    height: 50px;
-    padding:5px;
+.fa-facebook{
+    margin: 10px;
+    color: black;
 }
 
-.youtube{
-    width: 50px;
-    height: 50px;
-    padding: 2px;
+.fa-twitter{
+    margin: 10px;
+    color: black;
+}
+
+.fa-youtube{
+    margin: 10px;
+    color: black;
 }
 
 @media only screen and (max-width: 990px) {

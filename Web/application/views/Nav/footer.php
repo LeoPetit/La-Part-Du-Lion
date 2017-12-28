@@ -13,12 +13,13 @@
             Toutes les marques citées appartiennent à leur propriétaire (bientot aussi).</p>
     </div>
     <div class="networks col-md-4">
-        <p>Téléchargez La Part du Lion !</p>
-        <img class="androidButtonFooter" src="<?php echo base_url()?>application/assets/images/androidButton.png" alt="">
+        <a id="dlGame" href="">Téléchargez La Part du Lion !</a>
         <div class="networksButton">
-            <img class="facebook" src="<?php echo base_url()?>application/assets/images/facebook_logo.png" alt="">
-            <img class="twitter" src="<?php echo base_url()?>application/assets/images/twitter_logo.png" alt="">
-            <img class="youtube" src="<?php echo base_url()?>application/assets/images/youtube_logo.png" alt="">
+            <?php
+                echo anchor('', '<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>', '');
+                echo anchor('', '<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>', '');
+                echo anchor('', '<i class="fa fa-youtube fa-2x" aria-hidden="true"></i>', '');
+            ?>
         </div>
 
     </div>

@@ -4,10 +4,10 @@
             echo anchor('Utilisateur_Controller', 'Se connecter', 'class="nav-link connexion"');
         } else {
             echo "<p class='welcome'>Bienvenue, " . $_SESSION["utilisateur"]->pseudo . "</p>";
-            echo anchor('Utilisateur_Controller/deconnection/', 'Se déconnecter', 'class="nav-link deconnexion"');
+            echo anchor('Utilisateur_Controller/deconnection/', '<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>', 'class="nav-link deconnexion"');
         }
     ?>
-    <div  id="test"  class="navtitle col-lg-12">La Part du Lion</div>
+    <div id="test" class="navtitle col-lg-12">La Part du Lion</div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="icon-bar"></span>
@@ -79,7 +79,7 @@
                 if(!isset($_SESSION["utilisateur"]->pseudo)) {
                     echo anchor('Utilisateur_Controller', 'Se connecter', 'class="nav-link phoneConnexion"');
                 } else {
-                    echo anchor('Utilisateur_Controller/deconnection/', 'Se déconnecter', 'class="nav-link phoneDeconnexion"');
+                    echo anchor('Utilisateur_Controller/deconnection/', '<i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>', 'class="nav-link phoneDeconnexion"');
                 }
                 ?>
             </li>
