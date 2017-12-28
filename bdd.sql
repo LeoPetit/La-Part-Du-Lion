@@ -10,13 +10,13 @@ CREATE TABLE equipe (
   PRIMARY KEY (id)
 );
 
-INSERT INTO equipe VALUES (default, 'Technomancien', 'Des trucs', '#36003A');
-INSERT INTO equipe VALUES (default, 'Vosge', 'Des machins', '#88035C');
-INSERT INTO equipe VALUES (default, 'Jaures', 'Des bidules', '#02A6B5');
-INSERT INTO equipe VALUES (default, 'Miotte', 'Des bidules', '#067E00');
-INSERT INTO equipe VALUES (default, 'VieilleVille', 'Des bidules', '#D07700');
-INSERT INTO equipe VALUES (default, 'CentreVille', 'Des bidules', '#012943');
-INSERT INTO equipe VALUES (default, 'Residence', 'Des bidules', '#A20010');
+INSERT INTO equipe VALUES (default, 'Clan Technomancien', 'De nombreuses corporations et hommes d’affaires se sont allié pour former le clan des Technomancien, recherches scientifiques, innovation technologiques, au fils des siècles ce clan c’est spécialisé dans ces domaines, sous couvert des nombreuses entreprises implantés sur leur territoire.', '#36003A');
+INSERT INTO equipe VALUES (default, 'Clan des Exilés', 'Ce clan contrôlant la partie nord de belfort, doit son nom aux agent qui le compose : Tous anciennement membres des 6 autres clans, renégats, bannis, ils se sont rassemblés pour former un clan et on réussir à établir leurs domination sur les quartiers nord. Mais leurs vengeance ne fait que commencer, et ils comptent bien ne pas arrêter leur conquête.', '#88035C');
+INSERT INTO equipe VALUES (default, 'Clan des Résistants', 'Le territoire de ce clan est l’objet de nombreuses convoitises, Malgré les nombreuses attaques des clan voisins, aucun n’a réussi à prendre le contrôle. Les Agents sur place lassé de ses changements incessant de propriétaire, on décidé de créer leurs propre clan et de contrôler enfin cette zone.', '#02A6B5');
+INSERT INTO equipe VALUES (default, 'Clan de la Tour', 'Historiquement, cette tour était les yeux de la cité de Belfort, jadis poste avancé du clan de la forteresse, la garnison posté est devenu indépendante suite à une querelle avec leurs supérieurs. C’est ainsi qu’est né le clan de la tour.', '#067E00');
+INSERT INTO equipe VALUES (default, 'Clan de la Forteresse', 'Le clan de la forteresse du lion, la protège depuis des siècles. De nombreuses légendes spéculent sur ce que garde le clan, mais personnes à ce jour n’a réussi à percer les secrets que renferme cette imposante batisse.', '#D07700');
+INSERT INTO equipe VALUES (default, 'Clan des Negociants', 'Etablit dans le centre ville, le clan des négociant est une alliance des plus riche commerçant de la cité du lion. Ce clan a pour but le profits et le contrôle, avide de conquête, il utilise ses nombreux moyens financiers pour permettre à ses agents de capturer le maximum de territoires', '#012943');
+INSERT INTO equipe VALUES (default, 'Clan des Veilleurs', 'Du haut de leurs immeubles, le clan des veilleurs, surveille son territoire. N’espérez pas vous infiltré incognito sur leurs terrains ! Tout le monde se connaît et il ne sont pas friand des inconnu sur leurs terres.', '#A20010');
 
 CREATE TABLE utilisateur (
   id          INT NOT NULL AUTO_INCREMENT,
