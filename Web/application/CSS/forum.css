@@ -1,0 +1,45 @@
+.listTopics{
+    background-color: #DDDDDD;
+    text-align: center;
+    padding: 100px 10px;
+    text-decoration: none;
+}
+
+.topic{
+    display: flex;
+    text-align: center;
+    background-color: white;
+    padding: 20px 10px;
+    margin: auto;
+    margin-top: 50px;
+    border: 0.5px solid black;
+    color: #555555;
+}
+
+.fa-comment-o{
+    margin-left: 5px;
+}
+
+.author{
+    border-right: 0.5px solid black;
+}
+
+.name{
+    border-right: 0.5px solid black;
+    font-weight: 200;
+}
+
+.message{
+    border-right: 0.5px solid black;
+}
+
+.date{
+    color: #00AAFF;
+    font-weight: 100;
+}
+
+@media only screen and (max-width: 990px) {
+    .listTopics{
+        margin-top: 100px;
+    }
+}

@@ -23,7 +23,7 @@
                 <?php echo anchor('Welcome', 'Accueil', 'class="nav-link"') ?>
             </li>
             <li class="nav-item">
-                <?php echo anchor('index.php/Welcome/show/', 'Forum', 'class="nav-link"') ?>
+                <?php echo anchor('Forum_Controller', 'Forum', 'class="nav-link"') ?>
             </li>
             <li class="nav-item">
                 <?php echo anchor('Welcome/telecharger', 'Télécharger', 'class="nav-link" id="presentationButton"') ?>

@@ -13,7 +13,8 @@
             Toutes les marques citées appartiennent à leur propriétaire (bientot aussi).</p>
     </div>
     <div class="networks col-md-4">
-        <a id="dlGame" href="">Téléchargez La Part du Lion !</a>
+        <?php echo anchor('Welcome/telecharger', 'Téléchargez La Part du Lion !', 'id="dlGame"') ?>
+
         <div class="networksButton">
             <?php
                 echo anchor('', '<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>', '');

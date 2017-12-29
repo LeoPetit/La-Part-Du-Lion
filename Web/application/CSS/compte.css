@@ -11,10 +11,6 @@
     padding: 20px;
 }
 
-@media only screen and (max-width: 990px) {
-    .bloc_compte{margin-top:150px;}
-}
-
 .titre{
     text-align: center;
     margin-bottom: 40px;
@@ -52,4 +48,18 @@
 input::placeholder {
     color: white;
     opacity: 0.7;
+}
+
+.form_user{
+    display: flex;
+}
+
+@media only screen and (max-width: 990px) {
+    .bloc_compte{margin-top:150px;}
+}
+
+@media only screen and (max-width: 1400px) {
+    .form_user{
+        display: block;
+    }
 }

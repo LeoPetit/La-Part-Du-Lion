@@ -19,16 +19,10 @@
     border-radius: 10px;
     border: 3px solid black;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 10px;
     display: inline-flex;
     margin-left: 5.5%;
-}
-
-@media only screen and (max-width: 990px) {
-    .articleItem{
-        margin-left: 0;
-    }
 }
 
 .imgItem{
@@ -68,6 +62,29 @@
     padding-right: 150px;
 }
 
+.inventaireContent{
+    position: absolute;
+    width: 10%;
+    left: 4%;
+    top: 25%;
+    padding: 20px;
+    background-color: #222222;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+.inventaireContent h4{
+    font-size: 100%;
+
+}
+
+.inventaire {
+    width: 70px;
+    height: 70px;
+}
+
 @media only screen and (max-width: 1400px) {
 
     .shopContent{
@@ -78,6 +95,34 @@
     .prixItem{
         padding-left: 5%;
         margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .articleItem {
+        margin-left: 0;
+    }
+
+    .budgetItem {
+        margin-top: 170px;
+        margin-left: 60%;
+    }
+
+    .inventaireContent{
+        width: 50%;
+        left: 2%;
+        top: 15%;
+        padding: 20px;
+        background-color: #222222;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: center;
+        color: white;
+    }
+
+    .inventaire {
+        width: 40px;
+        height: 40px;
     }
 }
 
