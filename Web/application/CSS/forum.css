@@ -1,7 +1,8 @@
 .listTopics{
-    background-color: #DDDDDD;
+    background-color: #BBBBBB;
+    color: #FCFCFC;
     text-align: center;
-    padding: 100px 10px;
+    padding: 100px;
     text-decoration: none;
 }
 
@@ -63,6 +64,7 @@
 
 .interactZone{
     padding: 20px 0;
+    text-align: left;
 }
 
 .forumButton{
@@ -126,9 +128,28 @@
     font-size: 22px;
 }
 
+#answerPost.inputData{
+    width:100%;
+}
+
+form.form_topic{
+    text-align: left;
+}
+
+input#newTopic.inputData{
+    margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 990px) {
     .listTopics{
         margin-top: 100px;
+        padding: 40px;
+    }
+
+    .listAnswers{
+        margin-top: 100px;
+
+        padding: 40px;
     }
 
     .forumButton{

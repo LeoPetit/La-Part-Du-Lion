@@ -24,8 +24,20 @@
     <div class="listTopics container">
         <h1> Topics </h1>
 
+        <div class="interactZone">
+            <?php echo anchor('Forum_Controller/index#newTopic', 'Nouveau sujet', 'id="createTopics" class="forumButton"') ?>
+            <select>
+                <option value="Général">
+                    <?php echo anchor('Forum_Controller/index', 'Général', '') ?>
+                </option>
+                <option value="Clan">
+                    <?php echo anchor('Welcome', 'Clan', '') ?>
+                </option>
+            </select>
+        </div>
+
         <?php echo anchor('Forum_Controller/subject',
-    ' <div class="topic col-lg-10">
+    ' <div class="topic ">
                 <div class="author col-3">
                     <span>Jean-dider90</span>
                 </div>
@@ -42,7 +54,7 @@
             '')
         ?>
         <?php echo anchor('Forum_Controller/subject',
-            ' <div class="topic col-lg-10">
+            ' <div class="topic ">
                 <div class="author col-3">
                     <span>Jean-dider90</span>
                 </div>
@@ -59,7 +71,7 @@
             '')
         ?>
         <?php echo anchor('Forum_Controller/subject',
-            ' <div class="topic col-lg-10">
+            ' <div class="topic ">
                 <div class="author col-3">
                     <span>Jean-dider90</span>
                 </div>
@@ -76,7 +88,7 @@
             '')
         ?>
         <?php echo anchor('Forum_Controller/subject',
-            ' <div class="topic col-lg-10">
+            ' <div class="topic ">
                 <div class="author col-3">
                     <span>Jean-dider90</span>
                 </div>
@@ -92,6 +104,44 @@
             </div>',
             '')
         ?>
+        <?php echo form_open("Forum_Controller/subject", 'class = "form_topic"'); ?>
+
+        <h4 id="subject">Nouveau sujet</h4>
+        <div class="control-group">
+            <?php
+
+            $data = array(
+                'name'          => 'topicTitle',
+                'id'            => 'newTopic',
+                'class'         => 'inputData',
+                'type'          => 'text',
+                'value'         => '',
+                'placeholder' => 'Titre du sujet',
+            );
+
+            echo form_input($data);
+
+            $data = array(
+                'name'          => 'answer',
+                'id'            => 'answerPost',
+                'class'         => 'inputData',
+                'type'          => 'text',
+                'value'         => '',
+                'placeholder' => 'Votre message',
+            );
+
+            echo form_textarea($data);
+
+            $data = array(
+                'name'          => 'validerPost',
+                'class'         => 'validPost',
+                'value'         => 'Poster',
+            );
+
+            echo form_submit($data);
+            ?>
+        </div>
+        </form>
 
     </div>
 </body>

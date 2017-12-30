@@ -18,10 +18,14 @@ class Forum_Controller extends CI_Controller
 
     public function index()
     {
+        $this->load->helper(array('form', 'url'));
+
         $this->load->view('Forum/topics.php');
     }
 
     public function subject(){
+        $this->load->helper(array('form', 'url'));
+
         $this->load->view('Forum/forum.php');
     }
 }
