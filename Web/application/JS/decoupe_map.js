@@ -50,12 +50,7 @@ function myMap() {
     var i = 0;
 
     while (i < coordonnees.length - 1) {
-
-        //console.log("Quartier_id " + quartier_id);
-
         while (coordonnees[i].quartier_id == quartier_id) {
-            //console.log(coordonnees[i].quartier_id + " " + quartier_id);
-            //console.log(coordonnees[i].lat + "  " + coordonnees[i].longi + " " + i);
             test.push(coordonnees[i].lat, coordonnees[i].longi);
             tabCoord.push(new google.maps.LatLng(coordonnees[i].lat, coordonnees[i].longi));
             if (coordonnees[i + 1] != null) {
@@ -74,17 +69,35 @@ function myMap() {
             });
         };
 
-        var flightPath = new google.maps.Polygon({
-            path: tabCoord,
-            strokeColor: coordonnees[i - 1].couleur,
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: coordonnees[i - 1].couleur,
-            fillOpacity: 0.15,
-            indexID: coordonnees[i - 1].quartier_id,
-            possesseur: coordonnees[i - 1].possesseur,
-            nom: coordonnees[i - 1].quartier_nom
-        });
+        var flightPath;
+
+        console.log(coordonnees[i-1].QG);
+
+        if(coordonnees[i-1].QG == 1) {
+            flightPath = new google.maps.Polygon({
+                path: tabCoord,
+                strokeColor: coordonnees[i - 1].couleur,
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: coordonnees[i - 1].couleur,
+                fillOpacity: 0.50,
+                indexID: coordonnees[i - 1].quartier_id,
+                possesseur: coordonnees[i - 1].possesseur,
+                nom: coordonnees[i - 1].quartier_nom
+            });
+        } else {
+            flightPath = new google.maps.Polygon({
+                path: tabCoord,
+                strokeColor: coordonnees[i - 1].couleur,
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: coordonnees[i - 1].couleur,
+                fillOpacity: 0.15,
+                indexID: coordonnees[i - 1].quartier_id,
+                possesseur: coordonnees[i - 1].possesseur,
+                nom: coordonnees[i - 1].quartier_nom
+            });
+        }
 
         flightPath.setMap(map);
         addListenersOnPolygon(flightPath);
