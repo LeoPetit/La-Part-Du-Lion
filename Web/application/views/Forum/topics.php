@@ -24,7 +24,7 @@
     <div class="listTopics container">
         <h1> Topics </h1>
 
-        <?php echo anchor('Forum/index',
+        <?php echo anchor('Forum_Controller/subject',
     ' <div class="topic col-lg-10">
                 <div class="author col-3">
                     <span>Jean-dider90</span>
@@ -36,12 +36,12 @@
                     <span>3<i class="fa fa-comment-o" aria-hidden="true"></i></span>
                 </div>
                 <div class="date col-3">
-                    <span>Crée le : 28/12/17</span>
+                    <span>Créé le : 28/12/17</span>
                 </div>
             </div>',
             '')
         ?>
-        <?php echo anchor('Forum/index',
+        <?php echo anchor('Forum_Controller/subject',
             ' <div class="topic col-lg-10">
                 <div class="author col-3">
                     <span>Jean-dider90</span>
@@ -53,12 +53,12 @@
                     <span>3<i class="fa fa-comment-o" aria-hidden="true"></i></span>
                 </div>
                 <div class="date col-3">
-                    <span>Crée le : 28/12/17</span>
+                    <span>Créé le : 28/12/17</span>
                 </div>
             </div>',
             '')
         ?>
-        <?php echo anchor('Forum/index',
+        <?php echo anchor('Forum_Controller/subject',
             ' <div class="topic col-lg-10">
                 <div class="author col-3">
                     <span>Jean-dider90</span>
@@ -70,12 +70,12 @@
                     <span>3<i class="fa fa-comment-o" aria-hidden="true"></i></span>
                 </div>
                 <div class="date col-3">
-                    <span>Crée le : 28/12/17</span>
+                    <span>Créé le : 28/12/17</span>
                 </div>
             </div>',
             '')
         ?>
-        <?php echo anchor('Forum/index',
+        <?php echo anchor('Forum_Controller/subject',
             ' <div class="topic col-lg-10">
                 <div class="author col-3">
                     <span>Jean-dider90</span>
@@ -87,11 +87,12 @@
                     <span>3<i class="fa fa-comment-o" aria-hidden="true"></i></span>
                 </div>
                 <div class="date col-3">
-                    <span>Crée le : 28/12/17</span>
+                    <span>Créé le : 28/12/17</span>
                 </div>
             </div>',
             '')
         ?>
+
     </div>
 </body>
 

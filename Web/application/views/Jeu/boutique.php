@@ -54,10 +54,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         echo '<div class="articleItem col-lg-5">';
         echo '<img class="imgItem" src="'.base_url().'application/assets/images/items/png/'.$item->nom.'.png">';
         echo '<div class="moreDetails col-sm-5">';
-        echo '<div class="titreItem">'.$item->nom.'</div>';
-        echo '<div class="titreItem">fhuezif huzfizhfu izfhu zifh uzihf uizfhuz fhuiz hfui zhfuize </div>';
+        echo '<h5>'.$item->nom.'</h5>';
+        echo '<p>fhuezif huzfizhfu izfhu zifh uzihf uizfhuz fhuiz hfui zhfuize </p>';
         echo '</div>';
-        echo '<div class="prixItem col-md-3">Prix: '.$item->coutAchat.'<img src="'.base_url().'application/assets/images/items/png/monnaie.png"> PA : '.$item->coutRessource.'</div>';
+        echo '<div class="prixItem col-md-3"><p>Prix: '.$item->coutAchat.'</p><p>PA : '.$item->coutRessource.'</p></div>';
         //echo anchor('Utilisateur_Controller/achat/item_id/'.$item->id."/prix/".$item->coutAchat, 'Acheter', 'class="boutonAchat"');
         echo '</div>';
 

@@ -20,4 +20,8 @@ class Forum_Controller extends CI_Controller
     {
         $this->load->view('Forum/topics.php');
     }
+
+    public function subject(){
+        $this->load->view('Forum/forum.php');
+    }
 }
