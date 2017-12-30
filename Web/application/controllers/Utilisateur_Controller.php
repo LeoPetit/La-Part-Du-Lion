@@ -13,6 +13,16 @@ class Utilisateur_Controller extends CI_Controller
     {
         parent::__construct();
         $this->load->library('session');
+        $this->load->library('encryption');
+
+        $this->encryption->initialize(
+            array(
+                'cipher' => 'aes-256',
+                'mode' => 'ctr',
+                'key' => '<a 32-character random string>',
+                'driver' => 'openssl',
+            )
+        );
     }
 
     public function index()
@@ -37,6 +47,8 @@ class Utilisateur_Controller extends CI_Controller
             $mdp = $this->input->post("Password");
 
             $this->load->model('Utilisateur_Model', 'u');
+
+            //$mdp = $this->encryption->encrypt($mdp);
 
             $isRegistered = $this->u->connection($userName, $mdp);
 
