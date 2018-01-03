@@ -22,6 +22,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
+<?php
+if(!isset($_SESSION["utilisateur"]))
+{
+    header('Location:'. base_url().'index.php/Utilisateur_Controller');
+}
+?>
 
 <div class="budgetItem"><?php echo $_SESSION["utilisateur"]->gold?> <img src="<?php echo base_url()?>application/assets/images/items/png/monnaie.png"></div>
 <div class="inventaireContent">

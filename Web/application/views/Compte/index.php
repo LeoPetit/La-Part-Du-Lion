@@ -20,7 +20,12 @@
 
 
 <body>
-
+<?php
+if(!isset($_SESSION["utilisateur"]))
+{
+    header('Location:'. base_url().'index.php/Utilisateur_Controller');
+}
+?>
 
 <div class="bloc_compte col-lg-6">
     <div class="titre">

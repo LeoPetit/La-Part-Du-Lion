@@ -21,6 +21,11 @@
 
 <body>
     <?php
+
+    if(!isset($_SESSION["utilisateur"]))
+    {
+        header('Location:'. base_url().'index.php/Utilisateur_Controller');
+    }
         $data = array(
             'type'  => 'hidden',
             'name'  => 'couleur',
