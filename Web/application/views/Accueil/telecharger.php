@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-sm-8 links">
                     <p>Rejoignez le combat !</p>
-                    <img class="androidButton" src="<?php echo base_url()?>application/assets/images/androidButton.png" alt=""><br>
+                   <a href="<?php echo base_url()?>application/assets/ressources/laPartDuLion.zip" download="La part du lion"> <img class="androidButton" src="<?php echo base_url()?>application/assets/images/androidButton.png" alt=""></a><br>
                     <?php echo anchor('Utilisateur_Controller', 'Pas encore de compte ? Creez-en un !', '"'); ?>
                 </div>
             </div>
