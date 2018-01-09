@@ -56,7 +56,8 @@ class Utilisateur_Controller extends CI_Controller
                 $data["error"] = "unregistered";
                 $this->load->view('Connection/index.php', $data);
             } else {
-                $this->session->utilisateur = $isRegistered[0];
+                $_SESSION["utilisateur"] = $isRegistered[0];
+                //$this->session->utilisateur = $isRegistered[0];
                 $this->load->view('Jeu/map.php');
             }
         }
@@ -108,7 +109,7 @@ class Utilisateur_Controller extends CI_Controller
     public function deconnection()
     {
         unset($_SESSION["utilisateur"]);
-        $this->load->view("Accueil/index.php");
+        $this->load->view('Jeu/map.php');
     }
 
     public function achat()
