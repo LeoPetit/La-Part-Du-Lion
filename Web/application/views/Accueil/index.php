@@ -28,7 +28,7 @@
             <div class="details row col-lg-10">
                 <div class="details col-lg-6">
                     <H3>Qu'est-ce que "La part du lion" ?</H3>
-                    <p>La part du Lion est un jeu mobile de conquète en équipe à travers la ville de Belfort. Rejoignez l'un des sept clans dans cette guerres est faites le grandirafin de devenirle plus puissant de la ville.</p>
+                    <p>La part du Lion est un jeu mobile de conquète en équipe à travers la ville de Belfort. Rejoignez l'un des sept clans dans cette guerre est faites le grandir afin de devenir le plus puissant de la ville.</p>
                     <img class="androidButton" src="<?php echo base_url()?>application/assets/images/androidButton.png" alt="">
                 </div>
                 <img class="phone col-lg-6" src="<?php echo base_url()?>application/assets/images/phone.png" alt="">
@@ -38,10 +38,10 @@
             <div class="details row col-lg-10">
                 <img class="home_logo_details col-lg-6" src="<?php echo base_url()?>application/assets/images/logos/png/logo.png" alt="">
                 <div class="moreDetails col-lg-6">
-                    <H3>En vrai c'est quoi LOL ? ?</H3>
-                    <p>La part du Lion est un jeu mobile de conquète en équipe à travers la ville de Belfort. Rejoignez l'un des sept clans dans cette guerres est faites le grandirafin de devenirle plus puissant de la ville.</br></p>
-                    <p>La part du Lion est un jeu mobile de conquète en équipe à travers la ville de Belfort. Rejoignez l'un des sept clans dans cette guerres est faites le grandirafin de devenirle plus puissant de la ville.</br></p>
-                    <p>La part du Lion est un jeu mobile de conquète en équipe à travers la ville de Belfort. Rejoignez l'un des sept clans dans cette guerres est faites le grandirafin de devenirle plus puissant de la ville.</br></p>
+                    <H3>Agent rejoint l'aventure ! </H3>
+                    <p>La ville de Belfort est le terrain d'une guerre de territoire ! Sept clan ce livre en secret à une lutte pour le controle de la ville !</br></p>
+                    <p>Depuis déjà plusieurs siecles la bataille fait rage, mais à l'époque des technologies des nouveaux "soldats on vu le jour : Les Agents.</br>Muni de leurs smartphones ils mennent une bataille virtuelle pour la suprémacie</br></p>
+                    <p> Rejoignez l'un des sept clans dans cette guerre est faites le grandir afin de devenir le plus puissant de la ville.</br></p>
                 </div>
             </div>
         </div>
