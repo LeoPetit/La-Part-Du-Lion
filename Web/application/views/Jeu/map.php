@@ -5,6 +5,10 @@
  * Date: 11/10/17
  * Time: 10:07
  */
+
+if(empty($_SESSION["utilisateur"]))
+    session_start();
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 

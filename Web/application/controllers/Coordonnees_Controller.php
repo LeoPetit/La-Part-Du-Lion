@@ -13,11 +13,14 @@ class Coordonnees_Controller extends CI_Controller
     function __construct()
     {
         parent::__construct();
-
     }
 
     public function index()
     {
+        if (isset($_SESSION["utilisateur"]))
+        {
+            session_start();
+        }
         $this->load->view('Jeu/map');
     }
 

@@ -5,6 +5,7 @@
  * Date: 26/12/2017
  * Time: 20:05
  */
+session_start();
 ?>
 <!DOCTYPE html>
 
