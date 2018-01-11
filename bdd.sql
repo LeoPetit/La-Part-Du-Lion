@@ -158,7 +158,7 @@ INSERT INTO quartier VALUES (default, 'Pointe Nord', FALSE, 10, 2);
 INSERT INTO quartier VALUES (default, 'Marché des Vosges', FALSE, 10, 2);
 INSERT INTO quartier VALUES (default, 'QG Exilés', TRUE, 10, 2);
 INSERT INTO quartier VALUES (default, 'Zone Courbet', FALSE, 10, 2);
-INSERT INTO quartier VALUES (default, 'Champ de mars', FALSE, 10, 2);
+INSERT INTO quartier VALUES (default, 'Champ de Mars', FALSE, 10, 2);
 
 /*Jaures*/
 INSERT INTO quartier VALUES (default, 'Saint Joseph', FALSE, 10, 3);
