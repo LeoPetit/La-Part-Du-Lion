@@ -147,54 +147,54 @@ CREATE TABLE quartier (
 );
 
 /*Technomancien*/
-INSERT INTO quartier VALUES (default, 'Technomancien1', TRUE, 10, 1);
-INSERT INTO quartier VALUES (default, 'Technomancien2', FALSE, 10, 1);
-INSERT INTO quartier VALUES (default, 'Technomancien3', FALSE, 10, 1);
-INSERT INTO quartier VALUES (default, 'Technomancien4', FALSE, 10, 1);
-INSERT INTO quartier VALUES (default, 'Technomancien5', FALSE, 10, 1);
+INSERT INTO quartier VALUES (default, 'QG Technomanciens', TRUE, 10, 1);
+INSERT INTO quartier VALUES (default, 'Zone IUT', FALSE, 10, 1);
+INSERT INTO quartier VALUES (default, 'Sud techn''hom', FALSE, 10, 1);
+INSERT INTO quartier VALUES (default, 'Etang techn''hom', FALSE, 10, 1);
+INSERT INTO quartier VALUES (default, 'Nord techn''hom', FALSE, 10, 1);
 
 /*Vosge*/
-INSERT INTO quartier VALUES (default, 'Vosge1', FALSE, 10, 2);
-INSERT INTO quartier VALUES (default, 'Vosge2', FALSE, 10, 2);
-INSERT INTO quartier VALUES (default, 'Vosge3', TRUE, 10, 2);
-INSERT INTO quartier VALUES (default, 'Vosge4', FALSE, 10, 2);
-INSERT INTO quartier VALUES (default, 'Vosge5', FALSE, 10, 2);
+INSERT INTO quartier VALUES (default, 'Pointe Nord', FALSE, 10, 2);
+INSERT INTO quartier VALUES (default, 'Marché des Vosges', FALSE, 10, 2);
+INSERT INTO quartier VALUES (default, 'QG Exilés', TRUE, 10, 2);
+INSERT INTO quartier VALUES (default, 'Zone Courbet', FALSE, 10, 2);
+INSERT INTO quartier VALUES (default, 'Champ de mars', FALSE, 10, 2);
 
 /*Jaures*/
-INSERT INTO quartier VALUES (default, 'Jaures1', FALSE, 10, 3);
-INSERT INTO quartier VALUES (default, 'Jaures2', FALSE, 10, 3);
-INSERT INTO quartier VALUES (default, 'Jaures3', TRUE, 10, 3);
-INSERT INTO quartier VALUES (default, 'Jaures4', FALSE, 10, 3);
-INSERT INTO quartier VALUES (default, 'Jaures5', FALSE, 10, 3);
-INSERT INTO quartier VALUES (default, 'Jaures6', FALSE, 10, 3);
+INSERT INTO quartier VALUES (default, 'Saint Joseph', FALSE, 10, 3);
+INSERT INTO quartier VALUES (default, 'Nord-Est Jaures', FALSE, 10, 3);
+INSERT INTO quartier VALUES (default, 'QG Résistants', TRUE, 10, 3);
+INSERT INTO quartier VALUES (default, 'Ancien Hopital', FALSE, 10, 3);
+INSERT INTO quartier VALUES (default, 'Maison du Peuple', FALSE, 10, 3);
+INSERT INTO quartier VALUES (default, 'Tour des affaires', FALSE, 10, 3);
 
 /*Miotte*/
-INSERT INTO quartier VALUES (default, 'Miotte1', FALSE, 10, 4);
-INSERT INTO quartier VALUES (default, 'Miotte2', FALSE, 10, 4);
-INSERT INTO quartier VALUES (default, 'Miotte3', TRUE, 10, 4);
-INSERT INTO quartier VALUES (default, 'Miotte4', FALSE, 10, 4);
-INSERT INTO quartier VALUES (default, 'Miotte5', FALSE, 10, 4);
+INSERT INTO quartier VALUES (default, 'Etang des forges', FALSE, 10, 4);
+INSERT INTO quartier VALUES (default, 'Tour de la Miotte', FALSE, 10, 4);
+INSERT INTO quartier VALUES (default, 'QG de la Tour', TRUE, 10, 4);
+INSERT INTO quartier VALUES (default, 'Brisach', FALSE, 10, 4);
+INSERT INTO quartier VALUES (default, 'Vauban', FALSE, 10, 4);
 
 /*Vieille ville*/
-INSERT INTO quartier VALUES (default, 'VieilleVille1', FALSE, 10, 5);
-INSERT INTO quartier VALUES (default, 'VieilleVille2', FALSE, 10, 5);
-INSERT INTO quartier VALUES (default, 'VieilleVille3', FALSE, 10, 5);
-INSERT INTO quartier VALUES (default, 'VieilleVille4', FALSE, 10, 5);
-INSERT INTO quartier VALUES (default, 'VieilleVille5', TRUE, 10, 5);
+INSERT INTO quartier VALUES (default, 'Atria', FALSE, 10, 5);
+INSERT INTO quartier VALUES (default, 'Tour 46', FALSE, 10, 5);
+INSERT INTO quartier VALUES (default, 'Square du souvenir', FALSE, 10, 5);
+INSERT INTO quartier VALUES (default, 'Citadelle', FALSE, 10, 5);
+INSERT INTO quartier VALUES (default, 'QG Forteresse', TRUE, 10, 5);
 
 /*Centre ville*/
-INSERT INTO quartier VALUES (default, 'CentreVille1', TRUE, 10, 6);
-INSERT INTO quartier VALUES (default, 'CentreVille2', FALSE, 10, 6);
-INSERT INTO quartier VALUES (default, 'CentreVille3', FALSE, 10, 6);
-INSERT INTO quartier VALUES (default, 'CentreVille4', FALSE, 10, 6);
-INSERT INTO quartier VALUES (default, 'CentreVille5', FALSE, 10, 6);
+INSERT INTO quartier VALUES (default, 'QG Négociants', TRUE, 10, 6);
+INSERT INTO quartier VALUES (default, 'Corbis', FALSE, 10, 6);
+INSERT INTO quartier VALUES (default, 'Gare', FALSE, 10, 6);
+INSERT INTO quartier VALUES (default, 'Rue piétone', FALSE, 10, 6);
+INSERT INTO quartier VALUES (default, '4 AS', FALSE, 10, 6);
 
 /*Residence*/
-INSERT INTO quartier VALUES (default, 'Residence1', FALSE, 10, 7);
-INSERT INTO quartier VALUES (default, 'residence2', FALSE, 10, 7);
-INSERT INTO quartier VALUES (default, 'Residence3', FALSE, 10, 7);
-INSERT INTO quartier VALUES (default, 'Residence4', TRUE, 10, 7);
-INSERT INTO quartier VALUES (default, 'Residence5', FALSE, 10, 7);
+INSERT INTO quartier VALUES (default, 'Condorcet', FALSE, 10, 7);
+INSERT INTO quartier VALUES (default, 'Nouvelles Résidences', FALSE, 10, 7);
+INSERT INTO quartier VALUES (default, 'Kennedy', FALSE, 10, 7);
+INSERT INTO quartier VALUES (default, 'QG Veilleurs', TRUE, 10, 7);
+INSERT INTO quartier VALUES (default, 'Bois Essert', FALSE, 10, 7);
 
 CREATE TABLE coordonnees (
   id          INT NOT NULL AUTO_INCREMENT,
