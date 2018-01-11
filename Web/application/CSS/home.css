@@ -7,7 +7,7 @@
     background-size: 120vw;
     width: 100%;
     min-height: 94vh;
-    filter: blur(5px);
+    filter: blur(4px);
 }
 
 @media only screen and (max-width: 990px) {
