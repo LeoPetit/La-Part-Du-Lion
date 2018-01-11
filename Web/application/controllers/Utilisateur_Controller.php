@@ -12,7 +12,6 @@ class Utilisateur_Controller extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->library('session');
         $this->load->library('encryption');
 
         $this->encryption->initialize(
@@ -102,7 +101,7 @@ class Utilisateur_Controller extends CI_Controller
 
         $isRegistered = $this->u->connection($data["pseudo"], $data["mdp"]);
 
-        $this->session->utilisateur = $isRegistered[0];
+        $_SESSION["utilisateur"] = $isRegistered[0];
         $this->load->view('Accueil/index.php');
     }
 
@@ -137,7 +136,7 @@ class Utilisateur_Controller extends CI_Controller
             $this->load->view('Compte/index.php');
 
         } else {
-            $idJoueur = $this->session->utilisateur->id;
+            $idJoueur = $_SESSION["idJoueur"];
             $data["mdp"] = $this->input->post("password");
             $this->load->model('Utilisateur_Model', 'u');
             $this->u->UpdateUser($data, $idJoueur);
@@ -154,7 +153,7 @@ class Utilisateur_Controller extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('Compte/index.php');
         } else {
-            $idJoueur = $this->session->utilisateur->id;
+            $idJoueur = $_SESSION["idJoueur"];
             $data["email"] = $this->input->post("mail");
             $this->load->model('Utilisateur_Model', 'u');
             $this->u->UpdateUser($data, $idJoueur);

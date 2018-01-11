@@ -5,7 +5,10 @@
  * Date: 24/10/2017
  * Time: 16:21
  */
-
+if (isset($_SESSION["utilisateur"]))
+{
+    session_start();
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
