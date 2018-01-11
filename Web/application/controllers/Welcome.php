@@ -22,8 +22,6 @@ class Welcome extends CI_Controller {
 	{
         $this->load->helper('form');
 
-        if(empty($_SESSION["utilisateur"]))
-            session_start();
 
         $this->load->model('Equipe_Model', 'e');
         $result = $this->e->getDescriptionClan();
