@@ -22,7 +22,6 @@ class Welcome extends CI_Controller {
 	{
         $this->load->helper('form');
 
-
         $this->load->model('Equipe_Model', 'e');
         $result = $this->e->getDescriptionClan();
         $return["descriptif"] = $result;

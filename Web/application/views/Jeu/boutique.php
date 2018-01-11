@@ -5,7 +5,7 @@
  * Date: 12/12/17
  * Time: 11:34
  */
-
+session_start();
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 

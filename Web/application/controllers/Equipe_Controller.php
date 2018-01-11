@@ -16,6 +16,8 @@ class Equipe_Controller extends CI_Controller
 
     public function index() {
 
+        session_start();
+
         $this->load->helper(array('form', 'url'));
 
         $equipe_user = $_SESSION["utilisateur"]->equipe_id;
