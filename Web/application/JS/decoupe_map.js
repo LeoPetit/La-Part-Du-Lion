@@ -71,7 +71,7 @@ function myMap() {
 
         var flightPath;
 
-        console.log(coordonnees[i-1].QG);
+        //console.log(coordonnees[i-1].QG);
 
         if(coordonnees[i-1].QG == 1) {
             flightPath = new google.maps.Polygon({

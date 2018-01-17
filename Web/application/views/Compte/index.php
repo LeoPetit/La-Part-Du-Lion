@@ -5,7 +5,9 @@
  * Date: 24/10/2017
  * Time: 16:21
  */
-session_start();
+if(empty($_SESSION["utilisateur"]))
+    session_start();
+
 ?>
 <!DOCTYPE html>
 

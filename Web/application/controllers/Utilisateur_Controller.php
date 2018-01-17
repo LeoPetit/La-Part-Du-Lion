@@ -140,7 +140,8 @@ class Utilisateur_Controller extends CI_Controller
             $this->load->view('Compte/index.php');
 
         } else {
-            $idJoueur = $_SESSION["idJoueur"];
+            session_start();
+            $idJoueur = $_SESSION["utilisateur"]->id;
             $data["mdp"] = $this->input->post("password");
             $this->load->model('Utilisateur_Model', 'u');
             $this->u->UpdateUser($data, $idJoueur);
@@ -156,7 +157,8 @@ class Utilisateur_Controller extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('Compte/index.php');
         } else {
-            $idJoueur = $_SESSION["idJoueur"];
+            session_start();
+            $idJoueur = $_SESSION["utilisateur"]->id;
             $data["email"] = $this->input->post("mail");
             $this->load->model('Utilisateur_Model', 'u');
             $this->u->UpdateUser($data, $idJoueur);

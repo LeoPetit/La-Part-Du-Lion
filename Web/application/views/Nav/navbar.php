@@ -23,7 +23,7 @@
                 <?php echo anchor('Welcome', 'Accueil', 'class="nav-link"') ?>
             </li>
             <li class="nav-item">
-                <?php echo anchor('Forum_Controller', 'Forum', 'class="nav-link"') ?>
+                <?php echo "<a href='#' class='nav-link'>Forum (V2)<a>";/*anchor('Forum_Controller', 'Forum', 'class="nav-link"')*/ ?>
             </li>
             <li class="nav-item">
                 <?php echo anchor('Welcome/telecharger', 'Télécharger', 'class="nav-link" id="presentationButton"') ?>
@@ -42,10 +42,11 @@
                     <div class="dropdown-divider"></div>
 
                     <?php
-                    if(isset($_SESSION["utilisateur"]->pseudo))
+                    /*if(isset($_SESSION["utilisateur"]->pseudo))
                         echo anchor('Item_Controller', 'Boutique', 'class="dropdown-item"');
                     else
-                        echo anchor('Utilisateur_Controller', 'Boutique', 'class="dropdown-item"');
+                        echo anchor('Utilisateur_Controller', 'Boutique', 'class="dropdown-item"');*/
+                    echo "<a href='#' class='dropdown-item'>Boutique (V2)<a>";
                     ?>
                 </div>
             </li>
@@ -71,7 +72,7 @@
                             echo anchor('Utilisateur_Controller', 'Progression', 'class="dropdown-item"');
                     ?>
                     <div class="dropdown-divider"></div>
-                    <?php echo anchor('index.php/Welcome/show/', 'Arbre de compétences', 'class="dropdown-item"') ?>
+                    <?php echo "<a href='#' class='dropdown-item'>Compétences (V2)<a>";/*anchor('index.php/Welcome/show/', 'Arbre de compétences', 'class="dropdown-item"')*/ ?>
                 </div>
             </li>
             <li class="nav-item">
