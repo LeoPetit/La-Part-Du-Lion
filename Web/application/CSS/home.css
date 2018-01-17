@@ -10,13 +10,6 @@
     filter: blur(4px);
 }
 
-@media only screen and (max-width: 990px) {
-    .home{
-        background-position: 20%;
-        background-size: 280vw;
-    }
-}
-
 .home_text{
     position: absolute;
     top: 630px;
@@ -44,7 +37,7 @@
 
 .clans{
     margin:auto;
-    height: 200vh;
+    height: 2200px;
 }
 
 .moreInfos{
@@ -140,19 +133,45 @@ img.home_logoClan_details{
     .leftClan{
         float: none;
         margin: 20px auto 0 auto;
+        height: 300px;
     }
 
     .rightClan{
         float: none;
         margin: 20px auto 0 auto;
+        height: 300px;
     }
 
     .androidButton{
         margin: 0;
-        margin-left: 60px;
+        margin-left: 34%;
     }
 
     img.phone{
-        max-width: 300px;
+        max-width: 270px;
+    }
+
+    .home{
+        background-position: 20%;
+        background-size: 280vw;
+        height: 700px;
+        min-height: 0;
+    }
+
+    .home_logo{
+        max-width: 250px;
+        top: 170px;
+    }
+
+    .home_text{
+        top: 530px;
+    }
+
+    .networks{
+        padding: 30px;
+    }
+
+    .moreInfos{
+        padding: 10%;
     }
 }
