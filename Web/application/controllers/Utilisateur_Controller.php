@@ -147,7 +147,6 @@ class Utilisateur_Controller extends CI_Controller
             $_SESSION["utilisateur"]->mdp =  $data["mdp"];
             $this->load->view('Compte/index.php');
         }
-
     }
 
     public function updateEmail()
