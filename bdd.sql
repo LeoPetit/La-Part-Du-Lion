@@ -47,10 +47,6 @@ CREATE TABLE item (
 );
 
 INSERT INTO item VALUES(default, 'Piege classique', 60, 1, '+2PC, +60G / -1 PA');
-INSERT INTO item VALUES(default, 'Piege classique', 60, 1, '+2PC, +60G / -1 PA');
-INSERT INTO item VALUES(default, 'Piege classique', 60, 1, '+2PC, +60G / -1 PA');
-INSERT INTO item VALUES(default, 'Piege classique', 60, 1, '+2PC, +60G / -1 PA');
-INSERT INTO item VALUES(default, 'Piege classique', 60, 1, '+2PC, +60G / -1 PA');
 INSERT INTO item VALUES(default, 'Piege etrange', 20, 2, '+20 G');
 
 CREATE TABLE effet (

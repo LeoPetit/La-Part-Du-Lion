@@ -18,8 +18,10 @@ class Item_Model extends CI_Model
     {
         // récupère les items en BDD
 
+        $this->db->distinct();
         $this->db->select('id,nom,coutAchat,coutRessource');
         $this->db->from('item');
+        $this->db->order_by('id');
         $query = $this->db->get();
 
         return $query->result();
