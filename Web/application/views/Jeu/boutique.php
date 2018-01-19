@@ -64,7 +64,11 @@ if(!isset($_SESSION["utilisateur"]))
         echo '<p>fhuezif huzfizhfu izfhu zifh uzihf uizfhuz fhuiz hfui zhfuize </p>';
         echo '</div>';
         echo '<div class="prixItem col-md-3"><p>Prix: '.$item->coutAchat.'</p><p>PA : '.$item->coutRessource.'</p></div>';
-        //echo anchor('Utilisateur_Controller/achat/item_id/'.$item->id."/prix/".$item->coutAchat, 'Acheter', 'class="boutonAchat"');
+        echo '<div class="acheterItem">';
+        echo  '<p> quantité</p>';
+        echo '<input type="number" name="quantity" min="1" max="5">';
+        echo anchor('Utilisateur_Controller/achat/item_id/'.$item->id."/prix/".$item->coutAchat, 'Acheter', 'class="boutonAchat"');
+        echo '</div>';
         echo '</div>';
 
     }
