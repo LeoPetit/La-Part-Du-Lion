@@ -197,61 +197,89 @@ a.nav-link.phoneDeconnexion{
 }
 
 @media only screen and (max-width: 990px) {
-    .logo{
+    .logo {
         display: none;
     }
 
-    a.nav-link.phoneConnexion{
+    a.nav-link.phoneConnexion {
         display: block
     }
 
-    a.nav-link.phoneDeconnexion{
+    a.nav-link.phoneDeconnexion {
         display: block
     }
 
-    a.nav-link.connexion{
-         display: none;
-    }
-
-    a.nav-link.deconnexion{
+    a.nav-link.connexion {
         display: none;
     }
 
-    .welcome{
+    a.nav-link.deconnexion {
         display: none;
     }
 
-    .navbar-expand-lg .navbar-nav .nav-link{
+    .welcome {
+        display: none;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
         padding-left: 1rem;
     }
 
-    .footerContent{
+    .footerContent {
         margin-top: 100px;
         height: 500px;
     }
 
-    .linksContent{
+    .linksContent {
         border-right: 0;
         border-bottom: 1px solid white;
     }
 
-    .networks p{
+    .networks p {
         margin-top: 20px;
     }
 
-    .androidButtonFooter{
+    .androidButtonFooter {
         margin-top: 0;
         margin-bottom: 20px;
     }
 
-    .networks{
+    .networks {
         margin-left: auto;
         margin-right: auto;
+        padding: 30px;
     }
 
-    .footerContent p{
+    .footerContent p {
         margin: 7%;
         text-align: center;
+    }
+
+    nav.navbar.navbar-expand-lg {
+        min-height: 160px;
+    }
+
+    .icon-bar{
+        width: 50px;
+        height: 6px;
+    }
+
+    .navbar-toggler:focus, .navbar-toggler{
+        margin-top: 20px;
+    }
+
+    .navbar-nav .nav-link{
+        font-size: 32px;
+        margin: 20px 0;
+    }
+
+    a.dropdown-item{
+        font-size: 32px;
+        margin: 20px 0;
+    }
+
+    p{
+        font-size: 24px;
     }
 }
 

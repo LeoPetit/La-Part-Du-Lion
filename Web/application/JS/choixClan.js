@@ -5,20 +5,32 @@
 
 $('#validationButton').prop("disabled",true);
 
-$("p").each(function() {
-    $(this).hide();
-});
-
-$("input[id*='clan']").click(function() {
-    $("p").each(function() {
-        $(this).hide();
-    });
-
-    var id = $(this).attr("id").slice(4);
-    $("#content"+id).show();
-    $('#validationButton').prop("disabled",false);
-});
-
 $("footer").each(function() {
     $(this).hide();
 });
+
+$("li[id*='idClan']").click(function(){
+    var id = $(this).attr("id").slice(5);
+    if($($(this).attr("id") + " > div.animatedItem").has('.open')){
+        $($(this).attr("id") + " > div.animatedItem").slideDown('slow', function() {
+            $(this).removeClass('open');
+        });
+    }
+    else {
+        $($(this).attr("id") + " > div.animatedItem").slideDown('slow', function(){
+            $(this).addClass('open');
+        });
+    }
+});
+
+$("label.control-labelCheckBox").click(function(){
+    if($(this).hasClass('.test')){
+        $(this).css("background-color", "black");
+        $(this).removeClass('.test');
+    }
+    else{
+        $(this).css("background-color", "#13EA00");
+        $(this).addClass('.test');
+    }
+});
+

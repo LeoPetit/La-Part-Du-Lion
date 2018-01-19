@@ -114,7 +114,7 @@ ul li .animatedItem{
 #validationButton{
     position: absolute;
     z-index: 0;
-    top: 80%;
+    top: 45%;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -153,29 +153,8 @@ ul li .animatedItem{
         display:none;
     }
 
-    ul li:hover .animatedItem{
-        opacity:1;
-        height:440px;
-        width: 280px;
-        transition:0.5s left,0.5s height,0.5s opacity;
-    }
-
-    ul li .animatedItem{
-        position: absolute;
-        z-index: 100;
-        top: 98%;
-        left: 0;
-        width:280px;
-        height: 0;
-        background: rgba(0, 0, 0, 0.6);
-        overflow: hidden;
-        color: white;
-        opacity:0;
-        transition:0.5s left,0.5s height,0.5s opacity;
-    }
-
     .menu{
-        left: 26%;
+        left: 16%;
     }
 }
 

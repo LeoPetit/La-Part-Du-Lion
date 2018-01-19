@@ -32,8 +32,8 @@ session_start();
 
 <div class="menu row">
     <ul>
-        <li class="listItem">
-            <a href="" class="menuItem">Technomancien</a>
+        <li id="idClan1" class="listItem">
+            <h2 class="menuItem">Technomancien</h2>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[0]->nom);?></h3>
                 <?php
@@ -62,8 +62,8 @@ session_start();
                 );?>
             </div>
         </li>
-        <li class="listItem">
-            <a href="" class="menuItem">Les résistants</a>
+        <li id="idClan2" class="listItem">
+            <a class="menuItem">Les résistants</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[2]->nom)?></h3>
                 <?php
@@ -90,8 +90,8 @@ session_start();
                 ?>
             </div>
         </li>
-        <li class="listItem">
-            <a href="" class="menuItem">RedStone</a>
+        <li id="idClan3" class="listItem">
+            <a class="menuItem">RedStone</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[6]->nom)?></h3>
                 <?php
@@ -114,8 +114,8 @@ session_start();
                 ?>
             </div>
         </li>
-        <li class="listItem">
-            <a href="" class="menuItem">La tour</a>
+        <li id="idClan4" class="listItem">
+            <a  class="menuItem">La tour</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[3]->nom)?></h3>
                 <?php
@@ -139,8 +139,8 @@ session_start();
                 ?>
             </div>
         </li>
-        <li class="listItem">
-            <a href="" class="menuItem">Les Négociants</a>
+        <li id="idClan5" class="listItem">
+            <a class="menuItem">Les Négociants</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[5]->nom)?></h3>
                 <?php
@@ -164,8 +164,8 @@ session_start();
                 ?>
             </div>
         </li>
-        <li class="listItem">
-            <a href="" class="menuItem">Les Exilés</a>
+        <li id="idClan6" class="listItem">
+            <a class="menuItem">Les Exilés</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[1]->nom)?></h3>
                 <?php
@@ -189,8 +189,8 @@ session_start();
                 ?>
             </div>
         </li>
-        <li class="listItem">
-            <a href="" class="menuItem">La forteresse</a>
+        <li id="idClan7" class="listItem">
+            <a class="menuItem">La forteresse</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[4]->nom)?></h3>
                 <?php
