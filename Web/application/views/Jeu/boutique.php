@@ -61,7 +61,7 @@ if(!isset($_SESSION["utilisateur"]))
         echo '<img class="imgItem" src="'.base_url().'application/assets/images/items/png/'.$item->nom.'.png">';
         echo '<div class="moreDetails col-sm-5">';
         echo '<h5>'.$item->nom.'</h5>';
-        echo '<p>fhuezif huzfizhfu izfhu zifh uzihf uizfhuz fhuiz hfui zhfuize </p>';
+        echo '<p>'.$item->libelle.'</p>';
         echo '</div>';
         echo '<div class="prixItem col-md-3"><p>Prix: '.$item->coutAchat.'</p><p>PA : '.$item->coutRessource.'</p></div>';
         echo '<div class="acheterItem">';
