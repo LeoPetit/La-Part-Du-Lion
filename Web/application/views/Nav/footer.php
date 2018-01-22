@@ -8,11 +8,11 @@
 ?>
 
 <div class="footerContent row col-lg-12">
-    <div class="linksContent col-lg-8">
+    <div class="linksContent col-lg-6">
         <p>©2017 ZBEUBOUILLE ENTERTAINMENT, INC. TOUS DROITS RÉSERVÉS(bientot).
             Toutes les marques citées appartiennent à leur propriétaire (bientot aussi).</p>
     </div>
-    <div class="networks col-md-4">
+    <div class="networks col-md-6">
         <?php echo anchor('Welcome/telecharger', 'Téléchargez La Part du Lion !', 'id="dlGame"') ?>
 
         <div class="networksButton">

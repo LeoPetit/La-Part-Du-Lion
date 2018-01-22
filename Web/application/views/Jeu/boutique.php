@@ -59,18 +59,20 @@ if(!isset($_SESSION["utilisateur"]))
         // créer une div et affiche l'items
         echo '<div class="articleItem col-lg-5">';
         echo '<img class="imgItem" src="'.base_url().'application/assets/images/items/png/'.$item->nom.'.png">';
-        echo '<div class="moreDetails col-sm-5">';
+        echo '<div class="moreDetails col-sm-7">';
         echo '<h5>'.$item->nom.'</h5>';
         echo '<p>'.$item->libelle.'</p>';
-        echo '</div>';
+        echo '<div class="interactObject">';
         echo '<div class="prixItem col-md-3"><p>Prix: '.$item->coutAchat.'</p><p>PA : '.$item->coutRessource.'</p></div>';
         echo '<div class="acheterItem">';
-        echo  '<p> quantité</p>';
+        echo  '<p> Quantité :</p>';
         echo '<input type="number" name="quantity" min="1" max="5">';
         echo anchor('Utilisateur_Controller/achat/item_id/'.$item->id."/prix/".$item->coutAchat, 'Acheter', 'class="boutonAchat"');
         echo '</div>';
         echo '</div>';
+        echo '</div>';
 
+        echo '</div>';
     }
     ?>
 </div>

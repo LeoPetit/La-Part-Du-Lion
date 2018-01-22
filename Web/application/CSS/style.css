@@ -196,6 +196,13 @@ a.nav-link.phoneDeconnexion{
     color: black;
 }
 
+@media only screen and (max-width: 1300px) {
+
+    p{
+        font-size: 12px;
+    }
+}
+
 @media only screen and (max-width: 990px) {
     .logo {
         display: none;
@@ -270,18 +277,21 @@ a.nav-link.phoneDeconnexion{
 
     .navbar-nav .nav-link{
         font-size: 32px;
-        margin: 20px 0;
+        margin: 10px 0;
     }
 
     a.dropdown-item{
         font-size: 32px;
-        margin: 20px 0;
+        margin: 5px 0;
     }
 
     p{
-        font-size: 24px;
+        font-size: 18px;
     }
 }
+
+
+
 
 
 
