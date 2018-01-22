@@ -5,7 +5,9 @@
  * Date: 12/12/17
  * Time: 11:34
  */
-session_start();
+if(!isset($_SESSION['utilisateur']))
+    session_start();
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
@@ -32,23 +34,13 @@ if(!isset($_SESSION["utilisateur"]))
 <div class="budgetItem"><?php echo $_SESSION["utilisateur"]->gold?> <img src="<?php echo base_url()?>application/assets/images/items/png/monnaie.png"></div>
 <div class="inventaireContent">
     <h4> Inventaire </h4>
-    <img class="imgItem inventaire" src="<?php echo base_url()?>application/assets/images/items/png/Piege classique.png">
-    <span>x3</span>
 
-    <img class="imgItem inventaire" src="<?php echo base_url()?>application/assets/images/items/png/Piege classique.png">
-    <span>x3</span>
-
-    <img class="imgItem inventaire" src="<?php echo base_url()?>application/assets/images/items/png/Piege classique.png">
-    <span>x3</span>
-
-    <img class="imgItem inventaire" src="<?php echo base_url()?>application/assets/images/items/png/Piege classique.png">
-    <span>x3</span>
-
-    <img class="imgItem inventaire" src="<?php echo base_url()?>application/assets/images/items/png/Piege classique.png">
-    <span>x3</span>
-
-    <img class="imgItem inventaire" src="<?php echo base_url()?>application/assets/images/items/png/Piege classique.png">
-    <span>x3</span>
+    <?php
+        foreach($inventaire as $i) {
+            echo '<img class="imgItem inventaire" src="'.base_url().$i->link.'">
+            <span>x'.$i->nb.'</span>';
+        }
+    ?>
 
 </div>
 

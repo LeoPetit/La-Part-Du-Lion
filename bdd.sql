@@ -42,12 +42,13 @@ CREATE TABLE item (
   coutAchat     INT,
   coutRessource INT,
   libelle VARCHAR(50),
+  link VARCHAR(255),
 
   PRIMARY KEY (id)
 );
 
-INSERT INTO item VALUES(default, 'Piege classique', 60, 1, '+2PC, +60G / -1 PA');
-INSERT INTO item VALUES(default, 'Piege etrange', 20, 2, '+20 G');
+INSERT INTO item VALUES(default, 'Piege classique', 60, 1, '+2PC, +60G / -1 PA', 'application/assets/images/items/png/Piege classique.png');
+INSERT INTO item VALUES(default, 'Piege etrange', 20, 2, '+20 G', 'application/assets/images/items/png/Piege classique.png');
 
 CREATE TABLE effet (
   id      INT NOT NULL AUTO_INCREMENT,
