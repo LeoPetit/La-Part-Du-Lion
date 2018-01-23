@@ -50,8 +50,8 @@ CREATE TABLE item (
 );
 
 INSERT INTO item VALUES(default, 'Piege basique', 90, 2, '+2PC, +60G / -1 PA', 'application/assets/images/items/png/Piege_basique.png', 50, 2);
-INSERT INTO item VALUES(default, 'Bouclier', 120, 1, 'Invulnerabilité', 'application/assets/images/items/png/Piege_basique.png', NULL, NULL);
-INSERT INTO item VALUES(default, 'Bouclier divin', 500, 2, 'Invulnerabilité', 'application/assets/images/items/png/Piege_basique.png', NULL, 1);
+INSERT INTO item VALUES(default, 'Bouclier', 120, 1, 'Invulnerabilité', 'application/assets/images/items/png/Bouclier.png', NULL, NULL);
+INSERT INTO item VALUES(default, 'Bouclier divin', 500, 2, 'Invulnerabilité', 'application/assets/images/items/png/BouclierDivin.png', NULL, 1);
 INSERT INTO item VALUES(default, 'Piege assassin', 150, 1, '+4 PC / -4 PA', 'application/assets/images/items/png/Piege_basique.png', 3, 3);
 INSERT INTO item VALUES(default, 'Piege pick-pocket', 150, 2, '+2 PA, +200G / -100G', 'application/assets/images/items/png/Piege_basique.png', 5, 3);
 

@@ -70,11 +70,12 @@ ul li:hover .animatedItem {
 
 ul li .animatedItem{
     position: absolute;
-    top: 5%;
-    left: 100%;
+    top: 3%;
+    left: 99%;
     width:0;
-    height: 260px;
+    height: 280px;
     background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
     overflow: hidden;
     color: white;
     opacity:0;
@@ -108,13 +109,13 @@ ul li .animatedItem{
     background-color: black;
     font-weight: bold;
     color: white;
-    margin: 35px;
+    margin: 15px 130px;
 }
 
 #validationButton{
     position: absolute;
     z-index: 0;
-    top: 45%;
+    top: 650px;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -129,6 +130,10 @@ ul li .animatedItem{
     margin: auto;
     text-align: center;
     color: red
+}
+
+input[type=radio]{
+    display:none;
 }
 
 @media only screen and (max-width: 990px) {
