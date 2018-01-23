@@ -27,4 +27,8 @@ class Inventaire_Model extends CI_Model
         return $query->result();
     }
 
+    function putInInventaire($idItem) {
+        $this->db->insert('inventaire', ['user_id' => $_SESSION['utilisateur']->id, 'item_id' => $idItem]);
+    }
+
 }

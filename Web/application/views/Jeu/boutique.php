@@ -59,9 +59,49 @@ if(!isset($_SESSION["utilisateur"]))
         echo '<div class="interactObject">';
         echo '<div class="prixItem col-md-3"><p>'.$item->coutAchat.'<img src="'.base_url().'application/assets/images/items/png/monnaie.png"></p><p>PA : '.$item->coutRessource.'</p></div>';
         echo '<div class="acheterItem">';
-        echo  '<p> Quantité :</p>';
-        echo '<input type="number" name="quantity" min="1" max="5">';
-        echo anchor('Utilisateur_Controller/achat/item_id/'.$item->id."/prix/".$item->coutAchat, 'Acheter', 'class="boutonAchat"');
+        $attributes = array('name' => 'formAchat'.$item->id);
+        echo form_open('Inventaire_Controller/achat',$attributes);
+
+        $attributes = array(
+            'class' => 'control-label',
+        );
+
+        echo form_label('Quantite', 'quantite'.$item->id, $attributes);
+
+        $data = array(
+            'name'          => 'quantite'.$item->id,
+            'id'            => 'quantite',
+            'class'         => 'inputData',
+            'type'          => 'number',
+            'value'         => '1',
+            'min'           => '1',
+            'max'           => '5'
+        );
+
+        echo form_input($data);
+
+        $data = array(
+            'name'          => 'Achat',
+            'class'         => 'boutonAchat',
+            'value'         => 'Acheter'
+        );
+
+        echo form_submit($data);
+
+        $data = array(
+            'idItem'  => $item->id
+        );
+
+        echo form_hidden($data);
+
+        $data = array(
+            'prixItem'  => $item->coutAchat
+        );
+
+        echo form_hidden($data);
+        echo form_close();
+        //echo '<input type="number" name="quantity" min="1" max="5">';
+        //echo anchor('Utilisateur_Controller/achat/item_id/'.$item->id."/prix/".$item->coutAchat, 'Acheter', 'class="boutonAchat"');
         echo '</div>';
         echo '</div>';
         echo '</div>';

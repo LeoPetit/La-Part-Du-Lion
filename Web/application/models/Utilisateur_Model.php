@@ -32,22 +32,13 @@ class Utilisateur_Model extends CI_Model
     {
 
     }
-    public function updateBudget($idJoueur,$prix,$transaction)
+    public function setGolds($prix)
     {
-        echo $prix;
-        if ($transaction =="diminuer")
-        {
-            // problème avec $prix
-            $this->db->set('gold', 'gold -'.$prix, FALSE);
-            $this->db->where('id', $idJoueur);
-            $this->db->update('Utilisateur');
-        }
-        else
-        {
-            $this->db->set('gold', 'gold+'.$prix, FALSE);
-            $this->db->where('id', $idJoueur);
-            $this->db->update('Utilisateur');
-        }
+        // problème avec $prix
+        $this->db->set('gold', $prix);
+        $this->db->where('id', $_SESSION['utilisateur']->gold);
+        $this->db->update('utilisateur');
+
     }
     public function updateUser($data,$idJoueur)
     {
