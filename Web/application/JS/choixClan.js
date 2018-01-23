@@ -23,14 +23,10 @@ $("li[id*='idClan']").click(function(){
     }
 });
 
-$("label.control-labelCheckBox").click(function(){
-    if($(this).hasClass('.test')){
-        $(this).css("background-color", "black");
-        $(this).removeClass('.test');
-    }
-    else{
-        $(this).css("background-color", "#13EA00");
-        $(this).addClass('.test');
-    }
+$("label[for*=clan]").click(function(){
+    $("label").css('background-color', 'black');
+    $(this).css("background-color", "#13EA00");
+    $('#validationButton').prop("disabled",false);
+
 });
 

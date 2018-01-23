@@ -63,7 +63,7 @@ session_start();
             </div>
         </li>
         <li id="idClan2" class="listItem">
-            <a class="menuItem">Les résistants</a>
+            <a class="menuItem">Résistants</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[2]->nom)?></h3>
                 <?php
@@ -91,7 +91,7 @@ session_start();
             </div>
         </li>
         <li id="idClan3" class="listItem">
-            <a class="menuItem">RedStone</a>
+            <a class="menuItem">Veilleurs</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[6]->nom)?></h3>
                 <?php
@@ -115,7 +115,7 @@ session_start();
             </div>
         </li>
         <li id="idClan4" class="listItem">
-            <a  class="menuItem">La tour</a>
+            <a  class="menuItem">Tour</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[3]->nom)?></h3>
                 <?php
@@ -140,7 +140,7 @@ session_start();
             </div>
         </li>
         <li id="idClan5" class="listItem">
-            <a class="menuItem">Les Négociants</a>
+            <a class="menuItem">Négociants</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[5]->nom)?></h3>
                 <?php
@@ -165,7 +165,7 @@ session_start();
             </div>
         </li>
         <li id="idClan6" class="listItem">
-            <a class="menuItem">Les Exilés</a>
+            <a class="menuItem">Exilés</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[1]->nom)?></h3>
                 <?php
@@ -190,7 +190,7 @@ session_start();
             </div>
         </li>
         <li id="idClan7" class="listItem">
-            <a class="menuItem">La forteresse</a>
+            <a class="menuItem">Forteresse</a>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[4]->nom)?></h3>
                 <?php

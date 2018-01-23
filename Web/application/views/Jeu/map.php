@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="legendeClan col-sm-3">
             <img class="legendPicture" src="<?php echo base_url()?>application/assets/images/logos/png/logo_redstones.png"/>
-            <p class="legend">Clan des Redstones</p>
+            <p class="legend">Clan des Veilleurs</p>
         </div>
         <div class="legendeClan col-sm-3">
             <img class="legendPicture" src="<?php echo base_url()?>application/assets/images/logos/png/logo_resistants.png"/>
@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="legendeClan col-sm-3">
             <img class="legendPicture" src="<?php echo base_url()?>application/assets/images/logos/png/logo_technomanciens.png"/>
-            <p class="legend">Clan des Technomanciens</p>
+            <p class="legend">Clan Technomanciens</p>
         </div>
         <div class="legendeClan col-sm-3">
             <img class="legendPicture" src="<?php echo base_url()?>application/assets/images/logos/png/logo_tour.png"/>
