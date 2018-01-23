@@ -17,6 +17,7 @@ class Item_Controller extends CI_Controller
     public function index() {
 
         session_start();
+        $this->load->helper('form');
 
         $this->load->model('Item_Model', 'i');
         $this->load->model('Effet_Model', 'e');
