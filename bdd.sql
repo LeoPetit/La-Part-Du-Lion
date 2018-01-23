@@ -43,12 +43,17 @@ CREATE TABLE item (
   coutRessource INT,
   libelle VARCHAR(50),
   link VARCHAR(255),
+  rayon INT DEFAULT NULL,
+  temps INT DEFAULT NULL,
 
   PRIMARY KEY (id)
 );
 
-INSERT INTO item VALUES(default, 'Piege classique', 60, 1, '+2PC, +60G / -1 PA', 'application/assets/images/items/png/Piege classique.png');
-INSERT INTO item VALUES(default, 'Piege etrange', 20, 2, '+20 G', 'application/assets/images/items/png/Piege classique.png');
+INSERT INTO item VALUES(default, 'Piege basique', 90, 2, '+2PC, +60G / -1 PA', 'application/assets/images/items/png/Piege_basique.png', 50, 2);
+INSERT INTO item VALUES(default, 'Bouclier', 120, 1, 'Invulnerabilité', 'application/assets/images/items/png/Piege_basique.png', NULL, NULL);
+INSERT INTO item VALUES(default, 'Bouclier divin', 500, 2, 'Invulnerabilité', 'application/assets/images/items/png/Piege_basique.png', NULL, 1);
+INSERT INTO item VALUES(default, 'Piege assassin', 150, 1, '+4 PC / -4 PA', 'application/assets/images/items/png/Piege_basique.png', 3, 3);
+INSERT INTO item VALUES(default, 'Piege pick-pocket', 150, 2, '+2 PA, +200G / -100G', 'application/assets/images/items/png/Piege_basique.png', 5, 3);
 
 CREATE TABLE effet (
   id      INT NOT NULL AUTO_INCREMENT,
