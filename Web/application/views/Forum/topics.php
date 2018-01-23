@@ -27,7 +27,7 @@ session_start();
 
         <div class="interactZone">
             <?php echo anchor('Forum_Controller/index#newTopic', 'Nouveau sujet', 'id="createTopics" class="forumButton"') ?>
-            <select>
+            <select id="zone">
                 <option value="Général">
                     <?php echo anchor('Forum_Controller/index', 'Général', '') ?>
                 </option>
@@ -134,8 +134,9 @@ session_start();
             echo form_textarea($data);
 
             $data = array(
+                'id'            => 'validPost',
                 'name'          => 'validerPost',
-                'class'         => 'validPost',
+                'class'         => 'validPost forumButton',
                 'value'         => 'Poster',
             );
 

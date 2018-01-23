@@ -132,6 +132,16 @@
     width:100%;
 }
 
+#validPost{
+    background-color: #999999;
+    color: white;
+    width: 130px;
+}
+
+#validPost:hover{
+    background-color: #555555;
+}
+
 form.form_topic{
     text-align: left;
 }
@@ -140,6 +150,24 @@ input#newTopic.inputData{
     margin-bottom: 20px;
 }
 
+select{
+    padding: 30px;
+    margin-right: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: #002572;
+    color: white;
+    height: 55px;
+    width: 130px;
+}
+
+option{
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #555555;
+    color: white;
+}
 @media only screen and (max-width: 990px) {
     .listTopics{
         margin-top: 200px;
