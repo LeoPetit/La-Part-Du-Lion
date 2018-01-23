@@ -37,7 +37,7 @@ if(!isset($_SESSION["utilisateur"]))
 
     <?php
         foreach($inventaire as $i) {
-            echo '<img class="imgItem inventaire" src="'.base_url().$i->link.'">
+            echo '<img title ="'.$i->nom.'" class="imgItem inventaire" src="'.base_url().$i->link.'">
             <span>x'.$i->nb.'</span>';
         }
     ?>
