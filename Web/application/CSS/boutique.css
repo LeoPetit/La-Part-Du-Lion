@@ -1,10 +1,14 @@
 /*shop*/
+
+.container{
+    padding: 20px;
+}
 .budgetItem{
     background-color:black;
     border-radius: 30px;
     opacity: 0.8;
     width: 150px;
-    margin: 100px auto auto auto;
+    margin: 100px auto 30px auto;
     color: white;
     text-align: center;
     padding: 5px;
@@ -21,7 +25,7 @@
     margin: auto;
     margin-top: 40px;
     padding: 10px;
-    display: inline-flex;
+    display: inline-block;
     margin-left: 5.5%;
 }
 
@@ -44,6 +48,12 @@
     font-size: 12px;
 }
 
+.prixItem img{
+    width:22px;
+    margin-left: 10px;
+
+}
+
 .shopContent{
     margin:auto;
     margin-bottom: 100px;
@@ -52,10 +62,10 @@
 }
 
 .inventaireContent{
-    position: absolute;
-    width: 10%;
-    left: 4%;
-    top: 25%;
+    width: 60%;
+    left: 0;
+    right: 0;
+    margin: auto;
     padding: 20px;
     background-color: #222222;
     border: 2px solid black;
@@ -75,12 +85,17 @@
 }
 
 .interactObject{
+    border-top: 0.5px solid black;
+    margin-top: 10px;
+    padding-top: 15px;
+
     display:flex;
 }
 
 .acheterItem{
     display: flex;
-    margin: auto
+    margin: auto;
+
 
 }
 
@@ -107,12 +122,11 @@
 }
 
 .moreDetails{
+    display: inline-block;
     width: 70%;
 }
 
 @media only screen and (max-width: 1400px) {
-
-
 
     .prixItem{
         margin: 10px auto;
@@ -120,6 +134,7 @@
 }
 
 @media only screen and (max-width: 990px) {
+
     .articleItem {
         margin-left: 0;
     }
@@ -127,28 +142,13 @@
     .budgetItem {
         margin-top: 170px;
     }
-
     .inventaireContent{
-        width: 70%;
-        left: 0;
-        right: 0;
-        margin: auto;
-        top: 12%;
-        padding: 20px;
-        background-color: #222222;
-        border: 2px solid black;
-        border-radius: 5px;
-        text-align: center;
-        color: white;
+        width: 80%;
     }
 
     .inventaire {
         width: 70px;
         height: 70px;
-    }
-
-    .shopContent{
-        margin-top: 170px;
     }
 }
 

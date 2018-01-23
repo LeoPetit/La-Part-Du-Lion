@@ -44,18 +44,20 @@ if(!isset($_SESSION["utilisateur"]))
 
 </div>
 
-<div class="shopContent col-sm-10">
+<div class="container">
     <?php
     foreach ($items as $item)
     {
         // créer une div et affiche l'items
         echo '<div class="articleItem col-lg-5">';
-        echo '<img class="imgItem" src="'.base_url().'application/assets/images/items/png/'.$item->nom.'.png">';
-        echo '<div class="moreDetails col-sm-7">';
+        echo '<img class="imgItem" src="'.base_url().$item->link.'">';
+        echo '<div class="moreDetails col-lg-9">';
         echo '<h5>'.$item->nom.'</h5>';
         echo '<p>'.$item->libelle.'</p>';
+        echo '</div>';
+
         echo '<div class="interactObject">';
-        echo '<div class="prixItem col-md-3"><p>Prix: '.$item->coutAchat.'</p><p>PA : '.$item->coutRessource.'</p></div>';
+        echo '<div class="prixItem col-md-3"><p>'.$item->coutAchat.'<img src="'.base_url().'application/assets/images/items/png/monnaie.png"></p><p>PA : '.$item->coutRessource.'</p></div>';
         echo '<div class="acheterItem">';
         echo  '<p> Quantité :</p>';
         echo '<input type="number" name="quantity" min="1" max="5">';
@@ -64,7 +66,6 @@ if(!isset($_SESSION["utilisateur"]))
         echo '</div>';
         echo '</div>';
 
-        echo '</div>';
     }
     ?>
 </div>
