@@ -95,30 +95,31 @@
 .acheterItem{
     display: flex;
     margin: auto;
-
-
 }
 
 .acheterItem input{
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
-.acheterItem a{
-    background-color: #555555;
-    color: white;
-    border-radius: 10px;
-    padding: 0 20px;
-    height: 26px;
-}
 
 .acheterItem input{
     height: 26px;
-    width: 60px;
+    width: 40px;
     border-radius: 10px;
     background-color: #555555;
     color: white;
     text-align: center;
 
+}
+
+input#acheter.boutonAchat{
+    background-color: #555555;
+    color: white;
+    border-radius: 10px;
+    padding: 0 20px;
+    height: 26px;
+    width: 110px;
+    text-align: center;
 }
 
 .moreDetails{
@@ -149,6 +150,16 @@
     .inventaire {
         width: 70px;
         height: 70px;
+    }
+
+    input#acheter.boutonAchat{
+        width: 50%;
+    }
+    .acheterItem{
+        margin: 0 10px;
+    }
+    form{
+        width: 300px;
     }
 }
 

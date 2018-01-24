@@ -92,6 +92,7 @@ session_start();
             echo form_textarea($data);
 
             $data = array(
+                'id'            =>'validPost',
                 'name'          => 'validerPost',
                 'class'         => 'validPost',
                 'value'         => 'Poster',

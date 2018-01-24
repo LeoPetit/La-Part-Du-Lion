@@ -81,6 +81,7 @@ if(!isset($_SESSION["utilisateur"]))
         echo form_input($data);
 
         $data = array(
+            'id'            =>'acheter',
             'name'          => 'Achat',
             'class'         => 'boutonAchat',
             'value'         => 'Acheter'
