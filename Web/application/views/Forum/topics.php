@@ -26,10 +26,10 @@ session_start();
         <h1> Topics </h1>
 
         <div class="interactZone">
-            <?php echo anchor('Forum_Controller/index#newTopic', 'Nouveau sujet', 'id="createTopics" class="forumButton"') ?>
+            <?php echo anchor('Topic_Controller/index#newTopic', 'Nouveau sujet', 'id="createTopics" class="forumButton"') ?>
             <select id="zone">
                 <option value="Général">
-                    <?php echo anchor('Forum_Controller/index', 'Général', '') ?>
+                    <?php echo anchor('Topic_Controller/index', 'Général', '') ?>
                 </option>
                 <option value="Clan">
                     <?php echo anchor('Welcome', 'Clan', '') ?>
@@ -37,7 +37,7 @@ session_start();
             </select>
         </div>
 
-        <?php echo anchor('Forum_Controller/subject',
+        <?php echo anchor('Commentaire_Controller/subject',
     ' <div class="topic ">
                 <div class="author col-3">
                     <span>Jean-dider90</span>
@@ -54,58 +54,8 @@ session_start();
             </div>',
             '')
         ?>
-        <?php echo anchor('Forum_Controller/subject',
-            ' <div class="topic ">
-                <div class="author col-3">
-                    <span>Jean-dider90</span>
-                </div>
-                <div class="name col-3">
-                    <span>Comment ça marche ?</span>
-                </div>
-                <div class="message col-3">
-                    <span>3<i class="fa fa-comment-o" aria-hidden="true"></i></span>
-                </div>
-                <div class="date col-3">
-                    <span>Créé le : 28/12/17</span>
-                </div>
-            </div>',
-            '')
-        ?>
-        <?php echo anchor('Forum_Controller/subject',
-            ' <div class="topic ">
-                <div class="author col-3">
-                    <span>Jean-dider90</span>
-                </div>
-                <div class="name col-3">
-                    <span>Comment ça marche ?</span>
-                </div>
-                <div class="message col-3">
-                    <span>3<i class="fa fa-comment-o" aria-hidden="true"></i></span>
-                </div>
-                <div class="date col-3">
-                    <span>Créé le : 28/12/17</span>
-                </div>
-            </div>',
-            '')
-        ?>
-        <?php echo anchor('Forum_Controller/subject',
-            ' <div class="topic ">
-                <div class="author col-3">
-                    <span>Jean-dider90</span>
-                </div>
-                <div class="name col-3">
-                    <span>Comment ça marche ?</span>
-                </div>
-                <div class="message col-3">
-                    <span>3<i class="fa fa-comment-o" aria-hidden="true"></i></span>
-                </div>
-                <div class="date col-3">
-                    <span>Créé le : 28/12/17</span>
-                </div>
-            </div>',
-            '')
-        ?>
-        <?php echo form_open("Forum_Controller/subject", 'class = "form_topic"'); ?>
+
+        <?php echo form_open("Commentaire_Controller/subject", 'class = "form_topic"'); ?>
 
         <h4 id="subject">Nouveau sujet</h4>
         <div class="control-group">

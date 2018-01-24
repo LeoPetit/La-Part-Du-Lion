@@ -10,13 +10,27 @@ CREATE TABLE equipe (
   PRIMARY KEY (id)
 );
 
-INSERT INTO equipe VALUES (default, 'Clan Technomancien', 'De nombreuses corporations et hommes d’affaires se sont alliés pour former le clan des technomanciens, des recherches scientifiques, innovations technologique, aux fils des siècles ce clan s’est spécialisé dans ces domaines, sous couvert des nombreuses entreprises implantées sur leur territoire.', '#36003A');
-INSERT INTO equipe VALUES (default, 'Clan des Exilés', 'Ce clan contrôlant la partie nord de belfort, doit son nom aux agents qui le composent : Tous anciennement membres des 6 autres clans, renégats, bannis, ils se sont rassemblés pour former un clan et ont réussit à établir leur domination sur les quartiers nord. Mais leurs vengeance ne fait que commencer, ils comptent bien ne pas arrêter leur conquête.', '#88035C');
-INSERT INTO equipe VALUES (default, 'Clan des Résistants', 'Le territoire de ce clan est l’objet de nombreuses convoitises, malgré les nombreuses attaques des clan voisins, aucun n’a réussi à prendre le contrôle. Les Agents sur place lassés de ces changements incessant de propriétaire, ont décidés de créer leur propre clan et contrôler enfin cette zone.', '#02A6B5');
-INSERT INTO equipe VALUES (default, 'Clan de la Tour', 'Historiquement, cette tour était les yeux de la cité de Belfort, jadis poste avancé du clan de la forteresse, la garnison postée est devenu indépendante suite à une querelle avec leurs supérieurs. C’est ainsi qu’est né le clan de la tour.', '#067E00');
-INSERT INTO equipe VALUES (default, 'Clan de la Forteresse', 'Le clan de la forteresse du lion, la protège depuis des siècles. De nombreuses légendes spéculent sur ce que garde le clan, mais personnes à ce jour n’a réussi à percer les secrets que renferme cette imposante batisse.', '#D07700');
-INSERT INTO equipe VALUES (default, 'Clan des Negociants', 'Etablit dans le centre ville, le clan des négociants est une alliance des plus riches commerçants de la cité du lion. Ce clan a pour but le profits et le contrôle, avide de conquête, il utilise ses nombreux moyens financiers pour permettre à ses agents de capturer le maximum de territoires', '#012943');
-INSERT INTO equipe VALUES (default, 'Clan des Veilleurs', 'Du haut de leurs immeubles, le clan des veilleurs, surveille son territoire. N’espérez pas vous infiltré incognito sur leurs terrains ! Tout le monde se connaît et ils ne sont pas friand des inconnus sur leurs terres.', '#A20010');
+INSERT INTO equipe VALUES (default, 'Clan Technomancien',
+                           'De nombreuses corporations et hommes d’affaires se sont alliés pour former le clan des technomanciens, des recherches scientifiques, innovations technologique, aux fils des siècles ce clan s’est spécialisé dans ces domaines, sous couvert des nombreuses entreprises implantées sur leur territoire.',
+                           '#36003A');
+INSERT INTO equipe VALUES (default, 'Clan des Exilés',
+                           'Ce clan contrôlant la partie nord de belfort, doit son nom aux agents qui le composent : Tous anciennement membres des 6 autres clans, renégats, bannis, ils se sont rassemblés pour former un clan et ont réussit à établir leur domination sur les quartiers nord. Mais leurs vengeance ne fait que commencer, ils comptent bien ne pas arrêter leur conquête.',
+                           '#88035C');
+INSERT INTO equipe VALUES (default, 'Clan des Résistants',
+                           'Le territoire de ce clan est l’objet de nombreuses convoitises, malgré les nombreuses attaques des clan voisins, aucun n’a réussi à prendre le contrôle. Les Agents sur place lassés de ces changements incessant de propriétaire, ont décidés de créer leur propre clan et contrôler enfin cette zone.',
+                           '#02A6B5');
+INSERT INTO equipe VALUES (default, 'Clan de la Tour',
+                           'Historiquement, cette tour était les yeux de la cité de Belfort, jadis poste avancé du clan de la forteresse, la garnison postée est devenu indépendante suite à une querelle avec leurs supérieurs. C’est ainsi qu’est né le clan de la tour.',
+                           '#067E00');
+INSERT INTO equipe VALUES (default, 'Clan de la Forteresse',
+                           'Le clan de la forteresse du lion, la protège depuis des siècles. De nombreuses légendes spéculent sur ce que garde le clan, mais personnes à ce jour n’a réussi à percer les secrets que renferme cette imposante batisse.',
+                           '#D07700');
+INSERT INTO equipe VALUES (default, 'Clan des Negociants',
+                           'Etablit dans le centre ville, le clan des négociants est une alliance des plus riches commerçants de la cité du lion. Ce clan a pour but le profits et le contrôle, avide de conquête, il utilise ses nombreux moyens financiers pour permettre à ses agents de capturer le maximum de territoires',
+                           '#012943');
+INSERT INTO equipe VALUES (default, 'Clan des Veilleurs',
+                           'Du haut de leurs immeubles, le clan des veilleurs, surveille son territoire. N’espérez pas vous infiltré incognito sur leurs terrains ! Tout le monde se connaît et ils ne sont pas friand des inconnus sur leurs terres.',
+                           '#A20010');
 
 CREATE TABLE utilisateur (
   id          INT NOT NULL AUTO_INCREMENT,
@@ -24,7 +38,7 @@ CREATE TABLE utilisateur (
   mdp         VARCHAR(25),
   email       VARCHAR(25),
   gold        INT,
-  pointAction   INT,
+  pointAction INT,
   equipe_id   INT,
 
   PRIMARY KEY (id),
@@ -32,28 +46,35 @@ CREATE TABLE utilisateur (
   CONSTRAINT fk_equipe_id_utilisateur FOREIGN KEY (equipe_id) REFERENCES equipe (id)
 );
 
-INSERT INTO utilisateur VALUES (default, 'Leo', '0000', 'test@gmail.com',  150, 10, 1);
+INSERT INTO utilisateur VALUES (default, 'Leo', '0000', 'test@gmail.com', 150, 10, 1);
 INSERT INTO utilisateur VALUES (default, 'Jeremy', '1111', 'test1@gmail.com', 1550, 10, 2);
-INSERT INTO utilisateur VALUES (default, 'Melvin', '2222', 'test2@gmail.com',  180, 10, 3);
+INSERT INTO utilisateur VALUES (default, 'Melvin', '2222', 'test2@gmail.com', 180, 10, 3);
 
 CREATE TABLE item (
   id            INT NOT NULL AUTO_INCREMENT,
   nom           VARCHAR(25),
   coutAchat     INT,
   coutRessource INT,
-  libelle VARCHAR(50),
-  link VARCHAR(255),
-  rayon INT DEFAULT NULL,
-  temps INT DEFAULT NULL,
+  libelle       VARCHAR(50),
+  link          VARCHAR(255),
+  rayon         INT          DEFAULT NULL,
+  temps         INT          DEFAULT NULL,
 
   PRIMARY KEY (id)
 );
 
-INSERT INTO item VALUES(default, 'Piege basique', 90, 2, '+2PC, +60G / -1 PA', 'application/assets/images/items/png/Piege_basique.png', 50, 2);
-INSERT INTO item VALUES(default, 'Bouclier', 120, 1, 'Invulnerabilité', 'application/assets/images/items/png/Bouclier.png', NULL, NULL);
-INSERT INTO item VALUES(default, 'Bouclier divin', 500, 2, 'Invulnerabilité', 'application/assets/images/items/png/BouclierDivin.png', NULL, 1);
-INSERT INTO item VALUES(default, 'Piege assassin', 150, 1, '+4 PC / -4 PA', 'application/assets/images/items/png/Piege_basique.png', 3, 3);
-INSERT INTO item VALUES(default, 'Piege pick-pocket', 150, 2, '+2 PA, +200G / -100G', 'application/assets/images/items/png/Piege_basique.png', 5, 3);
+INSERT INTO item VALUES
+  (default, 'Piege basique', 90, 2, '+2PC, +60G / -1 PA', 'application/assets/images/items/png/Piege_basique.png', 50,
+   2);
+INSERT INTO item
+VALUES (default, 'Bouclier', 120, 1, 'Invulnerabilité', 'application/assets/images/items/png/Bouclier.png', NULL, NULL);
+INSERT INTO item VALUES
+  (default, 'Bouclier divin', 500, 2, 'Invulnerabilité', 'application/assets/images/items/png/BouclierDivin.png', NULL,
+   1);
+INSERT INTO item VALUES
+  (default, 'Piege assassin', 150, 1, '+4 PC / -4 PA', 'application/assets/images/items/png/Piege_basique.png', 3, 3);
+INSERT INTO item VALUES (default, 'Piege pick-pocket', 150, 2, '+2 PA, +200G / -100G',
+                         'application/assets/images/items/png/Piege_basique.png', 5, 3);
 
 CREATE TABLE effet (
   id      INT NOT NULL AUTO_INCREMENT,
@@ -82,10 +103,10 @@ CREATE TABLE effetItem (
   CONSTRAINT fk_effetItem_id_effet FOREIGN KEY (effet_id) REFERENCES effet (id)
 );
 
-INSERT INTO effetItem VALUES (default, 1,1);
-INSERT INTO effetItem VALUES (default, 1,2);
-INSERT INTO effetItem VALUES (default, 1,3);
-INSERT INTO effetItem VALUES (default, 2,4);
+INSERT INTO effetItem VALUES (default, 1, 1);
+INSERT INTO effetItem VALUES (default, 1, 2);
+INSERT INTO effetItem VALUES (default, 1, 3);
+INSERT INTO effetItem VALUES (default, 2, 4);
 
 CREATE TABLE mapItem (
   id      INT NOT NULL AUTO_INCREMENT,
@@ -110,11 +131,11 @@ CREATE TABLE inventaire (
   CONSTRAINT fk_item_id_inventaire FOREIGN KEY (item_id) REFERENCES item (id)
 );
 
-INSERT INTO inventaire VALUES(default, 1, 1);
-INSERT INTO inventaire VALUES(default, 1, 1);
-INSERT INTO inventaire VALUES(default, 1, 1);
-INSERT INTO inventaire VALUES(default, 1, 2);
-INSERT INTO inventaire VALUES(default, 2, 1);
+INSERT INTO inventaire VALUES (default, 1, 1);
+INSERT INTO inventaire VALUES (default, 1, 1);
+INSERT INTO inventaire VALUES (default, 1, 1);
+INSERT INTO inventaire VALUES (default, 1, 2);
+INSERT INTO inventaire VALUES (default, 2, 1);
 
 CREATE TABLE competence (
   id        INT AUTO_INCREMENT NOT NULL,
@@ -803,3 +824,37 @@ INSERT INTO pointEquipe VALUES (default, 33, 7, 10);
 INSERT INTO pointEquipe VALUES (default, 34, 7, 10);
 INSERT INTO pointEquipe VALUES (default, 35, 7, 10);
 INSERT INTO pointEquipe VALUES (default, 36, 7, 10);
+
+CREATE TABLE topic (
+  id           INT         NOT NULL AUTO_INCREMENT,
+  createur     INT         NOT NULL,
+  sujet        VARCHAR(80) NOT NULL,
+  dateCreation DATE,
+  clan_id      INT                  DEFAULT NULL,
+
+  PRIMARY KEY (id),
+
+  CONSTRAINT fk_createur_id_topic FOREIGN KEY (createur) REFERENCES utilisateur (id),
+  CONSTRAINT fk_clan_id_topic FOREIGN KEY (clan_id) REFERENCES equipe (id)
+);
+
+INSERT INTO topic VALUES (default, 1, 'Topic 1', '2018-01-01', NULL);
+INSERT INTO topic VALUES (default, 2, 'Topic 2', '2018-01-02', NULL);
+INSERT INTO topic VALUES (default, 3, 'Topic 3', '2018-01-03', 2);
+
+CREATE TABLE commentaire (
+  id        INT NOT NULL AUTO_INCREMENT,
+  auteur    INT NOT NULL,
+  contenu   TEXT,
+  datePoste DATE,
+  topic_id  INT,
+
+  PRIMARY KEY (id),
+
+  CONSTRAINT fk_auteur_id_commentaire FOREIGN KEY (auteur) REFERENCES utilisateur (id),
+  CONSTRAINT fk_topic_id_commentaire FOREIGN KEY (topic_id) REFERENCES topic (id)
+);
+
+INSERT INTO commentaire VALUES (default, 1, 'Test 1', '2018-01-01', 1);
+INSERT INTO commentaire VALUES (default, 2, 'Test 2', '2018-01-02', 2);
+INSERT INTO commentaire VALUES (default, 3, 'Test 3', '2018-01-03', 3);

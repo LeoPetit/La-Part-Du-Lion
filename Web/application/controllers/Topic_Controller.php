@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Date: 17/10/17
  * Time: 09:14
  */
-class Forum_Controller extends CI_Controller
+class Topic_Controller extends CI_Controller
 {
     function __construct()
     {
