@@ -24,7 +24,7 @@ class Inventaire_Controller extends CI_Controller
         $this->load->model('Utilisateur_Model', 'u');
         $this->load->model('Inventaire_Model', 'inv');
 
-        if(($prix*$quantite) < $_SESSION['utilisateur']->gold) {
+        if(($prix*$quantite) <= $_SESSION['utilisateur']->gold) {
             $this->u->setGolds($_SESSION['utilisateur']->gold - ($prix*$quantite));
             $_SESSION['utilisateur']->gold = ($_SESSION['utilisateur']->gold - ($prix*$quantite));
             for($i=0; $i < $quantite; $i++) {
