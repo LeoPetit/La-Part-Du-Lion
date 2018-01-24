@@ -28,10 +28,7 @@ class Utilisateur_Model extends CI_Model
     public function enregistrement($data) {
         $this->db->insert('utilisateur', $data);
     }
-    public function addItemInInventaire($idJoueur)
-    {
 
-    }
     public function setGolds($prix)
     {
         // problème avec $prix

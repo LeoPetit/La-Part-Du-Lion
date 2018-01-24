@@ -26,21 +26,4 @@ class Item_Model extends CI_Model
 
         return $query->result();
     }
-
-    function getItemInInventaire($idJoueur)
-    {
-        // récupère les items dans l'inventaire du joueur
-        /*
-        $this->db->select('');
-        $this->db->from('');
-        $this->db->where('user_id',$idJoueur);
-        $query = $this->db->get();
-
-        return $query->result();*/
-    }
-
-    function achatItem($idItem,$idJoueur)
-    {
-        // update : ajoute un item dans l'inventaire du joueur et retire son prix de ses thunes
-    }
 }
