@@ -151,7 +151,6 @@ input#newTopic.inputData{
 }
 
 select{
-    padding: 30px;
     margin-right: 20px;
     border: 1px solid white;
     border-radius: 20px;
