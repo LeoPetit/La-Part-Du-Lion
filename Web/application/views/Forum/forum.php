@@ -22,6 +22,20 @@ session_start();
 
 
 <body>
+    <?php
+    if(!isset($_SESSION["utilisateur"]))
+    {
+        header('Location:'. base_url().'index.php/Utilisateur_Controller');
+    }
+    $data = array(
+        'type'  => 'hidden',
+        'name'  => 'couleur',
+        'id'    => 'couleurUtilisateur',
+        'value' => $_SESSION["utilisateur"]->couleur,
+    );
+    echo form_input($data);
+    ?>
+
 <div class="listAnswers container">
     <p id="subject"> Sujet : Comment ça marche ? </p>
     <div class="interactZone">
@@ -109,5 +123,8 @@ session_start();
 <footer>
     <?php $this->load->view('Nav/footer.php') ?>
 </footer>
+
+<script type="text/javascript" src="<?php echo base_url();?>application/JS/colorChanges.js"></script>
+
 
 </html>

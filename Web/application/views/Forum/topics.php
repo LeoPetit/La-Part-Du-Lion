@@ -22,18 +22,28 @@ session_start();
 
 
 <body>
+    <?php
+    if(!isset($_SESSION["utilisateur"]))
+    {
+        header('Location:'. base_url().'index.php/Utilisateur_Controller');
+    }
+    $data = array(
+        'type'  => 'hidden',
+        'name'  => 'couleur',
+        'id'    => 'couleurUtilisateur',
+        'value' => $_SESSION["utilisateur"]->couleur,
+    );
+    echo form_input($data);
+    ?>
+
     <div class="listTopics container">
         <h1> Topics </h1>
 
         <div class="interactZone">
-            <?php echo anchor('Topic_Controller/index#newTopic', 'Nouveau sujet', 'id="createTopics" class="forumButton"') ?>
+            <a href="#newTopic" id="createTopics" class="forumButton"> Nouveau sujet</a>
             <select id="zone">
-                <option value="Général">
-                    <?php echo anchor('Topic_Controller/index', 'Général', '') ?>
-                </option>
-                <option value="Clan">
-                    <?php echo anchor('Welcome', 'Clan', '') ?>
-                </option>
+                <option>Général</option>
+                <option>Clan</option>
             </select>
         </div>
 
@@ -101,5 +111,8 @@ session_start();
 <footer>
     <?php $this->load->view('Nav/footer.php') ?>
 </footer>
+
+<script type="text/javascript" src="<?php echo base_url();?>application/JS/colorChanges.js"></script>
+
 
 </html>
