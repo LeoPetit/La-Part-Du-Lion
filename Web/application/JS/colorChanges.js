@@ -50,17 +50,18 @@ $(document).ready(function () {
     console.log(href);
 
 
-    if(href!=="Topic") {
+    if(href!=="Topic" && href!=="Commentaire") {
         $("#imageClan").attr("src", imageUrl);
         $(".navbar").css("background-color", couleur);
         $(".controlMap").css("background-color", couleur);
         $(".elemClan").css("background-color", couleur);
         $(".dropdown-menu").css("background-color", couleur);
+        $(".listAnswers").css("background-color", couleur2);
+
     }
 
     $('select').change(function () {
         if(href==="Topic") {
-            console.log($('option:selected').html());
             if($('option:selected').html() == "Clan"){
                 $(".navbar").css("background-color", couleur);
                 $(".dropdown-menu").css("background-color", couleur);
