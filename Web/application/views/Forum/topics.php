@@ -5,7 +5,9 @@
  * Date: 24/10/2017
  * Time: 16:21
  */
-session_start();
+if(!isset($_SESSION['utilisateur'])){
+    session_start();
+}
 ?>
 <!DOCTYPE html>
 
@@ -22,44 +24,89 @@ session_start();
 
 
 <body>
+
+    <?php
+    if(!isset($_SESSION["utilisateur"]))
+    {
+        header('Location:'. base_url().'index.php/Utilisateur_Controller');
+    }
+    $data = array(
+        'type'  => 'hidden',
+        'name'  => 'couleur',
+        'id'    => 'couleurUtilisateur',
+        'value' => $_SESSION["utilisateur"]->couleur,
+    );
+    echo form_input($data);
+    ?>
+
     <div class="listTopics container">
         <h1> Topics </h1>
 
         <div class="interactZone">
-            <?php echo anchor('Topic_Controller/index#newTopic', 'Nouveau sujet', 'id="createTopics" class="forumButton"') ?>
+            <a href="#newTopic" id="createTopics" class="forumButton"> Nouveau sujet</a>
             <select id="zone">
-                <option value="Général">
-                    <?php echo anchor('Topic_Controller/index', 'Général', '') ?>
-                </option>
-                <option value="Clan">
-                    <?php echo anchor('Welcome', 'Clan', '') ?>
-                </option>
+                <option>Général</option>
+                <option>Clan</option>
             </select>
         </div>
 
-        <?php echo anchor('Commentaire_Controller/subject',
-    ' <div class="topic ">
+
+        <?php
+            foreach($clan as $r){
+                echo anchor('Commentaire_Controller/subject/'.$r->id.'',
+                    ' <div id="clan"class="topic">
                 <div class="author col-3">
-                    <span>Jean-dider90</span>
+                    <span>'.$r->pseudo.'</span>
                 </div>
                 <div class="name col-3">
-                    <span>Comment ça marche ?</span>
+                    <span>'.$r->sujet.'</span>
                 </div>
                 <div class="message col-3">
-                    <span>3<i class="fa fa-comment-o" aria-hidden="true"></i></span>
+                    <span>'.$r->nbCommentaires.'<i class="fa fa-comment-o" aria-hidden="true"></i></span>
                 </div>
                 <div class="date col-3">
-                    <span>Créé le : 28/12/17</span>
+                    <span>'.$r->dateCreation.'</span>
                 </div>
-            </div>',
-            '')
+                </div>
+            ',
+                    '');
+
+            }
+
+        foreach($general as $r){
+            echo anchor('Commentaire_Controller/subject/'.$r->id,
+                ' <div id="general" class="topic ">
+                <div class="author col-3">
+                    <span>'.$r->pseudo.'</span>
+                </div>
+                <div class="name col-3">
+                    <span>'.$r->sujet.'</span>
+                </div>
+                <div class="message col-3">
+                    <span>'.$r->nbCommentaires.'<i class="fa fa-comment-o" aria-hidden="true"></i></span>
+                </div>
+                <div class="date col-3">
+                    <span>'.$r->dateCreation.'</span>
+                </div>
+                </div>
+            ',
+                '');
+        }
+
         ?>
 
-        <?php echo form_open("Commentaire_Controller/subject", 'class = "form_topic"'); ?>
+        <?php echo form_open("Topic_Controller/addSubject", 'class = "form_topic"'); ?>
 
         <h4 id="subject">Nouveau sujet</h4>
         <div class="control-group">
             <?php
+            $options = array(
+                'general'         => 'general',
+                'clan'           => 'clan',
+            );
+
+            echo form_dropdown('target', $options);
+
 
             $data = array(
                 'name'          => 'topicTitle',
@@ -101,5 +148,9 @@ session_start();
 <footer>
     <?php $this->load->view('Nav/footer.php') ?>
 </footer>
+
+<script type="text/javascript" src="<?php echo base_url();?>application/JS/colorChanges.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>application/JS/filterTopics.js"></script>
+
 
 </html>

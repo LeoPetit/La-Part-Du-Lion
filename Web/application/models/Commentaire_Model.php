@@ -20,13 +20,14 @@ class Commentaire_Model extends CI_Model
         $this->db->from('commentaire as c');
         $this->db->join('utilisateur as u', 'u.id = c.auteur');
         $this->db->where('c.topic_id', $topic_id);
-        $this->db->order_by('c.datePoste','desc');
+        $this->db->order_by('c.datePoste','asc');
         $query = $this->db->get();
 
         return $query->result();
     }
 
     public function addCommentaire($data) {
+        var_dump($data);
         $this->db->insert('commentaire', $data);
     }
 

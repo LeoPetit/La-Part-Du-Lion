@@ -16,13 +16,35 @@ class Topic_Model extends CI_Model
 
     public function getAllTopics($clan_id) {
 
-        $this->db->select('t.sujet, t.dateCreation, u.pseudo, COUNT(c.id) AS nbCommentaires');
+        $this->db->select('t.id, t.sujet, t.dateCreation, u.pseudo, COUNT(c.id) AS nbCommentaires');
         $this->db->from('topic as t');
         $this->db->join('commentaire as c', 't.id = c.topic_id');
         $this->db->join('utilisateur as u', 'u.id = t.createur');
         $this->db->where('t.clan_id', $clan_id);
         $this->db->group_by('c.id');
         $this->db->order_by('t.dateCreation','desc');
+        $this->db->distinct('t.id');
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+
+    public function getLastTopic() {
+        $this->db->select('t.id');
+        $this->db->from('topic as t');
+        $this->db->order_by('t.id','desc');
+        $this->db->limit('1');
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+
+    public function getCurrentSubject($id_topic){
+        $this->db->select('t.sujet, t.id');
+        $this->db->from('topic as t');
+
+        $this->db->where('t.id', $id_topic);
+
         $query = $this->db->get();
 
         return $query->result();

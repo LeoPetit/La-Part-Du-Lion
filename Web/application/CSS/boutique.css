@@ -138,6 +138,7 @@ input#acheter.boutonAchat{
 
     .articleItem {
         margin-left: 0;
+        overflow: hidden;
     }
 
     .budgetItem {
