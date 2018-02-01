@@ -18,7 +18,12 @@ session_start();
 
 </head>
 <body>
-
+<?php
+if(isset($message))
+{
+    echo "<script type='text/javascript'>alert('Compte créé')</script>";
+}
+?>
     <div class="home"></div>
     <div class="content">
         <img class="home_logo" src="<?php echo base_url()?>application/assets/images/logos/png/logo.png" alt="">

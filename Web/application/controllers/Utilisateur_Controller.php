@@ -12,6 +12,7 @@ class Utilisateur_Controller extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->database();
         $this->load->library('encryption');
 
         $this->encryption->initialize(
@@ -68,9 +69,17 @@ class Utilisateur_Controller extends CI_Controller
 
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('pseudo', 'pseudo', 'required', array('required' => 'Vous devez entrer un %s'));
-        $this->form_validation->set_rules('Mail', 'email', 'trim|required|valid_email', array('required' => 'Vous devez entrer un %s', 'is_unique' => '%s existe déjà', 'valid_email' => 'Vous devez entrer un %s valide'));
+        $this->form_validation->set_rules('pseudo', 'pseudo', 'required|is_unique[utilisateur.pseudo]', array('required' => 'Vous devez entrer un %s','is_unique' => '%s existe déjà'));
+        $this->form_validation->set_rules('Mail', 'email', 'trim|required|valid_email|is_unique[utilisateur.email]', array('required' => 'Vous devez entrer un %s', 'is_unique' => '%s existe déjà', 'valid_email' => 'Vous devez entrer un %s valide'));
         $this->form_validation->set_rules('password', 'mot de passe', 'required', array('required' => 'Vous devez entrer un %s.'));
+
+
+        function rolekey_exists($key) {
+            $this->Utilisateur_model->mail_exists($key);
+        }
+        function rolekey_exists2($key) {
+            $this->Utilisateur_model->pseudo_exists($key);
+        }
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('Connection/index.php');
@@ -88,7 +97,6 @@ class Utilisateur_Controller extends CI_Controller
 
     public function enregistrement()
     {
-
         $data["pseudo"] = $this->input->post("pseudo");
         $data["mdp"] = $this->input->post("password");
         $data["email"] = $this->input->post("Mail");
@@ -103,7 +111,8 @@ class Utilisateur_Controller extends CI_Controller
         $isRegistered = $this->u->connection($data["pseudo"], $data["mdp"]);
 
         $_SESSION["utilisateur"] = $isRegistered[0];
-        $this->load->view('Accueil/index.php');
+        $return["message"] = "e";
+        $this->load->view('Accueil/index.php',$return);
     }
 
     public function deconnection()

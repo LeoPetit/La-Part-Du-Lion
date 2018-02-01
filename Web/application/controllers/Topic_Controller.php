@@ -18,8 +18,11 @@ class Topic_Controller extends CI_Controller
     public function index()
     {
         $this->load->helper(array('form', 'url'));
+        $this->load->model('Topic_Model', 't');
 
-        $this->load->view('Forum/topics.php');
+        $data = $this->t->getAllTopics($_SESSION["utilisateur"]->equipe_id);
+
+        $this->load->view('Forum/topics.php',$data);
     }
 
     public function subject(){
