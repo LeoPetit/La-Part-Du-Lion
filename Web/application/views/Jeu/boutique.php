@@ -32,6 +32,13 @@ if(!isset($_SESSION["utilisateur"]))
 ?>
 
 <div class="budgetItem"><?php echo $_SESSION["utilisateur"]->gold?> <img src="<?php echo base_url()?>application/assets/images/items/png/monnaie.png"></div>
+<div id="message">
+  <?php  if(isset($error))
+    {
+    echo "<script type='text/javascript'>alert('pas assez d argent')</script>";
+    }
+    ?>
+</div>
 <div class="inventaireContent">
     <h4> Inventaire </h4>
 
