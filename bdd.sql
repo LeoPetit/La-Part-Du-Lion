@@ -87,10 +87,32 @@ CREATE TABLE effet (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+#Effet_item
 INSERT INTO effet VALUE (default, '-1 PA', -1, 'Ressource', 'cible');
 INSERT INTO effet VALUE (default, '+2 PC', 2, 'Classement', 'joueur');
 INSERT INTO effet VALUE (default, '+60 G', 60, 'Gold', 'joueur');
 INSERT INTO effet VALUE (default, '+20 G', 20, 'Gold', 'joueur');
+
+#Effet_competence
+INSERT INTO effet VALUE (default, '+5 G', 5, 'Gold', 'joueur');
+INSERT INTO effet VALUE (default, '+7 G', 7, 'Gold', 'joueur');
+INSERT INTO effet VALUE (default, '+10 G', 10, 'Gold', 'joueur');
+
+INSERT INTO effet VALUE (default, '+1 PC', 1, 'Classement', 'joueur');
+INSERT INTO effet VALUE (default, '+2 PC', 5, 'Classement', 'joueur');
+INSERT INTO effet VALUE (default, '+5 PC', 5, 'Classement', 'joueur');
+
+INSERT INTO effet VALUE (default, '3% reduc', 3, 'Reduc', 'joueur');
+INSERT INTO effet VALUE (default, '5% reduc', 5, 'Reduc', 'joueur');
+INSERT INTO effet VALUE (default, '12% reduc', 12, 'Reduc', 'joueur');
+
+INSERT INTO effet VALUE (default, '1 PA', 5, 'PASupp', 'joueur');
+INSERT INTO effet VALUE (default, '2 PA', 2, 'PASupp', 'joueur');
+INSERT INTO effet VALUE (default, '3 PA', 3, 'PASupp', 'joueur');
+
+
+
+
 
 CREATE TABLE effetItem (
   id       INT NOT NULL AUTO_INCREMENT,
@@ -143,7 +165,7 @@ CREATE TABLE competence (
   coutTotal INT,
   description TEXT,
   effet_id INT,
-  competence_parent INT,
+  competence_parent INT DEFAULT NULL,
 
   PRIMARY KEY (id),
 
@@ -151,6 +173,22 @@ CREATE TABLE competence (
   CONSTRAINT fk_effet_id_competence FOREIGN KEY (effet_id) REFERENCES effet (id)
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO competence VALUES (default, 'Surtaxe', 5000, '+5 revenues des quartiers', 5, NULL);
+INSERT INTO competence VALUES (default, 'Inflation', 10000, '+7 revenues des quartiers', 6, 1);
+INSERT INTO competence VALUES (default, 'As de la bourse', 15000, '+10 revenues des quartiers', 7, 2);
+
+INSERT INTO competence VALUES (default, 'First blood', 5000, 'Une attaque avec tout vos points donne +1 point de classement', 8, NULL);
+INSERT INTO competence VALUES (default, 'Attaque commando', 12000, 'Une attaque avec tout vos points donne +2 point de classement', 9, 3);
+INSERT INTO competence VALUES (default, 'Blitzkrieg', 25000, 'Une attaque avec tout vos points donne +5 point de classement', 10, 4);
+
+INSERT INTO competence VALUES (default, 'Marchandage', 6000, 'réduit le coûts des items de la boutique de 3%', 11, NULL);
+INSERT INTO competence VALUES (default, 'Négoce', 10000, 'Réduit le coûts des items de la boutique de 5%', 12, 5);
+INSERT INTO competence VALUES (default, 'As du Commerce', 25000, 'Réduit le coûts des items de la boutique de -12%', 13, 6);
+
+INSERT INTO competence VALUES (default, 'Surcharge', 50000, 'Augmente la réserve de point de +1', 14, NULL);
+INSERT INTO competence VALUES (default, 'Overclocking', 100000, 'Augmente la réserve de point de +2 ', 15, NULL);
+INSERT INTO competence VALUES (default, 'Stack overflow', 200000, 'Augmente la réserve de point de +3 ', 16, NULL);
 
 CREATE TABLE competenceEquipe (
   id            INT AUTO_INCREMENT NOT NULL,
