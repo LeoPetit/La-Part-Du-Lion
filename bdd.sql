@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS pointEquipe, coordonnees, quartier, competenceEquipe, competence, inventaire, mapItem, effetItem, effet, item, utilisateur, equipe;
+DROP TABLE IF EXISTS commentaire, topic, pointEquipe, coordonnees, quartier, competenceEquipe, competence, inventaire, mapItem, effetItem, effet, item, utilisateur, equipe;
 
 CREATE TABLE equipe (
   id         INT NOT NULL AUTO_INCREMENT,
@@ -8,7 +8,7 @@ CREATE TABLE equipe (
 
 
   PRIMARY KEY (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO equipe VALUES (default, 'Clan Technomancien',
                            'De nombreuses corporations et hommes d’affaires se sont alliés pour former le clan des technomanciens, des recherches scientifiques, innovations technologique, aux fils des siècles ce clan s’est spécialisé dans ces domaines, sous couvert des nombreuses entreprises implantées sur leur territoire.',
@@ -44,7 +44,7 @@ CREATE TABLE utilisateur (
   PRIMARY KEY (id),
 
   CONSTRAINT fk_equipe_id_utilisateur FOREIGN KEY (equipe_id) REFERENCES equipe (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO utilisateur VALUES (default, 'Leo', '0000', 'test@gmail.com', 150, 10, 1);
 INSERT INTO utilisateur VALUES (default, 'Jeremy', '1111', 'test1@gmail.com', 1550, 10, 2);
@@ -61,7 +61,7 @@ CREATE TABLE item (
   temps         INT          DEFAULT NULL,
 
   PRIMARY KEY (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO item VALUES
   (default, 'Piege basique', 90, 2, '+2PC, +60G / -1 PA', 'application/assets/images/items/png/Piege_basique.png', 50,
@@ -85,7 +85,7 @@ CREATE TABLE effet (
 
 
   PRIMARY KEY (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO effet VALUE (default, '-1 PA', -1, 'Ressource', 'cible');
 INSERT INTO effet VALUE (default, '+2 PC', 2, 'Classement', 'joueur');
@@ -101,7 +101,7 @@ CREATE TABLE effetItem (
 
   CONSTRAINT fk_effetItem_id_item FOREIGN KEY (item_id) REFERENCES item (id),
   CONSTRAINT fk_effetItem_id_effet FOREIGN KEY (effet_id) REFERENCES effet (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO effetItem VALUES (default, 1, 1);
 INSERT INTO effetItem VALUES (default, 1, 2);
@@ -118,7 +118,7 @@ CREATE TABLE mapItem (
   PRIMARY KEY (id),
 
   CONSTRAINT fk_map_id_item FOREIGN KEY (item_id) REFERENCES item (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE inventaire (
   id      INT NOT NULL AUTO_INCREMENT,
@@ -129,7 +129,7 @@ CREATE TABLE inventaire (
 
   CONSTRAINT fk_user_id_inventaire FOREIGN KEY (user_id) REFERENCES utilisateur (id),
   CONSTRAINT fk_item_id_inventaire FOREIGN KEY (item_id) REFERENCES item (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO inventaire VALUES (default, 1, 1);
 INSERT INTO inventaire VALUES (default, 1, 1);
@@ -141,13 +141,20 @@ CREATE TABLE competence (
   id        INT AUTO_INCREMENT NOT NULL,
   nom       VARCHAR(25),
   coutTotal INT,
-  coutPaye  INT,
+  description TEXT,
+  effet_id INT,
+  competence_parent INT,
 
-  PRIMARY KEY (id)
-);
+  PRIMARY KEY (id),
+
+  CONSTRAINT fk_competenceParent_id_competence FOREIGN KEY (competence_parent) REFERENCES competence (id),
+  CONSTRAINT fk_effet_id_competence FOREIGN KEY (effet_id) REFERENCES effet (id)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE competenceEquipe (
   id            INT AUTO_INCREMENT NOT NULL,
+  coutPaye  INT,
   equipe_id     INT,
   competence_id INT,
 
@@ -155,7 +162,7 @@ CREATE TABLE competenceEquipe (
 
   CONSTRAINT fk_equipe_id_competenceEquipe FOREIGN KEY (equipe_id) REFERENCES equipe (id),
   CONSTRAINT fk_competence_id_competenceEquipe FOREIGN KEY (competence_id) REFERENCES competence (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE quartier (
   id        INT NOT NULL AUTO_INCREMENT,
@@ -167,7 +174,7 @@ CREATE TABLE quartier (
   PRIMARY KEY (id),
 
   CONSTRAINT fk_equipe_id_quartier FOREIGN KEY (equipe_id) REFERENCES equipe (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Technomancien*/
 INSERT INTO quartier VALUES (default, 'QG Technomanciens', TRUE, 10, 1);
@@ -229,7 +236,7 @@ CREATE TABLE coordonnees (
   PRIMARY KEY (id),
 
   CONSTRAINT fk_quartier_id_coordonnees FOREIGN KEY (quartier_id) REFERENCES quartier (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*TECHNOMANCIEN*/
 #Quartier 1
@@ -557,7 +564,7 @@ CREATE TABLE pointEquipe (
 
   CONSTRAINT fk_quartier_id_pointEquipe FOREIGN KEY (quartier_id) REFERENCES quartier (id),
   CONSTRAINT fk_equipe_id_pointEquipe FOREIGN KEY (equipe_id) REFERENCES equipe (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /* POINT TECHNOMANCIEN */
 INSERT INTO pointEquipe VALUES (default, 1, 1, 10);
@@ -836,7 +843,7 @@ CREATE TABLE topic (
 
   CONSTRAINT fk_createur_id_topic FOREIGN KEY (createur) REFERENCES utilisateur (id),
   CONSTRAINT fk_clan_id_topic FOREIGN KEY (clan_id) REFERENCES equipe (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO topic VALUES (default, 1, 'Topic 1', '2018-01-01', NULL);
 INSERT INTO topic VALUES (default, 2, 'Topic 2', '2018-01-02', NULL);
@@ -853,7 +860,7 @@ CREATE TABLE commentaire (
 
   CONSTRAINT fk_auteur_id_commentaire FOREIGN KEY (auteur) REFERENCES utilisateur (id),
   CONSTRAINT fk_topic_id_commentaire FOREIGN KEY (topic_id) REFERENCES topic (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO commentaire VALUES (default, 1, 'Test 1', '2018-01-01', 1);
 INSERT INTO commentaire VALUES (default, 2, 'Test 2', '2018-01-02', 2);
