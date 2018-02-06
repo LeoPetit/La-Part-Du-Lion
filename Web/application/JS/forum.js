@@ -35,17 +35,4 @@ $(document).ready(function () {
             location.reload();
         });
     });
-
-    $('form#searchTopic').on('change', function(e) {
-        e.preventDefault();
-
-        $.ajax({
-            type: "POST",
-            url: url+"Topic_Controller/searchTopic",
-            data: $(this).serialize()
-        }).done(function(data) {
-
-            location.reload();
-        });
-    });
 });

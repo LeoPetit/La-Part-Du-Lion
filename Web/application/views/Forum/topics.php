@@ -42,29 +42,14 @@ if(!isset($_SESSION['utilisateur'])){
     <div class="listTopics container">
         <h1> Topics </h1>
 
-        <form class="interactZone">
+        <div class="interactZone">
             <a href="#newTopic" id="createTopics" class="forumButton"> Nouveau sujet</a>
             <select id="zone">
                 <option>Général</option>
                 <option>Clan</option>
             </select>
-            <?php form_open("", 'id="searchTopic" class="form_search"');?>
             <h4 id="subject">Rechercher un sujet</h4>
-            <div class="control-group">
-                <?php
-                $data = array(
-                    'name'          => 'searchTopic',
-                    'id'            => 'searchTopic',
-                    'class'         => 'inputData',
-                    'type'          => 'text',
-                    'value'         => '',
-                    'placeholder' => 'Rechercher un sujet',
-                );
-
-                echo form_input($data);
-
-                ?>
-            </form>
+            <input type="text" id="searchTopic" placeholder="Rechercher votre sujet" />
         </div>
 
 

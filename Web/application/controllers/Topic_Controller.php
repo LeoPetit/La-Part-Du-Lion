@@ -57,12 +57,4 @@ class Topic_Controller extends CI_Controller
 
         $this->c->addCommentaire($data2);
     }
-
-    public function searchSubject(){
-        $this->load->helper(array('form', 'url'));
-
-        session_start();
-        $this->load->model('Topic_model', 't');
-        $this->t->searchSubject($_POST['search']);
-    }
 }
