@@ -2,13 +2,14 @@
  * Created by leo on 07/12/17.
  */
 
-var urlAjax = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
 var imageUrl = "http://localhost/projet_licence/La-Part-Du-Lion/Web/application/assets/images/logos/png/" ;
+//var imageUrl = "http://www.partdulion.fr/application/assets/images/logos/png/";
 
 $(document).ready(function () {
     var couleur = $("#couleurUtilisateur").val();
     var couleur2 = "";
 
+    //var href = location.href.split('/')[4].split('_')[0];
     var href = location.href.split('/')[7].split('_')[0];
 
     switch(couleur) {

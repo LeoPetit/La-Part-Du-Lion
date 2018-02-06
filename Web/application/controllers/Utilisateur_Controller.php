@@ -13,16 +13,6 @@ class Utilisateur_Controller extends CI_Controller
     {
         parent::__construct();
         $this->load->database();
-        $this->load->library('encryption');
-
-        $this->encryption->initialize(
-            array(
-                'cipher' => 'aes-256',
-                'mode' => 'ctr',
-                'key' => '<a 32-character random string>',
-                'driver' => 'openssl',
-            )
-        );
     }
 
     public function index()

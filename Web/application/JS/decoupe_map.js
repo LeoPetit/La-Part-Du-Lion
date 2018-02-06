@@ -3,6 +3,7 @@
  */
 
 var url = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
+//var url = "http://www.partdulion.fr/index.php/";
 
 window.onresize = function(event) {
     if (window.matchMedia('(min-width: 990px)').matches) {

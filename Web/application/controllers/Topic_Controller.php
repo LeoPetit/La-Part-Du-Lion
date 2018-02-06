@@ -30,10 +30,11 @@ class Topic_Controller extends CI_Controller
     }
 
     public function addSubject(){
+        session_start();
+
         $this->load->helper(array('form', 'url'));
 
-        session_start();
-        $this->load->model('Topic_model', 't');
+        $this->load->model('Topic_Model', 't');
         $data["createur"] = $_SESSION['utilisateur']->id ;
         $data["sujet"] = $this->input->post("topicTitle");
         $data["dateCreation"] = Date('Y-m-d h:i:s');
@@ -48,7 +49,7 @@ class Topic_Controller extends CI_Controller
 
         $this->t->addTopic($data);
 
-        $this->load->model('Commentaire_model', 'c');
+        $this->load->model('Commentaire_Model', 'c');
         $data2["auteur"] = $_SESSION['utilisateur']->id ;
         $data2["contenu"] = $this->input->post("answer");
         $data2["datePoste"] = Date('Y-m-d h:i:s');

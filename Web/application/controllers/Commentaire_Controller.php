@@ -42,7 +42,7 @@ class Commentaire_Controller extends CI_Controller
 
         $this->load->model('Topic_Model', 't');
 
-        $this->load->model('Commentaire_model', 'c');
+        $this->load->model('Commentaire_Model', 'c');
         $data2["auteur"] = $_SESSION['utilisateur']->id ;
         $data2["contenu"] = $this->input->post("answer");
         $data2["datePoste"] = Date('Y-m-d h:i:s');

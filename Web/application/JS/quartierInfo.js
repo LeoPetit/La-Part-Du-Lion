@@ -1,6 +1,7 @@
 /**
  * Created by leo on 08/12/17.
  */
+//var url = "http://www.partdulion.fr/index.php/";
 var url = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
 var polygonId;
 
