@@ -75,7 +75,12 @@
                         echo anchor('Utilisateur_Controller', 'Progression', 'class="dropdown-item"');
                     ?>
                     <div class="dropdown-divider"></div>
-                    <?php echo "<a href='#' class='dropdown-item'>Compétences (V2)<a>";/*anchor('index.php/Welcome/show/', 'Arbre de compétences', 'class="dropdown-item"')*/ ?>
+                    <?php
+                    if (isset($_SESSION["utilisateur"]->pseudo))
+                        echo anchor('Competence_Controller', 'Competences de Clan', 'class="dropdown-item"');
+                    else
+                        echo anchor('Utilisateur_Controller', 'Competences de Clan', 'class="dropdown-item"');
+                    ?>
                 </div>
             </li>
             <li class="nav-item">
