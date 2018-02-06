@@ -22,9 +22,10 @@ class Topic_Controller extends CI_Controller
 
         $this->load->model('Topic_Model', 't');
         if(isset($_SESSION['utilisateur'])){
-            $result["clan"] = $this->t->getAllTopics($_SESSION["utilisateur"]->equipe_id);
+            $result["topics"] = $this->t->getAllTopics($_SESSION["utilisateur"]->equipe_id);
+        }else{
+            $result=null;
         }
-        $result["general"] = $this->t->getAllTopics(NULL);
         $this->load->view('Forum/topics.php', $result);
     }
 
@@ -35,7 +36,7 @@ class Topic_Controller extends CI_Controller
         $this->load->model('Topic_model', 't');
         $data["createur"] = $_SESSION['utilisateur']->id ;
         $data["sujet"] = $this->input->post("topicTitle");
-        $data["dateCreation"] = Date('Y-m-d');
+        $data["dateCreation"] = Date('Y-m-d h:i:s');
 
 
         if($this->input->post("target") == "clan"){
@@ -54,12 +55,13 @@ class Topic_Controller extends CI_Controller
         $data2["topic_id"] = $this->t->getLastTopic()[0]->id;
 
         $this->c->addCommentaire($data2);
+    }
 
-        if(isset($_SESSION['utilisateur'])){
-            $result["clan"] = $this->t->getAllTopics($_SESSION["utilisateur"]->equipe_id);
-        }
+    public function searchSubject(){
+        $this->load->helper(array('form', 'url'));
 
-        $result["general"] = $this->t->getAllTopics(NULL);
-        $this->load->view('Forum/topics.php', $result);
+        session_start();
+        $this->load->model('Topic_model', 't');
+        $this->t->searchSubject($_POST['search']);
     }
 }
