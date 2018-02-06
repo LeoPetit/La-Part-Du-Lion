@@ -27,7 +27,6 @@ class Commentaire_Model extends CI_Model
     }
 
     public function addCommentaire($data) {
-        var_dump($data);
         $this->db->insert('commentaire', $data);
     }
 

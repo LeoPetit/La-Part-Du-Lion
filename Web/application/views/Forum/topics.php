@@ -42,19 +42,44 @@ if(!isset($_SESSION['utilisateur'])){
     <div class="listTopics container">
         <h1> Topics </h1>
 
-        <div class="interactZone">
+        <form class="interactZone">
             <a href="#newTopic" id="createTopics" class="forumButton"> Nouveau sujet</a>
             <select id="zone">
                 <option>Général</option>
                 <option>Clan</option>
             </select>
+            <?php form_open("", 'id="searchTopic" class="form_search"');?>
+            <h4 id="subject">Rechercher un sujet</h4>
+            <div class="control-group">
+                <?php
+                $data = array(
+                    'name'          => 'searchTopic',
+                    'id'            => 'searchTopic',
+                    'class'         => 'inputData',
+                    'type'          => 'text',
+                    'value'         => '',
+                    'placeholder' => 'Rechercher un sujet',
+                );
+
+                echo form_input($data);
+
+                ?>
+            </form>
         </div>
 
 
         <?php
-            foreach($clan as $r){
+
+
+            foreach($topics as $r){
+                if(empty($r->clan_id)){
+                    $class = "general";
+                }
+                else{
+                    $class = "clan";
+                }
                 echo anchor('Commentaire_Controller/subject/'.$r->id.'',
-                    ' <div id="clan"class="topic">
+                    ' <div id='.$class.' class="topic">
                 <div class="author col-3">
                     <span>'.$r->pseudo.'</span>
                 </div>
@@ -72,30 +97,9 @@ if(!isset($_SESSION['utilisateur'])){
                     '');
 
             }
-
-        foreach($general as $r){
-            echo anchor('Commentaire_Controller/subject/'.$r->id,
-                ' <div id="general" class="topic ">
-                <div class="author col-3">
-                    <span>'.$r->pseudo.'</span>
-                </div>
-                <div class="name col-3">
-                    <span>'.$r->sujet.'</span>
-                </div>
-                <div class="message col-3">
-                    <span>'.$r->nbCommentaires.'<i class="fa fa-comment-o" aria-hidden="true"></i></span>
-                </div>
-                <div class="date col-3">
-                    <span>'.$r->dateCreation.'</span>
-                </div>
-                </div>
-            ',
-                '');
-        }
-
         ?>
 
-        <?php echo form_open("Topic_Controller/addSubject", 'class = "form_topic"'); ?>
+        <?php echo form_open("", 'id="topics" class = "form_topic"'); ?>
 
         <h4 id="subject">Nouveau sujet</h4>
         <div class="control-group">
@@ -151,6 +155,7 @@ if(!isset($_SESSION['utilisateur'])){
 
 <script type="text/javascript" src="<?php echo base_url();?>application/JS/colorChanges.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>application/JS/filterTopics.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>application/JS/forum.js"></script>
 
 
 </html>

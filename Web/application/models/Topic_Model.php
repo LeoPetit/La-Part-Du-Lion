@@ -16,12 +16,13 @@ class Topic_Model extends CI_Model
 
     public function getAllTopics($clan_id) {
 
-        $this->db->select('t.id, t.sujet, t.dateCreation, u.pseudo, COUNT(c.id) AS nbCommentaires');
+        $this->db->select('t.id, t.sujet, t.dateCreation, u.pseudo, COUNT(c.id) AS nbCommentaires, t.clan_id');
         $this->db->from('topic as t');
         $this->db->join('commentaire as c', 't.id = c.topic_id');
         $this->db->join('utilisateur as u', 'u.id = t.createur');
         $this->db->where('t.clan_id', $clan_id);
-        $this->db->group_by('c.id');
+        $this->db->or_where('t.clan_id', NULL);
+        $this->db->group_by('t.id');
         $this->db->order_by('t.dateCreation','desc');
         $this->db->distinct('t.id');
         $query = $this->db->get();

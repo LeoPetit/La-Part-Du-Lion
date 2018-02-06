@@ -33,7 +33,7 @@ $(document).ready(function () {
             break;
         case "#D07700" :
             imageUrl += "logo_forteresse.png";
-            couleur2 +="#D07700";
+            couleur2 +="#693C00";
 
             break;
         case "#012943" :

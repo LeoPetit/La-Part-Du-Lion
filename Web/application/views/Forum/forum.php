@@ -58,7 +58,7 @@ if(!isset($_SESSION['utilisateur'])){
     ?>
 
     <?php echo
-        form_open("Commentaire_Controller/addComment", 'class = "form_topic"');
+        form_open("", 'id="forum" class = "form_topic"');
         echo form_hidden('idSubject', $subject->id);
     ?>
 
@@ -102,6 +102,7 @@ if(!isset($_SESSION['utilisateur'])){
 </footer>
 
 <script type="text/javascript" src="<?php echo base_url();?>application/JS/colorChanges.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>application/JS/forum.js"></script>
 
 
 </html>

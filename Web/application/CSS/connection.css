@@ -89,6 +89,7 @@ ul li .animatedItem{
     position: absolute;
     left: 30%;
     z-index: -11;
+    padding: 10px;
 }
 
 .menuItem{
@@ -114,14 +115,8 @@ ul li .animatedItem{
 }
 
 #validationButton{
-    position: absolute;
-    z-index: -10;
-    bottom: 20%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
     width: 250px;
+    margin-top: 400px;
 }
 
 .spanError{
@@ -135,6 +130,12 @@ ul li .animatedItem{
 
 input[type=radio]{
     display:none;
+}
+
+.form_clan{
+    margin:auto;
+    width: 15%;
+    height: 500px;
 }
 
 @media only screen and (max-width: 990px) {
