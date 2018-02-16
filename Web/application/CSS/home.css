@@ -63,7 +63,8 @@ img.home_logo_details{
 }
 
 img.phone{
-    max-width: 400px;
+    max-width: 35%;
+    min-width: 300px;
     margin:auto;
 }
 
@@ -149,6 +150,7 @@ img.home_logoClan_details{
 
     img.phone{
         max-width: 270px;
+        min-width: 270px;
     }
 
     .home{
