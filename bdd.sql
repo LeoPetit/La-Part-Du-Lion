@@ -189,8 +189,8 @@ INSERT INTO competence VALUES (default, 'Négoce', 10000, 'Réduit le coûts des
 INSERT INTO competence VALUES (default, 'As du Commerce', 25000, 'Réduit le coûts des items de la boutique de -12%', 13, 6);
 
 INSERT INTO competence VALUES (default, 'Surcharge', 50000, 'Augmente la réserve de point de +1', 14, NULL);
-INSERT INTO competence VALUES (default, 'Overclocking', 100000, 'Augmente la réserve de point de +2 ', 15, NULL);
-INSERT INTO competence VALUES (default, 'Stack overflow', 200000, 'Augmente la réserve de point de +3 ', 16, NULL);
+INSERT INTO competence VALUES (default, 'Overclocking', 100000, 'Augmente la réserve de point de +2 ', 15, 10);
+INSERT INTO competence VALUES (default, 'Stack overflow', 200000, 'Augmente la réserve de point de +3 ', 16, 11);
 
 CREATE TABLE competenceEquipe (
   id            INT AUTO_INCREMENT NOT NULL,
@@ -203,6 +203,97 @@ CREATE TABLE competenceEquipe (
   CONSTRAINT fk_equipe_id_competenceEquipe FOREIGN KEY (equipe_id) REFERENCES equipe (id),
   CONSTRAINT fk_competence_id_competenceEquipe FOREIGN KEY (competence_id) REFERENCES competence (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 1);
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 2);
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 3);
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 4);
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 5);
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 6);
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 7);
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 8);
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 9);
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 10);
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 11);
+INSERT INTO competenceEquipe VALUES (default, 0, 1, 12);
+
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 1);
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 2);
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 3);
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 4);
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 5);
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 6);
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 7);
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 8);
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 9);
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 10);
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 11);
+INSERT INTO competenceEquipe VALUES (default, 0, 2, 12);
+
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 1);
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 2);
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 3);
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 4);
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 5);
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 6);
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 7);
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 8);
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 9);
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 10);
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 11);
+INSERT INTO competenceEquipe VALUES (default, 0, 3, 12);
+
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 1);
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 2);
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 3);
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 4);
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 5);
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 6);
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 7);
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 8);
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 9);
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 10);
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 11);
+INSERT INTO competenceEquipe VALUES (default, 0, 4, 12);
+
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 1);
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 2);
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 3);
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 4);
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 5);
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 6);
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 7);
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 8);
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 9);
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 10);
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 11);
+INSERT INTO competenceEquipe VALUES (default, 0, 5, 12);
+
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 1);
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 2);
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 3);
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 4);
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 5);
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 6);
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 7);
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 8);
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 9);
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 10);
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 11);
+INSERT INTO competenceEquipe VALUES (default, 0, 6, 12);
+
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 1);
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 2);
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 3);
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 4);
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 5);
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 6);
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 7);
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 8);
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 9);
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 10);
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 11);
+INSERT INTO competenceEquipe VALUES (default, 0, 7, 12);
 
 CREATE TABLE quartier (
   id        INT NOT NULL AUTO_INCREMENT,

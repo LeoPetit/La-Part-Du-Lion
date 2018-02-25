@@ -17,6 +17,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>application/CSS/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="<?php echo base_url() ?>application/libraries/treant-js-master/Treant.css" type="text/css"/>
 
 
 

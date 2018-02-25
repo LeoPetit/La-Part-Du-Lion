@@ -33,3 +33,5 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="<?php echo base_url();?>application/JS/navbar.js"></script>
 
+<script src="<?php echo base_url();?>application/libraries/Raphael.js"></script>
+<script src="<?php echo base_url() ?>application/libraries/treant-js-master/Treant.js"></script>

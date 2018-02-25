@@ -41,13 +41,13 @@ if(!isset($_SESSION["utilisateur"]))
     ?>
 </div>
 
-
-
+<div id="tree-simple"> </div>
 
 </body>
 
 <footer>
     <?php $this->load->view("Nav/footer.php") ?>
+    <script type="text/javascript" src="<?php echo base_url(); ?>application/JS/competence.js"></script>
 </footer>
 
 </html>

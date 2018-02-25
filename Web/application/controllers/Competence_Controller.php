@@ -19,4 +19,13 @@ class Competence_Controller extends CI_Controller
         $this->load->view('Clan/competence.php');
     }
 
+    public function show() {
+        $this->load->model('Competence_Model', 'c');
+
+        session_start();
+
+        $competences = $this->c->getAllCompetenceEquipe($_SESSION['utilisateur']->equipe_id);
+
+        echo json_encode($competences);
+    }
 }
