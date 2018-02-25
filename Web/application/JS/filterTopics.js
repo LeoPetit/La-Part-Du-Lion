@@ -13,39 +13,36 @@ $(document).ready(function () {
         i++;
     });
 
-    $( "#searchTopic" ).autocomplete({
+    $("#searchTopic").autocomplete({
         minLength: 0,
         source: subjects,
-        focus: function( event, ui ) {
-            $( "#searchTopic" ).val( ui.item.label );
+        focus: function (event, ui) {
+            $("#searchTopic").val(ui.item.label);
             return false;
         },
-        open: function( event, ui ) {
+        open: function (event, ui) {
             var param = $("#searchTopic").val();
-            if($( "#searchTopic" ).val() != ""){
+            var target;
+
+            if ($('select option:selected').html() == "Clan") {
+                target = "clan";
+            } else {
+                target = "general";
+            }
+
+            if ($("#searchTopic").val() != "") {
                 $('.topic').hide();
-                if($('select option:selected').html() == "Clan"){
-                    console.log('test');
-                    if($("span:contains('"+param+"')").parent().parent().attr('id') == "clan") {
-                        $("span:contains('" + param + "')").parent().parent().show();
+                $("span:contains('" + param + "')").parent().parent().each(function () {
+                    if ($(this).attr('id') == target) {
+                        $(this).show();
                     }
-                }
-                else{
-                    if($("span:contains('"+param+"')").parent().parent().attr('id') == "general") {
-                        $("span:contains('" + param + "')").parent().parent().show();
-                    }
-                }
+                });
                 return false;
             }
-            else{
-                if($('option:selected').html() == "Clan"){
-                    $('div#clan').show();
-                    $('div#general').hide();
-                }
-                else {
-                    $('div#clan').hide();
-                    $('div#general').show();
-                }
+            else {
+                $('.topic').hide();
+                $('div#' + target).show();
+
             }
 
         }
@@ -55,14 +52,14 @@ $(document).ready(function () {
     $('div#general').show();
 
     $('select').change(function () {
-        if(href==="Topic") {
-            if($('option:selected').html() == "Clan"){
-                $( "#searchTopic" ).val("");
+        if (href === "Topic") {
+            if ($('option:selected').html() == "Clan") {
+                $("#searchTopic").val("");
                 $('div#clan').show();
                 $('div#general').hide();
             }
             else {
-                $( "#searchTopic" ).val("");
+                $("#searchTopic").val("");
                 $('div#clan').hide();
                 $('div#general').show();
             }

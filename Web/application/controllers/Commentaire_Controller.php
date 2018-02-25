@@ -45,7 +45,8 @@ class Commentaire_Controller extends CI_Controller
         $this->load->model('Commentaire_Model', 'c');
         $data2["auteur"] = $_SESSION['utilisateur']->id ;
         $data2["contenu"] = $this->input->post("answer");
-        $data2["datePoste"] = Date('Y-m-d h:i:s');
+        $date = DateTime::createFromFormat('Y-m-d H:i:s', Date('Y-m-d H:i:s'));
+        $data2["datePoste"] = $date->format('Y-m-d H:i:s') ;
         $data2["topic_id"] = $this->input->post('idSubject');
 
         var_dump($data2);

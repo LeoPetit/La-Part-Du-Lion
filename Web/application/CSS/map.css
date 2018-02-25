@@ -10,7 +10,7 @@
 .legendeClan
 {
     color: black ;
-    height: 80px;
+    height: 40px;
     float: left;
     margin: 10px 0 10px 0;
 }
@@ -25,7 +25,8 @@
     padding: 5px 0 0 15%;
 }
 
-@media only screen and (max-width: 990px) {
+
+@media only screen and (max-width: 800px) {
     .footerContent{
         margin-top:0;
     }
@@ -33,6 +34,16 @@
     .legend{
         padding: 5px 0 0 25%;
     }
+    p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    p{
+        font-size: 18px;
+    }
+
 }
 
 

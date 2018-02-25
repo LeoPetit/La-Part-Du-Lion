@@ -876,7 +876,7 @@ CREATE TABLE topic (
   id           INT         NOT NULL AUTO_INCREMENT,
   createur     INT         NOT NULL,
   sujet        VARCHAR(80) NOT NULL,
-  dateCreation DATE,
+  dateCreation DATETIME,
   clan_id      INT                  DEFAULT NULL,
 
   PRIMARY KEY (id),
@@ -893,7 +893,7 @@ CREATE TABLE commentaire (
   id        INT NOT NULL AUTO_INCREMENT,
   auteur    INT NOT NULL,
   contenu   TEXT,
-  datePoste DATE,
+  datePoste DATETIME,
   topic_id  INT,
 
   PRIMARY KEY (id),
