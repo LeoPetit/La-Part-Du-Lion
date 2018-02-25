@@ -40,15 +40,16 @@ CREATE TABLE utilisateur (
   gold        INT,
   pointAction INT,
   equipe_id   INT,
+  revenuJournalier BOOLEAN,
 
   PRIMARY KEY (id),
 
   CONSTRAINT fk_equipe_id_utilisateur FOREIGN KEY (equipe_id) REFERENCES equipe (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO utilisateur VALUES (default, 'Leo', '0000', 'test@gmail.com', 150, 10, 1);
-INSERT INTO utilisateur VALUES (default, 'Jeremy', '1111', 'test1@gmail.com', 1550, 10, 2);
-INSERT INTO utilisateur VALUES (default, 'Melvin', '2222', 'test2@gmail.com', 180, 10, 3);
+INSERT INTO utilisateur VALUES (default, 'Leo', '0000', 'test@gmail.com', 150, 10, 1, false);
+INSERT INTO utilisateur VALUES (default, 'Jeremy', '1111', 'test1@gmail.com', 1550, 10, 2, false);
+INSERT INTO utilisateur VALUES (default, 'Melvin', '2222', 'test2@gmail.com', 180, 10, 3, false);
 
 CREATE TABLE item (
   id            INT NOT NULL AUTO_INCREMENT,
@@ -57,6 +58,7 @@ CREATE TABLE item (
   coutRessource INT,
   libelle       VARCHAR(50),
   link          VARCHAR(255),
+  linkAndroid   VARCHAR(255),
   rayon         INT          DEFAULT NULL,
   temps         INT          DEFAULT NULL,
 
@@ -64,17 +66,17 @@ CREATE TABLE item (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO item VALUES
-  (default, 'Piege basique', 90, 2, '+2PC, +60G / -1 PA', 'application/assets/images/items/png/Piege_basique.png', 50,
+  (default, 'Piege basique', 90, 2, '+2PC, +60G / -1 PA', 'application/assets/images/items/png/Piege_basique.png','Piege_basique.png', 50,
    2);
 INSERT INTO item
-VALUES (default, 'Bouclier', 120, 1, 'Invulnerabilité', 'application/assets/images/items/png/Bouclier.png', NULL, NULL);
+VALUES (default, 'Bouclier', 120, 1, 'Invulnerabilité', 'application/assets/images/items/png/Bouclier.png','Bouclier.png', NULL, NULL);
 INSERT INTO item VALUES
-  (default, 'Bouclier divin', 500, 2, 'Invulnerabilité', 'application/assets/images/items/png/BouclierDivin.png', NULL,
+  (default, 'Bouclier divin', 500, 2, 'Invulnerabilité', 'application/assets/images/items/png/BouclierDivin.png', 'BouclierDivin.png', NULL,
    1);
 INSERT INTO item VALUES
-  (default, 'Piege assassin', 150, 1, '+4 PC / -4 PA', 'application/assets/images/items/png/Piege_basique.png', 3, 3);
+  (default, 'Piege assassin', 150, 1, '+4 PC / -4 PA', 'application/assets/images/items/png/Piege_basique.png', 'Piege_basique.png', 3, 3);
 INSERT INTO item VALUES (default, 'Piege pick-pocket', 150, 2, '+2 PA, +200G / -100G',
-                         'application/assets/images/items/png/Piege_basique.png', 5, 3);
+                         'application/assets/images/items/png/Piege_basique.png', 'Piege_Basique.png', 5, 3);
 
 CREATE TABLE effet (
   id      INT NOT NULL AUTO_INCREMENT,
@@ -903,3 +905,11 @@ CREATE TABLE commentaire (
 INSERT INTO commentaire VALUES (default, 1, 'Test 1', '2018-01-01', 1);
 INSERT INTO commentaire VALUES (default, 2, 'Test 2', '2018-01-02', 2);
 INSERT INTO commentaire VALUES (default, 3, 'Test 3', '2018-01-03', 3);
+
+/*UPDATE utilisateur AS u
+SET u.gold=(u.gold+(
+  SELECT SUM(revenus)
+  FROM quartier AS q
+  WHERE q.equipe_id=1)
+),
+u.revenuJournalier=true WHERE u.id=1;*/
