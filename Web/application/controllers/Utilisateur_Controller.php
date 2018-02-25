@@ -24,7 +24,6 @@ class Utilisateur_Controller extends CI_Controller
 
     public function connection()
     {
-
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('pseudo', 'pseudo', 'required', array('required' => 'Vous devez entrer un %s'));

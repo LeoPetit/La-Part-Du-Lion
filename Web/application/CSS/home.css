@@ -12,7 +12,7 @@
 
 .home_text{
     position: absolute;
-    top: 630px;
+    top: 580px;
     left:0;
     right:0;
     margin-left: auto;
@@ -27,7 +27,7 @@
 .home_logo{
     position: absolute;
     z-index: 0;
-    top: 130px;
+    top: 10%;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -92,6 +92,10 @@ img.phone{
     background-color: black;
     float: left;
     font-size: 8px;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 0 5px 10px #888888;
 }
 
 .rightClan{
@@ -104,6 +108,10 @@ img.phone{
     opacity:0.8;
     background-color: black;
     float: right;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 0 5px 10px #888888;
 }
 
 img.home_logoClan_details{

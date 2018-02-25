@@ -1,0 +1,9 @@
+div.node{
+    background-color: #666666;
+    color: white;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 15px 10px 0 10px;
+    width: 300px;
+    text-align: center;
+}

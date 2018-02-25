@@ -2,7 +2,6 @@
  * Created by leo on 11/10/17.
  */
 
-var url = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
 //var url = "http://www.partdulion.fr/index.php/";
 
 window.onresize = function(event) {

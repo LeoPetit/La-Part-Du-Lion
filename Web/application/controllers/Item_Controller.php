@@ -36,6 +36,4 @@ class Item_Controller extends CI_Controller
 
         $this->load->view("Jeu/boutique.php",$return);
     }
-
-
 }

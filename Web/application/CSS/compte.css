@@ -37,7 +37,7 @@
 
 .inputData{
     background-color: #505050;
-    margin: auto;
+    margin: auto 10% auto auto;
     opacity: 0.8;
     border: 1px solid white;
     width: 300px;

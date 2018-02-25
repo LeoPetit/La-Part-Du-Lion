@@ -47,7 +47,7 @@ if(!isset($_SESSION["utilisateur"]))
             <?php
             echo form_open("Utilisateur_Controller/updateMdp", 'class = "form_user"');
 
-            echo "<h6>mot de passe : " . $_SESSION["utilisateur"]->mdp . "</h6>";
+            echo "<h6>mot de passe : ****</h6>";
             $attributes = array(
                 'class' => 'control-label',
             );

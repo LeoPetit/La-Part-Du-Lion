@@ -21,6 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>Part du Lion</title>
     <?php $this->load->view("Nav/header.php") ?>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>application/CSS/boutique.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>application/CSS/competence.css">
     <?php $this->load->view("Nav/navbar.php") ?>
 </head>
 
@@ -48,6 +49,7 @@ if(!isset($_SESSION["utilisateur"]))
 <footer>
     <?php $this->load->view("Nav/footer.php") ?>
     <script type="text/javascript" src="<?php echo base_url(); ?>application/JS/competence.js"></script>
+
 </footer>
 
 </html>

@@ -43,12 +43,14 @@ $(document).ready(function () {
         if(competences[i].competence_parent != null) {
             node = {
                 parent: childs[i-1],
-                text: { name: competences[i].text }
+                text: { name: competences[i].text },
+                HTMLid: competences[i].id
             };
         } else {
             node = {
                 parent: simple_chart_config[1],
-                text: { name: competences[i].text }
+                text: { name: competences[i].text },
+                HTMLid: competences[i].id
             };
         }
 
