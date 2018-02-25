@@ -33,10 +33,17 @@ if(!isset($_SESSION["utilisateur"]))
 
 <div class="budgetItem"><?php echo $_SESSION["utilisateur"]->gold?> <img src="<?php echo base_url()?>application/assets/images/items/png/monnaie.png"></div>
 <div id="message">
-  <?php  if(isset($error))
+  <?php  if(isset($error) && $error == "Pas assez de golds !" )
     {
     echo "<script type='text/javascript'>alert('pas assez d argent')</script>";
+        $error="";
     }
+    else if(isset($error) && $error == "Achat effectue !")
+    {
+        echo "<script type='text/javascript'>alert('Achat effectué')</script>";
+        $error="";
+    }
+
     ?>
 </div>
 <div class="inventaireContent">
@@ -82,7 +89,7 @@ if(!isset($_SESSION["utilisateur"]))
             'type'          => 'number',
             'value'         => '1',
             'min'           => '1',
-            'max'           => '5'
+            'max'           => '99'
         );
 
         echo form_input($data);

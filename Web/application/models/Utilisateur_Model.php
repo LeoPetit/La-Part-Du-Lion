@@ -33,7 +33,7 @@ class Utilisateur_Model extends CI_Model
     {
         // problème avec $prix
         $this->db->set('gold', $prix);
-        $this->db->where('id', $_SESSION['utilisateur']->gold);
+        $this->db->where('id', $_SESSION['utilisateur']->id);
         $this->db->update('utilisateur');
 
     }
@@ -41,5 +41,28 @@ class Utilisateur_Model extends CI_Model
     {
         $this->db->where('id', $idJoueur);
         $this->db->update('utilisateur',$data);
+    }
+
+    function mail_exists($key)
+    {
+        $this->db->where('email',$key);
+        $query = $this->db->get('utilisateur');
+        if ($query->num_rows() > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    function pseudo_exists($key)
+    {
+        $this->db->where('pseudo',$key);
+        $query = $this->db->get('utilisateur');
+        if ($query->num_rows() > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
