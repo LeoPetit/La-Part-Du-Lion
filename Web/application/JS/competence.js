@@ -2,9 +2,12 @@
  * Created by leo on 25/02/18.
  */
 
-var url = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
+//var url = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
+var url = "http://www.partdulion.fr/index.php/";
 
 $(document).ready(function () {
+
+    alert("Cette page est en cours de développement !! Toutes le fonctionnalités ne sont pas terminées, merci d'attendre quelques jours avant de les utilsiés. Merci.");
 
     var competences;
 
@@ -20,8 +23,6 @@ $(document).ready(function () {
             console.log(e);
         }
     });
-
-    console.log(competences);
 
     config = {
         container: "#tree-simple"
@@ -44,13 +45,13 @@ $(document).ready(function () {
             node = {
                 parent: childs[i-1],
                 text: { name: competences[i].text },
-                HTMLid: competences[i].id
+                HTMLid: competences[i].id+"_"+competences[i].paye
             };
         } else {
             node = {
                 parent: simple_chart_config[1],
                 text: { name: competences[i].text },
-                HTMLid: competences[i].id
+                HTMLid: competences[i].id+"_"+competences[i].paye
             };
         }
 
@@ -60,6 +61,39 @@ $(document).ready(function () {
     }
 
     var my_chart = new Treant(simple_chart_config);
+
+    $(".node").click(function () {
+
+        if($(this).attr('id') != null) {
+            var paye = (($(this).attr('id').split('_')[1] <= 0));
+
+            var id = $(this).attr('id').split('_')[0];
+
+            if (!paye) {
+
+                $.ajax({
+                    type: 'POST',
+                    url: url + "Competence_Controller/getCompetence/" + id,
+                    dataType: 'json',
+                    success: function (data) {
+                        var competence = data;
+
+                        $('.modal-title').html(competence[0].nom);
+                        $('#descComp').html(competence[0].description);
+                        $('.modal').modal('toggle');
+                    },
+                    error: function (e) {
+                        console.log(e);
+                    }
+                });
+            }
+        }
+    });
+
+    $('#addGold').click(function () {
+
+    })
+
 });
 
 

@@ -44,6 +44,32 @@ if(!isset($_SESSION["utilisateur"]))
 
 <div id="tree-simple"> </div>
 
+<div id="test" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p class="description" id="descComp"></p>
+                <label for="nom">Ajouter</label>
+                <input type="number" name="goldAjout" id="gold" min="1" max="<?php echo $_SESSION["utilisateur"]->gold;?>"/>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" id="addGold" class="btn btn-primary">Ajouter</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 </body>
 
 <footer>

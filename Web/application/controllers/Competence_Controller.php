@@ -28,4 +28,12 @@ class Competence_Controller extends CI_Controller
 
         echo json_encode($competences);
     }
+
+    public function getCompetence($id) {
+        $this->load->model('Competence_Model', 'c');
+
+        $competence = $this->c->getCompetence($id);
+
+        echo json_encode($competence);
+    }
 }
