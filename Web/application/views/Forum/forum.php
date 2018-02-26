@@ -41,7 +41,7 @@ if(!isset($_SESSION['utilisateur'])){
 <div class="listAnswers container">
     <?php echo '<p id="subject"> Sujet : '.$subject->sujet.'  </p>'?>
     <div class="interactZone">
-        <?php echo anchor('Topic_Controller/subject#answerPost', 'Répondre', 'id="createAnswer" class="forumButton"') ?>
+        <?php echo anchor('Commentaire_Controller/subject/'.$subject->id.'#answerPost', 'Répondre', 'id="createAnswer" class="forumButton"') ?>
         <?php echo anchor('Topic_Controller/index#newTopic', 'Nouveau sujet', 'id="createTopics" class="forumButton"') ?>
         <?php echo anchor('Topic_Controller/index', 'liste des sujets', 'id="listTopics" class="forumButton"') ?>
     </div>
