@@ -7,3 +7,7 @@ div.node{
     width: 300px;
     text-align: center;
 }
+
+div.node:hover{
+    cursor: pointer;
+}
