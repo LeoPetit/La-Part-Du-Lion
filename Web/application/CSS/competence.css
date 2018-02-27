@@ -8,6 +8,25 @@ div.node{
     text-align: center;
 }
 
-div.node:hover{
+div.node.unlock:hover{
     cursor: pointer;
+    background-color: #888888;
+}
+
+div.node.title{
+    border: none;
+    cursor: auto;
+    background-color: white;
+    color: black;
+}
+
+div.node.lock{
+    border: none;
+    cursor: auto;
+    opacity: 0.3;
+    color: black;
+}
+
+div.node.activ{
+    background-color: #00CC00;
 }

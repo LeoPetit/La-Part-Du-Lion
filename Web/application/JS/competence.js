@@ -30,7 +30,8 @@ $(document).ready(function () {
     };
 
     parent_node = {
-        text: { name: "Competence" }
+        text: { name: "Competences"},
+        HTMLclass: "title"
     };
 
     simple_chart_config = [
@@ -76,7 +77,7 @@ $(document).ready(function () {
 
     var my_chart = new Treant(simple_chart_config);
 
-    $(".node").click(function () {
+    $(".node.unlock").click(function () {
 
         if($(this).attr('id') != null) {
             var paye = (($(this).attr('id').split('_')[1] <= 0));
