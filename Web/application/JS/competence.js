@@ -7,7 +7,9 @@ var url = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
 
 $(document).ready(function () {
 
-    alert("Cette page est en cours de développement !! Toutes le fonctionnalités ne sont pas terminées, merci d'attendre quelques jours avant de les utilsiés. Merci.");
+    var id;
+
+    //alert("Cette page est en cours de développement !! Toutes le fonctionnalités ne sont pas terminées, merci d'attendre quelques jours avant de les utilsiés. Merci.");
 
     var competences;
 
@@ -82,7 +84,7 @@ $(document).ready(function () {
         if($(this).attr('id') != null) {
             var paye = (($(this).attr('id').split('_')[1] <= 0));
 
-            var id = $(this).attr('id').split('_')[0];
+            id = $(this).attr('id').split('_')[0];
 
             if (!paye) {
 
@@ -106,7 +108,22 @@ $(document).ready(function () {
     });
 
     $('#addGold').click(function () {
+        var gold = $('#gold').val();
 
+        $.ajax({
+            type: 'POST',
+            url: url + "CompetenceEquipe_Controller/addGoldToCompetence",
+            data: {
+                'id': id,
+                'gold': gold
+            },
+            success: function () {
+                location.reload();
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        });
     })
 
 });
