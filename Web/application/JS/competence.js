@@ -20,7 +20,6 @@ $(document).ready(function () {
         async: false,
         success: function (data) {
             competences = data;
-            console.log(data);
         },
         error: function (e) {
             console.log(e);
@@ -47,7 +46,6 @@ $(document).ready(function () {
 
         if(competences[i].competence_parent != null) {
             var classe;
-            console.log(competences[i].paye);
             if(competences[i-1].paye == "0")
             {
                 classe = "unlock";

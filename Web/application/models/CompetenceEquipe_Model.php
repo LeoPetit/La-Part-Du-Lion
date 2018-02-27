@@ -14,9 +14,10 @@ class CompetenceEquipe_Model extends CI_Model
         $this->load->database();
     }
 
-    public function addGoldToCompetence($id, $gold) {
+    public function addGoldToCompetence($id, $gold, $id_equipe) {
         $this->db->set('coutPaye', 'coutPaye+'.$gold.'', FALSE);
-        $this->db->where('id', $id);
+        $this->db->where('competence_id', $id);
+        $this->db->where('equipe_id', $id_equipe);
         $this->db->update('competenceEquipe');
     }
 }

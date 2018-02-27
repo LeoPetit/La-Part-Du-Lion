@@ -27,6 +27,6 @@ class CompetenceEquipe_Controller extends CI_Controller
 
         $_SESSION["utilisateur"]->gold = ($_SESSION["utilisateur"]->gold-$gold);
 
-        $this->c->addGoldToCompetence($id, $gold);
+        $this->c->addGoldToCompetence($id, $gold, $_SESSION['utilisateur']->equipe_id);
     }
 }
