@@ -43,16 +43,29 @@ $(document).ready(function () {
     for(var i=0; i<competences.length;i++) {
 
         if(competences[i].competence_parent != null) {
+            var classe;
+            console.log(competences[i].paye);
+            if(competences[i-1].paye == "0")
+            {
+                classe = "unlock";
+            }
+            else
+            {
+                classe = "lock";
+            }
             node = {
                 parent: childs[i-1],
                 text: { name: competences[i].text },
-                HTMLid: competences[i].id+"_"+competences[i].paye
+                HTMLid: competences[i].id+"_"+competences[i].paye,
+                HTMLclass: classe
             };
         } else {
+
             node = {
                 parent: simple_chart_config[1],
                 text: { name: competences[i].text },
-                HTMLid: competences[i].id+"_"+competences[i].paye
+                HTMLid: competences[i].id+"_"+competences[i].paye,
+                HTMLclass: "unlock"
             };
         }
 
