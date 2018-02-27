@@ -2,8 +2,8 @@
  * Created by leo on 25/02/18.
  */
 
-//var url = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
-var url = "http://www.partdulion.fr/index.php/";
+var url = "http://localhost/projet_licence/La-Part-Du-Lion/Web/index.php/";
+//var url = "http://www.partdulion.fr/index.php/";
 
 $(document).ready(function () {
 
@@ -18,6 +18,7 @@ $(document).ready(function () {
         async: false,
         success: function (data) {
             competences = data;
+            console.log(data);
         },
         error: function (e) {
             console.log(e);
