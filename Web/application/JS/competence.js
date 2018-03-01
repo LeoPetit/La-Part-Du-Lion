@@ -46,12 +46,15 @@ $(document).ready(function () {
 
         if(competences[i].competence_parent != null) {
             var classe;
-            if(competences[i-1].paye == "0")
-            {
-                classe = "unlock";
-            }
-            else
-            {
+            console.log(competences[i].text);
+            if(competences[i-1].paye == "0") {
+                if(competences[i].paye == "0"){
+                    classe = "activ";
+                }
+                else{
+                    classe = "unlock";
+                }
+            } else {
                 classe = "lock";
             }
             node = {
@@ -62,11 +65,16 @@ $(document).ready(function () {
             };
         } else {
 
+            if(competences[i].paye == "0") {
+                classe = "activ";
+            } else {
+                classe = "unlock";
+            }
             node = {
                 parent: simple_chart_config[1],
                 text: { name: competences[i].text },
                 HTMLid: competences[i].id+"_"+competences[i].paye,
-                HTMLclass: "unlock"
+                HTMLclass: classe
             };
         }
 

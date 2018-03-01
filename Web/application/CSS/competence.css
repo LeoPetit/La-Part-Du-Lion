@@ -28,5 +28,6 @@ div.node.lock{
 }
 
 div.node.activ{
-    background-color: #00CC00;
+    background-color: #fbd32A;
+    color: black;
 }

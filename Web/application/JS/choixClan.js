@@ -9,7 +9,8 @@ $("footer").each(function() {
     $(this).hide();
 });
 
-$("li[id*='idClan']").click(function(){
+$("li[id*=idClan]").click(function(){
+    console.log("ok");
     var id = $(this).attr("id").slice(5);
     if($($(this).attr("id") + " > div.animatedItem").has('.open')){
         $($(this).attr("id") + " > div.animatedItem").slideDown('slow', function() {
