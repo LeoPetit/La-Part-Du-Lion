@@ -32,10 +32,11 @@ echo form_hidden('password', $_POST["password"]);
 
 <div class="menu">
     <ul>
+
         <li id="idClan1" class="listItem">
-            <h2 class="menuItem"><? echo($descriptif[0]->nom) ?></h2>
+            <h2 class="menuItem"><?php echo $descriptif[0]->nom; ?></h2>
             <div class="animatedItem">
-                <h3><?php echo($descriptif[0]->nom); ?></h3>
+                <h3><?php echo $descriptif[0]->nom; ?></h3>
                 <?php
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
@@ -63,9 +64,9 @@ echo form_hidden('password', $_POST["password"]);
             </div>
         </li>
         <li id="idClan2" class="listItem">
-            <h2 class="menuItem"><? echo($descriptif[2]->nom) ?></h2>
+            <h2 class="menuItem"><?php echo $descriptif[2]->nom ?></h2>
             <div class="animatedItem">
-                <h3><?php echo($descriptif[2]->nom) ?></h3>
+                <h3><?php echo $descriptif[2]->nom  ?></h3>
                 <?php
                 $attributes = array(
                     'class' => 'control-labelCheckBox',
@@ -91,7 +92,7 @@ echo form_hidden('password', $_POST["password"]);
             </div>
         </li>
         <li id="idClan3" class="listItem">
-            <h2 class="menuItem"><? echo($descriptif[6]->nom) ?></h2>
+            <h2 class="menuItem"><?php echo($descriptif[6]->nom) ?></h2>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[6]->nom) ?></h3>
                 <?php
@@ -115,7 +116,7 @@ echo form_hidden('password', $_POST["password"]);
             </div>
         </li>
         <li id="idClan4" class="listItem">
-            <h2 class="menuItem"><? echo($descriptif[3]->nom) ?></h2>
+            <h2 class="menuItem"><?php echo($descriptif[3]->nom) ?></h2>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[3]->nom) ?></h3>
                 <?php
@@ -140,7 +141,7 @@ echo form_hidden('password', $_POST["password"]);
             </div>
         </li>
         <li id="idClan5" class="listItem">
-            <h2 class="menuItem"><? echo($descriptif[5]->nom) ?></h2>
+            <h2 class="menuItem"><?php echo($descriptif[5]->nom) ?></h2>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[5]->nom) ?></h3>
                 <?php
@@ -165,7 +166,7 @@ echo form_hidden('password', $_POST["password"]);
             </div>
         </li>
         <li id="idClan6" class="listItem">
-            <h2 class="menuItem"><? echo($descriptif[1]->nom) ?></h2>
+            <h2 class="menuItem"><?php echo($descriptif[1]->nom) ?></h2>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[1]->nom) ?></h3>
                 <?php
@@ -190,7 +191,7 @@ echo form_hidden('password', $_POST["password"]);
             </div>
         </li>
         <li id="idClan7" class="listItem">
-            <h2 class="menuItem"><? echo($descriptif[4]->nom) ?></h2>
+            <h2 class="menuItem"><?php echo($descriptif[4]->nom) ?></h2>
             <div class="animatedItem">
                 <h3><?php echo($descriptif[4]->nom) ?></h3>
                 <?php
