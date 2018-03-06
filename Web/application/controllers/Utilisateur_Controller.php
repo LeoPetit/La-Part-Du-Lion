@@ -47,9 +47,23 @@ class Utilisateur_Controller extends CI_Controller
             } else {
                 session_start();
                 $_SESSION["utilisateur"] = $isRegistered[0];
+                $this->setRevenu();
                 //$this->session->utilisateur = $isRegistered[0];
                 $this->load->view('Jeu/map.php');
             }
+        }
+    }
+
+    public function setRevenu() {
+        if(!$_SESSION['utilisateur']->revenuJournalier) {
+            $this->load->model('Utilisateur_Model', 'u');
+            $this->load->model('Quartier_Model', 'q');
+
+            $revenu = $this->q->revenusTotalEquipe($_SESSION['utilisateur']->equipe_id);
+
+            $_SESSION['utilisateur']->gold = $_SESSION['utilisateur']->gold + $revenu[0]->revenusTotalEquipe;
+
+            $this->u->setRevenuJournalier();
         }
     }
 

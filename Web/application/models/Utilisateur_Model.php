@@ -15,7 +15,7 @@ class Utilisateur_Model extends CI_Model
     }
 
     public function connection($userName, $userMDP) {
-        $this->db->select('pseudo, mdp, utilisateur.id, gold, equipe_id, email, equipe.couleur');
+        $this->db->select('pseudo, mdp, utilisateur.id, gold, equipe_id, email, equipe.couleur, revenuJournalier');
         $this->db->from('utilisateur');
         $this->db->join('equipe', 'equipe.id=utilisateur.equipe_id');
         $this->db->where('pseudo', $userName);
@@ -37,6 +37,7 @@ class Utilisateur_Model extends CI_Model
         $this->db->update('utilisateur');
 
     }
+
     public function updateUser($data,$idJoueur)
     {
         $this->db->where('id', $idJoueur);
@@ -64,5 +65,12 @@ class Utilisateur_Model extends CI_Model
         else{
             return false;
         }
+    }
+
+    function setRevenuJournalier() {
+        $this->db->set('revenuJournalier', true);
+        $this->db->set('gold', $_SESSION['utilisateur']->gold);
+        $this->db->where('id', $_SESSION['utilisateur']->id);
+        $this->db->update('utilisateur');
     }
 }
